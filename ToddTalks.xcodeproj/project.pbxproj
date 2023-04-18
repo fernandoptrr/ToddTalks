@@ -1,0 +1,622 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C449E8D129ED729900F9409F /* ToddTalksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C449E8D029ED729900F9409F /* ToddTalksApp.swift */; };
+		C449E8D529ED729A00F9409F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C449E8D429ED729A00F9409F /* Assets.xcassets */; };
+		C449E8D829ED729A00F9409F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C449E8D729ED729A00F9409F /* Preview Assets.xcassets */; };
+		C449E8DA29ED729A00F9409F /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = C449E8D929ED729A00F9409F /* Persistence.swift */; };
+		C449E8DD29ED729A00F9409F /* ToddTalks.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C449E8DB29ED729A00F9409F /* ToddTalks.xcdatamodeld */; };
+		C449E8E629ED730600F9409F /* MilestoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C449E8E529ED730600F9409F /* MilestoneView.swift */; };
+		C449E8EB29ED7C1800F9409F /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C449E8EA29ED7C1800F9409F /* Colors.xcassets */; };
+		C449E8ED29ED7D5600F9409F /* Color+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = C449E8EC29ED7D5600F9409F /* Color+App.swift */; };
+		C449E8F629ED809000F9409F /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = C449E8F529ED809000F9409F /* Fonts.swift */; };
+		C449E8F729ED88B900F9409F /* SassoonSansStd-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C449E8F129ED7FF900F9409F /* SassoonSansStd-Bold.otf */; };
+		C449E8F829ED88BB00F9409F /* SassoonSansStd-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = C449E8F229ED7FFA00F9409F /* SassoonSansStd-Medium.otf */; };
+		C449E8F929ED88C300F9409F /* SassoonSansStd.otf in Resources */ = {isa = PBXBuildFile; fileRef = C449E8F029ED7FF900F9409F /* SassoonSansStd.otf */; };
+		C449E8FA29ED88C600F9409F /* NiceSugar.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C449E8F429ED802000F9409F /* NiceSugar.ttf */; };
+		C449E8FE29ED8A5600F9409F /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C449E8FD29ED8A5600F9409F /* AudioPlayer.swift */; };
+		C449E90229ED8AC600F9409F /* Prompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C449E90129ED8AC600F9409F /* Prompt.swift */; };
+		C449E90429ED8AF500F9409F /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C449E90329ED8AF500F9409F /* LottieView.swift */; };
+		C449E90729ED8B4B00F9409F /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = C449E90629ED8B4B00F9409F /* Lottie */; };
+		C449E91029ED8C8C00F9409F /* RaisedButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C449E90F29ED8C8C00F9409F /* RaisedButtonStyle.swift */; };
+		C449E91429ED92B300F9409F /* MilestoneCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C449E91329ED92B300F9409F /* MilestoneCardView.swift */; };
+		C449E91729ED983800F9409F /* crab.json in Resources */ = {isa = PBXBuildFile; fileRef = C449E91629ED983800F9409F /* crab.json */; };
+		C449E91929ED983F00F9409F /* Lotties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C449E91829ED983F00F9409F /* Lotties.swift */; };
+		C449E91B29EE23F200F9409F /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C449E91A29EE23F200F9409F /* ProgressBarView.swift */; };
+		C449E91E29EE2AFC00F9409F /* HintTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C449E91D29EE2AFC00F9409F /* HintTextView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C449E8CD29ED729900F9409F /* ToddTalks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToddTalks.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C449E8D029ED729900F9409F /* ToddTalksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToddTalksApp.swift; sourceTree = "<group>"; };
+		C449E8D429ED729A00F9409F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C449E8D729ED729A00F9409F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C449E8D929ED729A00F9409F /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		C449E8DC29ED729A00F9409F /* ToddTalks.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ToddTalks.xcdatamodel; sourceTree = "<group>"; };
+		C449E8DE29ED729A00F9409F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C449E8E529ED730600F9409F /* MilestoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilestoneView.swift; sourceTree = "<group>"; };
+		C449E8EA29ED7C1800F9409F /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		C449E8EC29ED7D5600F9409F /* Color+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+App.swift"; sourceTree = "<group>"; };
+		C449E8F029ED7FF900F9409F /* SassoonSansStd.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SassoonSansStd.otf; sourceTree = "<group>"; };
+		C449E8F129ED7FF900F9409F /* SassoonSansStd-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SassoonSansStd-Bold.otf"; sourceTree = "<group>"; };
+		C449E8F229ED7FFA00F9409F /* SassoonSansStd-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SassoonSansStd-Medium.otf"; sourceTree = "<group>"; };
+		C449E8F429ED802000F9409F /* NiceSugar.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NiceSugar.ttf; sourceTree = "<group>"; };
+		C449E8F529ED809000F9409F /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		C449E8FD29ED8A5600F9409F /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		C449E90129ED8AC600F9409F /* Prompt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prompt.swift; sourceTree = "<group>"; };
+		C449E90329ED8AF500F9409F /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		C449E90F29ED8C8C00F9409F /* RaisedButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaisedButtonStyle.swift; sourceTree = "<group>"; };
+		C449E91329ED92B300F9409F /* MilestoneCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilestoneCardView.swift; sourceTree = "<group>"; };
+		C449E91629ED983800F9409F /* crab.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = crab.json; sourceTree = "<group>"; };
+		C449E91829ED983F00F9409F /* Lotties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lotties.swift; sourceTree = "<group>"; };
+		C449E91A29EE23F200F9409F /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
+		C449E91D29EE2AFC00F9409F /* HintTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintTextView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C449E8CA29ED729900F9409F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C449E90729ED8B4B00F9409F /* Lottie in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C449E8C429ED729900F9409F = {
+			isa = PBXGroup;
+			children = (
+				C449E8CF29ED729900F9409F /* ToddTalks */,
+				C449E8CE29ED729900F9409F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C449E8CE29ED729900F9409F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C449E8CD29ED729900F9409F /* ToddTalks.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C449E8CF29ED729900F9409F /* ToddTalks */ = {
+			isa = PBXGroup;
+			children = (
+				C449E8E729ED7BF100F9409F /* Core */,
+				C449E90829ED8B8500F9409F /* Features */,
+				C449E8D929ED729A00F9409F /* Persistence.swift */,
+				C449E8D029ED729900F9409F /* ToddTalksApp.swift */,
+				C449E8DE29ED729A00F9409F /* Info.plist */,
+				C449E8DB29ED729A00F9409F /* ToddTalks.xcdatamodeld */,
+				C449E8D629ED729A00F9409F /* Preview Content */,
+			);
+			path = ToddTalks;
+			sourceTree = "<group>";
+		};
+		C449E8D629ED729A00F9409F /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C449E8D729ED729A00F9409F /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C449E8E429ED72AC00F9409F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C449E91529ED982E00F9409F /* Lotties */,
+				C449E8D429ED729A00F9409F /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C449E8E729ED7BF100F9409F /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				C449E8E429ED72AC00F9409F /* Resources */,
+				C449E90029ED8A8B00F9409F /* Constants */,
+				C449E8FF29ED8A7D00F9409F /* Extension */,
+				C449E8FC29ED8A4100F9409F /* Utilites */,
+				C449E8E829ED7BF900F9409F /* Themes */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		C449E8E829ED7BF900F9409F /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				C449E91C29EE273600F9409F /* Components */,
+				C449E8FB29ED8A2900F9409F /* Modifiers */,
+				C449E8EE29ED7F4A00F9409F /* Fonts */,
+				C449E8E929ED7C0100F9409F /* Colors */,
+			);
+			path = Themes;
+			sourceTree = "<group>";
+		};
+		C449E8E929ED7C0100F9409F /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				C449E8EA29ED7C1800F9409F /* Colors.xcassets */,
+				C449E8EC29ED7D5600F9409F /* Color+App.swift */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		C449E8EE29ED7F4A00F9409F /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C449E8F329ED800000F9409F /* NiceSugar */,
+				C449E8EF29ED7FC800F9409F /* Sassoon */,
+				C449E8F529ED809000F9409F /* Fonts.swift */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		C449E8EF29ED7FC800F9409F /* Sassoon */ = {
+			isa = PBXGroup;
+			children = (
+				C449E8F129ED7FF900F9409F /* SassoonSansStd-Bold.otf */,
+				C449E8F229ED7FFA00F9409F /* SassoonSansStd-Medium.otf */,
+				C449E8F029ED7FF900F9409F /* SassoonSansStd.otf */,
+			);
+			path = Sassoon;
+			sourceTree = "<group>";
+		};
+		C449E8F329ED800000F9409F /* NiceSugar */ = {
+			isa = PBXGroup;
+			children = (
+				C449E8F429ED802000F9409F /* NiceSugar.ttf */,
+			);
+			path = NiceSugar;
+			sourceTree = "<group>";
+		};
+		C449E8FB29ED8A2900F9409F /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				C449E90F29ED8C8C00F9409F /* RaisedButtonStyle.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		C449E8FC29ED8A4100F9409F /* Utilites */ = {
+			isa = PBXGroup;
+			children = (
+				C449E8FD29ED8A5600F9409F /* AudioPlayer.swift */,
+				C449E90329ED8AF500F9409F /* LottieView.swift */,
+			);
+			path = Utilites;
+			sourceTree = "<group>";
+		};
+		C449E8FF29ED8A7D00F9409F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		C449E90029ED8A8B00F9409F /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				C449E90129ED8AC600F9409F /* Prompt.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		C449E90829ED8B8500F9409F /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				C449E90929ED8B8B00F9409F /* Milestone */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		C449E90929ED8B8B00F9409F /* Milestone */ = {
+			isa = PBXGroup;
+			children = (
+				C449E90C29ED8BB700F9409F /* ViewModels */,
+				C449E90B29ED8BA500F9409F /* Presenters */,
+				C449E90A29ED8B9E00F9409F /* Models */,
+			);
+			path = Milestone;
+			sourceTree = "<group>";
+		};
+		C449E90A29ED8B9E00F9409F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C449E90B29ED8BA500F9409F /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				C449E90E29ED8BCA00F9409F /* Components */,
+				C449E90D29ED8BBE00F9409F /* Views */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		C449E90C29ED8BB700F9409F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C449E90D29ED8BBE00F9409F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C449E8E529ED730600F9409F /* MilestoneView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C449E90E29ED8BCA00F9409F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C449E91329ED92B300F9409F /* MilestoneCardView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		C449E91529ED982E00F9409F /* Lotties */ = {
+			isa = PBXGroup;
+			children = (
+				C449E91829ED983F00F9409F /* Lotties.swift */,
+				C449E91629ED983800F9409F /* crab.json */,
+			);
+			path = Lotties;
+			sourceTree = "<group>";
+		};
+		C449E91C29EE273600F9409F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C449E91A29EE23F200F9409F /* ProgressBarView.swift */,
+				C449E91D29EE2AFC00F9409F /* HintTextView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C449E8CC29ED729900F9409F /* ToddTalks */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C449E8E129ED729A00F9409F /* Build configuration list for PBXNativeTarget "ToddTalks" */;
+			buildPhases = (
+				C449E8C929ED729900F9409F /* Sources */,
+				C449E8CA29ED729900F9409F /* Frameworks */,
+				C449E8CB29ED729900F9409F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ToddTalks;
+			packageProductDependencies = (
+				C449E90629ED8B4B00F9409F /* Lottie */,
+			);
+			productName = ToddTalks;
+			productReference = C449E8CD29ED729900F9409F /* ToddTalks.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C449E8C529ED729900F9409F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					C449E8CC29ED729900F9409F = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = C449E8C829ED729900F9409F /* Build configuration list for PBXProject "ToddTalks" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C449E8C429ED729900F9409F;
+			packageReferences = (
+				C449E90529ED8B4B00F9409F /* XCRemoteSwiftPackageReference "lottie-spm" */,
+			);
+			productRefGroup = C449E8CE29ED729900F9409F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C449E8CC29ED729900F9409F /* ToddTalks */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C449E8CB29ED729900F9409F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C449E8F829ED88BB00F9409F /* SassoonSansStd-Medium.otf in Resources */,
+				C449E91729ED983800F9409F /* crab.json in Resources */,
+				C449E8FA29ED88C600F9409F /* NiceSugar.ttf in Resources */,
+				C449E8F929ED88C300F9409F /* SassoonSansStd.otf in Resources */,
+				C449E8EB29ED7C1800F9409F /* Colors.xcassets in Resources */,
+				C449E8D829ED729A00F9409F /* Preview Assets.xcassets in Resources */,
+				C449E8F729ED88B900F9409F /* SassoonSansStd-Bold.otf in Resources */,
+				C449E8D529ED729A00F9409F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C449E8C929ED729900F9409F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C449E91929ED983F00F9409F /* Lotties.swift in Sources */,
+				C449E8DD29ED729A00F9409F /* ToddTalks.xcdatamodeld in Sources */,
+				C449E90229ED8AC600F9409F /* Prompt.swift in Sources */,
+				C449E90429ED8AF500F9409F /* LottieView.swift in Sources */,
+				C449E8ED29ED7D5600F9409F /* Color+App.swift in Sources */,
+				C449E8E629ED730600F9409F /* MilestoneView.swift in Sources */,
+				C449E8DA29ED729A00F9409F /* Persistence.swift in Sources */,
+				C449E8F629ED809000F9409F /* Fonts.swift in Sources */,
+				C449E91429ED92B300F9409F /* MilestoneCardView.swift in Sources */,
+				C449E91029ED8C8C00F9409F /* RaisedButtonStyle.swift in Sources */,
+				C449E8D129ED729900F9409F /* ToddTalksApp.swift in Sources */,
+				C449E8FE29ED8A5600F9409F /* AudioPlayer.swift in Sources */,
+				C449E91E29EE2AFC00F9409F /* HintTextView.swift in Sources */,
+				C449E91B29EE23F200F9409F /* ProgressBarView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C449E8DF29ED729A00F9409F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C449E8E029ED729A00F9409F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C449E8E229ED729A00F9409F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = PurpleColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ToddTalks/Preview Content\"";
+				DEVELOPMENT_TEAM = WRQ5UZA34D;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ToddTalks/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fernandoptr.ToddTalks;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C449E8E329ED729A00F9409F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = PurpleColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ToddTalks/Preview Content\"";
+				DEVELOPMENT_TEAM = WRQ5UZA34D;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ToddTalks/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fernandoptr.ToddTalks;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C449E8C829ED729900F9409F /* Build configuration list for PBXProject "ToddTalks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C449E8DF29ED729A00F9409F /* Debug */,
+				C449E8E029ED729A00F9409F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C449E8E129ED729A00F9409F /* Build configuration list for PBXNativeTarget "ToddTalks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C449E8E229ED729A00F9409F /* Debug */,
+				C449E8E329ED729A00F9409F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C449E90529ED8B4B00F9409F /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C449E90629ED8B4B00F9409F /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C449E90529ED8B4B00F9409F /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		C449E8DB29ED729A00F9409F /* ToddTalks.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C449E8DC29ED729A00F9409F /* ToddTalks.xcdatamodel */,
+			);
+			currentVersion = C449E8DC29ED729A00F9409F /* ToddTalks.xcdatamodel */;
+			path = ToddTalks.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = C449E8C529ED729900F9409F /* Project object */;
+}
