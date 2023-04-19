@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MilestoneView: View {
     var body: some View {
-        Text("Hello, hey!")
+        Text("Hello, kamu!")
     }
 }
 
