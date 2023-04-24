@@ -28,7 +28,7 @@ struct RaisedButtonStyle: ButtonStyle {
 struct RaisedButtonStyle_Previews: PreviewProvider {
     static var previews: some View {
         Button("Journey"){}
-            .frame(maxWidth: 160, maxHeight: 40)
+            .frame(maxWidth: 160, maxHeight: 44)
             .foregroundColor(.white)
             .buttonStyle(RaisedButtonStyle())
             .previewLayout(.sizeThatFits)

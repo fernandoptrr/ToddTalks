@@ -37,17 +37,19 @@ struct MilestoneCardView: View {
         • You're a natural mediator and prefer to avoid conflict, preferring instead to foster harmony and cooperation among those around you.
         """)
                 Spacer()
-                Button("Journey"){}
-                    .buttonStyle(RaisedButtonStyle())
-                
-                    .frame(maxHeight: 46)
-                    .foregroundColor(.white)
-                    .padding()
-                    .offset(y: -100)
+                Button("Journey"){
+                }
+                .buttonStyle(RaisedButtonStyle())
+                .frame(maxHeight: 44)
+                .foregroundColor(.white)
+                .padding()
+                .offset(y: -100)
             }
+            
             .padding()
             .offset(y: 100)
         }
+        
     }
 }
 
