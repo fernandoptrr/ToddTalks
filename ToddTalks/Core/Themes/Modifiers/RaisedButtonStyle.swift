@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct RaisedButtonStyle: ButtonStyle {
-    let offset: CGFloat = 4
+    let offset: CGFloat = 6
     
     func makeBody(configuration: Configuration) -> some View {
         ZStack {

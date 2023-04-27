@@ -31,7 +31,7 @@ struct HintCarousel: View {
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
             .fixedSize(horizontal: false, vertical: false)
             .background(
-                RoundedRectangle(cornerRadius: 18, style: .continuous)
+                RoundedRectangle(cornerRadius: 12, style: .continuous)
                     .strokeBorder(Color(uiColor: .systemGray5), lineWidth: 1)
             )
             .onAppear {

@@ -24,9 +24,9 @@ struct MilestoneView: View {
             if showingConfirmationDialog {
                 StageDialog(
                     isPresented: $showingConfirmationDialog,
-                    title: "Learn P, M, L",
-                    message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                    hintContent: nil,
+                    headline: "Learn P, M, L",
+                    subHeadline: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    tips: nil,
                     primaryButtonTitle: "Play Now",
                     primaryButtonAction: {},
                     secondaryButtonTitle: nil,

@@ -2,9 +2,9 @@ import SwiftUI
 
 struct StageDialog: View {
     @Binding var isPresented: Bool
-    let title: String
-    let message: String
-    let hintContent: [String]?
+    let headline: String
+    let subHeadline: String
+    let tips: [String]?
     let primaryButtonTitle: String
     let primaryButtonAction: () -> Void
     let secondaryButtonTitle: String?
@@ -13,28 +13,35 @@ struct StageDialog: View {
     
     @State private var offset: CGFloat = 1000
     
+    private func getStarIc(value: Int) -> String {
+        return starCount >= value ? "star.fill" : "star"
+    }
+    
     var body: some View {
         ZStack {
             Color.black
-                .opacity(0.7)
+                .opacity(0.64)
                 .onTapGesture {
                     close()
                 }
             ZStack {
                 RoundedRectangle(cornerRadius: 24, style: .continuous)
-                    .fill(Color.white.opacity(0.6))
-                    .offset(y: 4)
+                    .fill(Color(uiColor: .systemGray4))
+                    .offset(y: 6)
                 VStack {
-                    Text(title) .font(FontProvider.custom(.niceSugar, size: .title))
+                    Text(headline) .font(FontProvider.custom(.niceSugar, size: .title))
                         .padding(.top, 32)
-                        .padding(.bottom, 8)
-                    Text(message) .font(FontProvider.custom(.niceSugar, size: .caption2))
+                    Text(subHeadline)
+                        .font(FontProvider.custom(.niceSugar, size: .subheadline))
                         .multilineTextAlignment(.center)
-                        .padding(.bottom, 16)
-                        .padding(.horizontal)
-                    if hintContent != nil {
-                        HintCarousel(carouselContent: hintContent!)
-                            .frame(height: 90)
+                        .padding(.top, 4)
+                    if tips != nil {
+                        HintText(text: """
+                        • You're a loyal and caring friend!
+                        • You're empathetic and have a strong sense of fairness and justice.
+                        • You're a natural mediator and prefer to avoid conflict, preferring instead to foster harmony and cooperation among those around you.
+                        """)
+                        .padding(.top, 16)
                     }
                     HStack {
                         Button(primaryButtonTitle) {
@@ -54,7 +61,9 @@ struct StageDialog: View {
                     .buttonStyle(RaisedButtonStyle())
                     .foregroundColor(.white)
                     .frame(height: 44)
+                    .padding(.top, 16)
                     .padding()
+
                 }
                 .padding()
                 .background(.white)
@@ -71,18 +80,18 @@ struct StageDialog: View {
                 }
                 .overlay(alignment: .top){
                     HStack {
-                        Image(systemName: "star.fill")
+                        Image(systemName: getStarIc(value: 1))
                             .foregroundColor(.yellow)
                             .font(.system(size: 48))
                             .rotationEffect(.degrees(58))
                             .shimmering()
                             .offset(x: 6)
-                        Image(systemName: "star.fill")
+                        Image(systemName: getStarIc(value: 2))
                             .foregroundColor(.yellow)
                             .font(.system(size: 56))
                             .shimmering()
                             .offset(y: -14)
-                        Image(systemName: "star")
+                        Image(systemName: getStarIc(value: 3))
                             .foregroundColor(.yellow)
                             .font(.system(size: 48))
                             .rotationEffect(.degrees(-58))
@@ -118,10 +127,10 @@ struct DialogView_Previews: PreviewProvider {
     static var previews: some View {
         StageDialog(
             isPresented: .constant(true),
-            title: "Learn P, M, L",
-            message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            hintContent: nil,
-            primaryButtonTitle: "Play Now",
+            headline: "Gesture 101",
+            subHeadline: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+            tips: ["sss", "ss"],
+            primaryButtonTitle: "Start",
             primaryButtonAction: {},
             secondaryButtonTitle: nil,
             secondaryButtonAction: nil,
