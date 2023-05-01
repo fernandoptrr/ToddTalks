@@ -32,7 +32,26 @@ struct MilestoneView: View  {
                     GeometryReader { proxy in
                         let size = proxy.size
 
-                        MilestoneCardView(milestoneCard: cards[0])
+                        MilestoneCardView(
+                            illSrc: Lotties.crab,
+                            headline: "12 - 24 Months",
+                            subHeadline: "Pada tahap ini diharapkan sang anak dapat mengucapkan kata “p” , “w”, “z” dan “t” dengan benar.",
+                            progLabel: "5 / 30 Stars",
+                            progVal: 12,
+                            progMaxVal: 30,
+                            tips: ["""
+                            • You're a loyal and caring friend!
+                            • You're empathetic and have a strong sense of fairness and justice.
+                            """,
+                            """
+                            • You're a loyal and caring friend!
+                            • You're empathetic and have a strong sense of fairness and justice.
+                            """,
+                            """
+                            • You're a loyal and caring friend!
+                            • You're empathetic and have a strong sense of fairness and justice.
+                            """]
+                        )
                             .aspectRatio(CGSize(width: 6.8, height: 10), contentMode: .fill)
                             .frame(width:size.width)
                             .cornerRadius(40)

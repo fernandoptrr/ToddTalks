@@ -109,11 +109,26 @@ struct SnapCarouselView <Content: View, T: Identifiable> : View {
 }
 
 struct SnapCarouselView_Previews: PreviewProvider {
-    
-//    static let data = MilestoneCardData()
-    
     static var previews: some View {
-        MilestoneCardView(milestoneCard: MilestoneCardData().milestoneCard[0])
-//            .environmentObject(data)
+        MilestoneCardView(
+            illSrc: Lotties.crab,
+            headline: "12 - 24 Months",
+            subHeadline: "Pada tahap ini diharapkan sang anak dapat mengucapkan kata “p” , “w”, “z” dan “t” dengan benar.",
+            progLabel: "5 / 30 Stars",
+            progVal: 12,
+            progMaxVal: 30,
+            tips: ["""
+            • You're a loyal and caring friend!
+            • You're empathetic and have a strong sense of fairness and justice.
+            """,
+            """
+            • You're a loyal and caring friend!
+            • You're empathetic and have a strong sense of fairness and justice.
+            """,
+            """
+            • You're a loyal and caring friend!
+            • You're empathetic and have a strong sense of fairness and justice.
+            """]
+        )
     }
 }
