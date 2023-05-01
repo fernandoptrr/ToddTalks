@@ -52,7 +52,7 @@ struct MilestoneCardView: View {
                     .padding(.top, 16)
             }
             .padding()
-        }
+        } 
         .fixedSize(horizontal: false, vertical: true)
     }
 }
