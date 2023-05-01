@@ -43,7 +43,6 @@ struct MilestoneView: View  {
                 .padding(.bottom, 50)
                 .padding(.top, 25)
 
-                //indicator
                 HStack (spacing: 10){
                     ForEach(cards.indices) { index in
                         Circle()

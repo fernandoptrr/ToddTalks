@@ -15,6 +15,11 @@
 		6A7693F429F83413008A1B65 /* SnapCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7693F329F83413008A1B65 /* SnapCarouselView.swift */; };
 		6A7693F629F834BB008A1B65 /* MilestoneCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7693F529F834BB008A1B65 /* MilestoneCard.swift */; };
 		6A76940029F83677008A1B65 /* StageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7693FF29F83677008A1B65 /* StageButton.swift */; };
+		C40589CD29F7683700E76068 /* JourneyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40589CC29F7683700E76068 /* JourneyView.swift */; };
+		C40589D229F76B5500E76068 /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40589D129F76B5500E76068 /* Stage.swift */; };
+		C40589DE29F77CE600E76068 /* StageCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40589DD29F77CE600E76068 /* StageCircle.swift */; };
+		C420A64629F630D800C028D8 /* HintCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C420A64529F630D800C028D8 /* HintCarousel.swift */; };
+		C420A64829F658E100C028D8 /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C420A64729F658E100C028D8 /* IndicatorView.swift */; };
 		C449E8D129ED729900F9409F /* ToddTalksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C449E8D029ED729900F9409F /* ToddTalksApp.swift */; };
 		C449E8D529ED729A00F9409F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C449E8D429ED729A00F9409F /* Assets.xcassets */; };
 		C449E8D829ED729A00F9409F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C449E8D729ED729A00F9409F /* Preview Assets.xcassets */; };
@@ -37,7 +42,9 @@
 		C449E91729ED983800F9409F /* crab.json in Resources */ = {isa = PBXBuildFile; fileRef = C449E91629ED983800F9409F /* crab.json */; };
 		C449E91929ED983F00F9409F /* Lotties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C449E91829ED983F00F9409F /* Lotties.swift */; };
 		C449E91B29EE23F200F9409F /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C449E91A29EE23F200F9409F /* ProgressBarView.swift */; };
-		C449E91E29EE2AFC00F9409F /* HintTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C449E91D29EE2AFC00F9409F /* HintTextView.swift */; };
+		C449E91E29EE2AFC00F9409F /* HintText.swift in Sources */ = {isa = PBXBuildFile; fileRef = C449E91D29EE2AFC00F9409F /* HintText.swift */; };
+		C4BAF53029F6D2D70077DD6D /* ShimmerEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BAF52F29F6D2D70077DD6D /* ShimmerEffect.swift */; };
+		C4C30C1629F61B5B006EC836 /* StageDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C30C1529F61B5B006EC836 /* StageDialog.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +56,11 @@
 		6A7693F329F83413008A1B65 /* SnapCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapCarouselView.swift; sourceTree = "<group>"; };
 		6A7693F529F834BB008A1B65 /* MilestoneCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MilestoneCard.swift; path = ToddTalks/Features/Milestone/Presenters/Views/MilestoneCard.swift; sourceTree = SOURCE_ROOT; };
 		6A7693FF29F83677008A1B65 /* StageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageButton.swift; sourceTree = "<group>"; };
+		C40589CC29F7683700E76068 /* JourneyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyView.swift; sourceTree = "<group>"; };
+		C40589D129F76B5500E76068 /* Stage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stage.swift; sourceTree = "<group>"; };
+		C40589DD29F77CE600E76068 /* StageCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageCircle.swift; sourceTree = "<group>"; };
+		C420A64529F630D800C028D8 /* HintCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintCarousel.swift; sourceTree = "<group>"; };
+		C420A64729F658E100C028D8 /* IndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
 		C449E8CD29ED729900F9409F /* ToddTalks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToddTalks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C449E8D029ED729900F9409F /* ToddTalksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToddTalksApp.swift; sourceTree = "<group>"; };
 		C449E8D429ED729A00F9409F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -72,7 +84,9 @@
 		C449E91629ED983800F9409F /* crab.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = crab.json; sourceTree = "<group>"; };
 		C449E91829ED983F00F9409F /* Lotties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lotties.swift; sourceTree = "<group>"; };
 		C449E91A29EE23F200F9409F /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
-		C449E91D29EE2AFC00F9409F /* HintTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintTextView.swift; sourceTree = "<group>"; };
+		C449E91D29EE2AFC00F9409F /* HintText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintText.swift; sourceTree = "<group>"; };
+		C4BAF52F29F6D2D70077DD6D /* ShimmerEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerEffect.swift; sourceTree = "<group>"; };
+		C4C30C1529F61B5B006EC836 /* StageDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageDialog.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +138,25 @@
 			isa = PBXGroup;
 			children = (
 				6A7693ED29F82D8E008A1B65 /* VideoModalSheetView.swift */,
+		C40589CE29F76B3500E76068 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C40589D129F76B5500E76068 /* Stage.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C40589CF29F76B3C00E76068 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C40589DC29F779E300E76068 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C40589CC29F7683700E76068 /* JourneyView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -140,6 +173,12 @@
 			isa = PBXGroup;
 			children = (
 				6A7693FD29F83653008A1B65 /* Presenters */,
+		C420A64229F6246E00C028D8 /* Journey */ = {
+			isa = PBXGroup;
+			children = (
+				C40589CF29F76B3C00E76068 /* ViewModels */,
+				C40589CE29F76B3500E76068 /* Models */,
+				C420A64329F6247A00C028D8 /* Presenters */,
 			);
 			path = Journey;
 			sourceTree = "<group>";
@@ -148,6 +187,11 @@
 			isa = PBXGroup;
 			children = (
 				6A7693FE29F83662008A1B65 /* Components */,
+		C420A64329F6247A00C028D8 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				C420A64429F6248400C028D8 /* Components */,
+				C40589DC29F779E300E76068 /* Views */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -156,6 +200,11 @@
 			isa = PBXGroup;
 			children = (
 				6A7693FF29F83677008A1B65 /* StageButton.swift */,
+		C420A64429F6248400C028D8 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C4C30C1529F61B5B006EC836 /* StageDialog.swift */,
+				C40589DD29F77CE600E76068 /* StageCircle.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -273,6 +322,7 @@
 			isa = PBXGroup;
 			children = (
 				C449E90F29ED8C8C00F9409F /* RaisedButtonStyle.swift */,
+				C4BAF52F29F6D2D70077DD6D /* ShimmerEffect.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -306,6 +356,7 @@
 			children = (
 				6A7693FC29F83648008A1B65 /* Journey */,
 				6A7693F729F835A9008A1B65 /* VideoSheet */,
+				C420A64229F6246E00C028D8 /* Journey */,
 				C449E90929ED8B8B00F9409F /* Milestone */,
 			);
 			path = Features;
@@ -376,7 +427,9 @@
 			isa = PBXGroup;
 			children = (
 				C449E91A29EE23F200F9409F /* ProgressBarView.swift */,
-				C449E91D29EE2AFC00F9409F /* HintTextView.swift */,
+				C449E91D29EE2AFC00F9409F /* HintText.swift */,
+				C420A64529F630D800C028D8 /* HintCarousel.swift */,
+				C420A64729F658E100C028D8 /* IndicatorView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -471,6 +524,7 @@
 				C449E8DD29ED729A00F9409F /* ToddTalks.xcdatamodeld in Sources */,
 				C449E90229ED8AC600F9409F /* Prompt.swift in Sources */,
 				C449E90429ED8AF500F9409F /* LottieView.swift in Sources */,
+				C40589DE29F77CE600E76068 /* StageCircle.swift in Sources */,
 				C449E8ED29ED7D5600F9409F /* Color+App.swift in Sources */,
 				6A7693F229F83384008A1B65 /* MilestoneCardData.swift in Sources */,
 				6A76940029F83677008A1B65 /* StageButton.swift in Sources */,
@@ -480,10 +534,16 @@
 				6A7693F629F834BB008A1B65 /* MilestoneCard.swift in Sources */,
 				6A7693F029F82EC2008A1B65 /* PlayVideoButton.swift in Sources */,
 				C449E91429ED92B300F9409F /* MilestoneCardView.swift in Sources */,
+				C4C30C1629F61B5B006EC836 /* StageDialog.swift in Sources */,
 				C449E91029ED8C8C00F9409F /* RaisedButtonStyle.swift in Sources */,
+				C420A64829F658E100C028D8 /* IndicatorView.swift in Sources */,
 				C449E8D129ED729900F9409F /* ToddTalksApp.swift in Sources */,
 				C449E8FE29ED8A5600F9409F /* AudioPlayer.swift in Sources */,
-				C449E91E29EE2AFC00F9409F /* HintTextView.swift in Sources */,
+				C40589D229F76B5500E76068 /* Stage.swift in Sources */,
+				C449E91E29EE2AFC00F9409F /* HintText.swift in Sources */,
+				C40589CD29F7683700E76068 /* JourneyView.swift in Sources */,
+				C4BAF53029F6D2D70077DD6D /* ShimmerEffect.swift in Sources */,
+				C420A64629F630D800C028D8 /* HintCarousel.swift in Sources */,
 				C449E91B29EE23F200F9409F /* ProgressBarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

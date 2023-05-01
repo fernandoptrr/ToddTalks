@@ -13,15 +13,18 @@ struct ProgressBarView: View {
     var maximum: Int
     
     var body: some View {
-        VStack {
+        HStack(alignment: .center) {
             Gauge(value: Double(value), in: 0...Double(maximum)) {}
-                .gaugeStyle(.accessoryLinearCapacity)
-                .scaleEffect(x: 1, y: 4, anchor: .center)
-                .tint(Color.primaryColor)
-            Text(label)
-                .font(FontProvider.custom(.sassoon, size: .subheadline))
-                .multilineTextAlignment(.center)
-                .padding(.top, 8)
+                .gaugeStyle(.linearCapacity)
+                .scaleEffect(x: 1, y: 1.3, anchor: .center)
+                .tint(Color.greenColor)
+                .overlay(alignment: .center) {
+                    Text(label)
+                        .font(FontProvider.custom(.sassoon, size: .caption))
+                }
+            Image(systemName: "shippingbox.fill")
+                .foregroundColor(.greenColor)
+                .font(.title)
         }
         .animation(.spring(), value: value)
         

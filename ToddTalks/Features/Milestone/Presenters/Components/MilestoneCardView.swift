@@ -8,59 +8,81 @@
 import SwiftUI
 
 struct MilestoneCardView: View {
+    let illSrc: String
+    let headline: String
+    let subHeadline: String
+    let progLabel: String
+    let progVal: Int
+    let progMaxVal: Int
+    let tips: [String]
     
-//    @EnvironmentObject var data: MilestoneCardData
-    var milestoneCard: MilestoneCard
-    
-    let offset: CGFloat = 6
+    private let offset: CGFloat = 6
     
     var body: some View {
         ZStack(alignment: .top){
             RoundedRectangle(cornerRadius: 32, style: .continuous)
-                .fill(Color(uiColor: .systemGray6))
+                .fill(Color(uiColor: .systemGray4))
                 .offset(y: offset)
             RoundedRectangle(cornerRadius: 32, style: .continuous)
                 .fill(.white)
-            LottieView(name: milestoneCard.animationName, loopMode: .loop, animationSpeed: 0.8)
-                .frame(height: 180)
-                .offset(y: -80)
             VStack {
-                Text("\(milestoneCard.startMonth) - \(milestoneCard.endMonth) Bulan")
+                Text(headline)
                     .font(FontProvider.custom(.niceSugar, size: .title))
-                    .padding(.bottom, 8)
-                Text(milestoneCard.description)
+                    .padding(.top, 84)
+                    .overlay {
+                        LottieView(name: illSrc, loopMode: .loop, animationSpeed: 0.8)
+                            .frame(height: 180)
+                            .offset(y: -72)
+                    }
+                Text(subHeadline)
                     .font(FontProvider.custom(.niceSugar, size: .subheadline))
+                    .fixedSize(horizontal: false, vertical: true)
                     .multilineTextAlignment(.center)
-                    .padding(.bottom, 32)
-                ProgressBarView(label: "\(milestoneCard.progress) / \(milestoneCard.totalStage) Bintang", value: milestoneCard.progress, maximum: milestoneCard.totalStage)
-                    .padding(.horizontal)
-                    .padding(.bottom, 16)
-                HintTextView(text: milestoneCard.hintText)
-                Spacer()
+                    .padding(.top, 8)
+                ProgressBarView(label: progLabel, value: progVal, maximum: progMaxVal)
+                    .padding(.top, 32)
+                HintCarousel(carouselContent: tips)
+                    .frame(height: 100)
+                    .padding(.top, 8)
                 Button("Journey"){}
                     .buttonStyle(RaisedButtonStyle())
-                
-                    .frame(maxHeight: 46)
+                    .frame(height: 44)
                     .foregroundColor(.white)
                     .padding()
-                    .offset(y: -100)
+                    .padding(.top, 16)
             }
             .padding()
-            .offset(y: 100)
-        }
-        .padding(.horizontal, 40)
+        } 
+        .fixedSize(horizontal: false, vertical: true)
     }
 }
 
 struct MilestoneCardView_Previews: PreviewProvider {
-    
-//    static let data = MilestoneCardData()
-    
     static var previews: some View {
         ZStack {
-            Color.purpleColor.ignoresSafeArea()
-            MilestoneCardView(milestoneCard: MilestoneCardData().milestoneCard[1])
-//                            .environmentObject(data)
+            Color.blueColor.ignoresSafeArea()
+            MilestoneCardView(
+                illSrc: Lotties.crab,
+                headline: "12 - 24 Months",
+                subHeadline: "Pada tahap ini diharapkan sang anak dapat mengucapkan kata “p” , “w”, “z” dan “t” dengan benar.",
+                progLabel: "5 / 30 Stars",
+                progVal: 12,
+                progMaxVal: 30,
+                tips: ["""
+                • You're a loyal and caring friend!
+                • You're empathetic and have a strong sense of fairness and justice.
+                """,
+                """
+                • You're a loyal and caring friend!
+                • You're empathetic and have a strong sense of fairness and justice.
+                """,
+                """
+                • You're a loyal and caring friend!
+                • You're empathetic and have a strong sense of fairness and justice.
+                """]
+            )
+            .padding(.horizontal, 32)
+            .padding(.vertical, 84)
         }
     }
 }
