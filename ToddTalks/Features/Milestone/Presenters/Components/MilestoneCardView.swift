@@ -40,12 +40,14 @@ struct MilestoneCardView: View {
                     .frame(height: 100)
                     .padding(.top, 8)
                     .foregroundColor(.black)
-                Button("Journey"){}
-                    .buttonStyle(RaisedButtonStyle())
-                    .frame(height: 44)
-                    .foregroundColor(.white)
-                    .padding()
-                    .padding(.top, 16)
+                NavigationLink(destination: JourneyView()) {
+                    Text("Journey")
+                }
+                .buttonStyle(RaisedButtonStyle())
+                .frame(height: 44)
+                .foregroundColor(.white)
+                .padding()
+                .padding(.top, 16)
             }
             .foregroundColor(.primaryColor)
             .padding()

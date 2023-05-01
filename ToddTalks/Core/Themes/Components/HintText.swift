@@ -17,7 +17,7 @@ struct HintText: View {
             VStack(alignment: .leading) {
                 Text(text)
                     .lineSpacing(4)
-                    .font(FontProvider.custom(.niceSugar, size: .caption))
+                    .font(FontProvider.custom(.sassoon, size: .caption))
                     .multilineTextAlignment(.leading)
                     .padding(.top, 4)
             }

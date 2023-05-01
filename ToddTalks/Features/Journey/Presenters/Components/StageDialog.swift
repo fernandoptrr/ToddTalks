@@ -2,19 +2,17 @@ import SwiftUI
 
 struct StageDialog: View {
     @Binding var isPresented: Bool
-    let headline: String
-    let subHeadline: String
-    let tips: [String]?
-    let primaryButtonTitle: String
+    let stage: Stage
+    var primaryButtonTitle: String = "Start"
     let primaryButtonAction: () -> Void
     let secondaryButtonTitle: String?
     let secondaryButtonAction: (() -> Void)?
-    let starCount: Int
     
     @State private var offset: CGFloat = 1000
+
     
     private func getStarIc(value: Int) -> String {
-        return starCount >= value ? "star.fill" : "star"
+        return stage.starCount >= value ? "star.fill" : "star"
     }
     
     var body: some View {
@@ -29,18 +27,16 @@ struct StageDialog: View {
                     .fill(Color(uiColor: .systemGray4))
                     .offset(y: 6)
                 VStack {
-                    Text(headline) .font(FontProvider.custom(.niceSugar, size: .title))
+                    Text(stage.title)
+                        .font(FontProvider.custom(.niceSugar, size: .title))
+                        .foregroundColor(.primaryColor)
                         .padding(.top, 32)
-                    Text(subHeadline)
-                        .font(FontProvider.custom(.niceSugar, size: .subheadline))
+                    Text(stage.body)
+                        .font(FontProvider.custom(.sassoon, size: .body))
                         .multilineTextAlignment(.center)
                         .padding(.top, 4)
-                    if tips != nil {
-                        HintText(text: """
-                        • You're a loyal and caring friend!
-                        • You're empathetic and have a strong sense of fairness and justice.
-                        • You're a natural mediator and prefer to avoid conflict, preferring instead to foster harmony and cooperation among those around you.
-                        """)
+                    if stage.tips != nil {
+                        HintText(text: stage.tips!)
                         .padding(.top, 16)
                     }
                     HStack {
@@ -63,7 +59,7 @@ struct StageDialog: View {
                     .frame(height: 44)
                     .padding(.top, 16)
                     .padding()
-
+                    
                 }
                 .padding()
                 .background(.white)
@@ -127,14 +123,10 @@ struct DialogView_Previews: PreviewProvider {
     static var previews: some View {
         StageDialog(
             isPresented: .constant(true),
-            headline: "Gesture 101",
-            subHeadline: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
-            tips: ["sss", "ss"],
-            primaryButtonTitle: "Start",
+            stage:             Stage(illPath: "play.fill", title: "Gesture 1", body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.", tips: "haha", starCount: 3),
             primaryButtonAction: {},
             secondaryButtonTitle: nil,
-            secondaryButtonAction: nil,
-            starCount: 3
+            secondaryButtonAction: nil
         )
     }
 }

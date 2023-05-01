@@ -9,17 +9,61 @@ import SwiftUI
 
 struct StageCircle: View {
     let stage: Stage
-
+    @Binding var showStageDialog: Bool
+    
+    private func getStarIc(value: Int) -> String {
+        return stage.starCount >= value ? "star.fill" : "star"
+    }
+    
     var body: some View {
-        Button("", action: {})
-            .frame(width: 50, height: 50)
-            .foregroundColor(.white)
-            .buttonStyle(RaisedButtonStyle())
+        VStack(alignment: .center) {
+            HStack {
+                Image(systemName: getStarIc(value: 1))
+                    .foregroundColor(.yellow)
+                    .font(.system(size: 18))
+                    .rotationEffect(.degrees(45))
+                    .shimmering()
+                    .offset(y: 8)
+                Image(systemName: getStarIc(value: 2))
+                    .foregroundColor(.yellow)
+                    .font(.system(size: 18))
+                    .shimmering()
+                    .offset(y: -4)
+                Image(systemName: getStarIc(value: 3))
+                    .foregroundColor(.yellow)
+                    .font(.system(size: 18))
+                    .rotationEffect(.degrees(-45))
+                    .shimmering()
+                    .offset(y: 8)
+            }
+            .shadow(color: .yellow ,radius: 4)
+            Button("", action: {
+                showStageDialog = true
+            })
+                .frame(width: 40, height: 40)
+                .foregroundColor(.white)
+                .buttonStyle(RaisedButtonStyle(radius: 100))
+                .overlay{
+                    Image(systemName: "play.fill")
+                        .font(.system(size: 16))
+                        .foregroundColor(.white)
+                }
+            Text(stage.title)
+                .font(FontProvider.custom(.sassoon, size: .body).weight(.medium))
+                .multilineTextAlignment(.center)
+                .fixedSize(horizontal: false, vertical: true)
+                .lineSpacing(8)
+                .lineLimit(3)
+                .padding(.top, 4)
+            Spacer()
+        }
     }
 }
 
 struct StageCircle_Previews: PreviewProvider {
     static var previews: some View {
-        StageCircle(stage: Stage(name: "jaja"))
+        StageCircle(stage: Stage(illPath: "play.fill", title: "Gesture 1", body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.", tips: "haha", starCount: 3),
+                    showStageDialog: .constant(false))
+        .previewLayout(.sizeThatFits)
     }
 }

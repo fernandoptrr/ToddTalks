@@ -12,29 +12,31 @@ struct MilestoneView: View  {
     @StateObject var viewModel = MilestoneViewModel()
 
     var body: some View {
-        ZStack{
-            viewModel.milestones[currentIndex].colorTheme
-                .ignoresSafeArea()
-                .animation(.easeOut, value: currentIndex )
-            VStack{
-                Text("KataKecil")
-                    .font(FontProvider.custom(.niceSugar, size: .largeTitle))
-                    .foregroundColor(.primaryColor)
-                    .padding(.top,24)
-                SnapCarouselView(trailingSpace: 64, index: $currentIndex, items: viewModel.milestones){ milestone in
-                    MilestoneCardView(
-                        milestone: milestone,
-                        illScale: 1.8
-                    )
-                }
-                .padding(.top, 64)
-                HStack (spacing: 6){
-                    ForEach(viewModel.milestones.indices, id: \.self) { index in
-                        Circle()
-                            .fill(currentIndex == index ? .primaryColor : Color(.systemGray4))
-                            .frame(width: 10, height: 10)
-                            .scaleEffect(currentIndex == index ? 1 : 0.8)
-                            .animation(.spring(), value: currentIndex == index )
+        NavigationStack {
+            ZStack{
+                viewModel.milestones[currentIndex].colorTheme
+                    .ignoresSafeArea()
+                    .animation(.easeOut, value: currentIndex )
+                VStack{
+                    Text("KataKecil")
+                        .font(FontProvider.custom(.niceSugar, size: .largeTitle))
+                        .foregroundColor(.primaryColor)
+                        .padding(.top,24)
+                    SnapCarouselView(trailingSpace: 64, index: $currentIndex, items: viewModel.milestones){ milestone in
+                        MilestoneCardView(
+                            milestone: milestone,
+                            illScale: 1.8
+                        )
+                    }
+                    .padding(.top, 64)
+                    HStack (spacing: 6){
+                        ForEach(viewModel.milestones.indices, id: \.self) { index in
+                            Circle()
+                                .fill(currentIndex == index ? .primaryColor : Color(.systemGray4))
+                                .frame(width: 10, height: 10)
+                                .scaleEffect(currentIndex == index ? 1 : 0.8)
+                                .animation(.spring(), value: currentIndex == index )
+                        }
                     }
                 }
             }

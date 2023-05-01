@@ -9,5 +9,9 @@ import Foundation
 
 struct Stage: Hashable, Identifiable {
     let id = UUID()
-    let name: String
+    let illPath: String
+    let title: String
+    let body: String
+    let tips: String?
+    let starCount: Int
 }
