@@ -8,14 +8,8 @@
 import SwiftUI
 
 struct MilestoneCardView: View {
-    let illSrc: String
-    let headline: String
-    let subHeadline: String
-    let progLabel: String
-    let progVal: Int
-    let progMaxVal: Int
-    let tips: [String]
-    
+    let milestone: Milestone
+    var illScale: CGFloat = 1.6
     private let offset: CGFloat = 6
     
     var body: some View {
@@ -26,24 +20,26 @@ struct MilestoneCardView: View {
             RoundedRectangle(cornerRadius: 32, style: .continuous)
                 .fill(.white)
             VStack {
-                Text(headline)
+                Text(milestone.title)
                     .font(FontProvider.custom(.niceSugar, size: .title))
                     .padding(.top, 84)
                     .overlay {
-                        LottieView(name: illSrc, loopMode: .loop, animationSpeed: 0.8)
-                            .frame(height: 180)
+                        LottieView(name: milestone.illPath, loopMode: .loop, animationSpeed: 0.8)
+                            .scaleEffect(illScale)
                             .offset(y: -72)
                     }
-                Text(subHeadline)
-                    .font(FontProvider.custom(.niceSugar, size: .subheadline))
+                Text(milestone.body)
+                    .font(FontProvider.custom(.sassoon, size: .body)
+                        .weight(.medium))
                     .fixedSize(horizontal: false, vertical: true)
                     .multilineTextAlignment(.center)
                     .padding(.top, 8)
-                ProgressBarView(label: progLabel, value: progVal, maximum: progMaxVal)
+                ProgressBarView(label: milestone.progLabel, value: milestone.progVal, maximum: milestone.progMaxVal)
                     .padding(.top, 32)
-                HintCarousel(carouselContent: tips)
+                HintCarousel(carouselContent: milestone.tips)
                     .frame(height: 100)
                     .padding(.top, 8)
+                    .foregroundColor(.black)
                 Button("Journey"){}
                     .buttonStyle(RaisedButtonStyle())
                     .frame(height: 44)
@@ -51,8 +47,9 @@ struct MilestoneCardView: View {
                     .padding()
                     .padding(.top, 16)
             }
+            .foregroundColor(.primaryColor)
             .padding()
-        } 
+        }
         .fixedSize(horizontal: false, vertical: true)
     }
 }
@@ -62,13 +59,13 @@ struct MilestoneCardView_Previews: PreviewProvider {
         ZStack {
             Color.blueColor.ignoresSafeArea()
             MilestoneCardView(
-                illSrc: Lotties.crab,
-                headline: "12 - 24 Months",
-                subHeadline: "Pada tahap ini diharapkan sang anak dapat mengucapkan kata “p” , “w”, “z” dan “t” dengan benar.",
-                progLabel: "5 / 30 Stars",
-                progVal: 12,
-                progMaxVal: 30,
-                tips: ["""
+                milestone: Milestone(
+                    illPath: Lotties.baby,
+                    title: "12 - 24 Bulan",
+                    body: "Pada tahap ini diharapkan sang anak dapat mengucapkan kata “p” , “w”, “z” dan “t” dengan benar.",
+                    progVal: 5,
+                    progMaxVal: 30,
+                    tips: ["""
                 • You're a loyal and caring friend!
                 • You're empathetic and have a strong sense of fairness and justice.
                 """,
@@ -79,7 +76,9 @@ struct MilestoneCardView_Previews: PreviewProvider {
                 """
                 • You're a loyal and caring friend!
                 • You're empathetic and have a strong sense of fairness and justice.
-                """]
+                """],
+                    colorTheme: .purpleColor),
+                illScale: 1.8
             )
             .padding(.horizontal, 32)
             .padding(.vertical, 84)

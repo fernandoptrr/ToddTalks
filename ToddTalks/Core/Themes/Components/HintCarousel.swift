@@ -20,12 +20,11 @@ struct HintCarousel: View {
                     ScrollView(.vertical,showsIndicators: true) {
                         Text(carouselContent[index])
                             .lineSpacing(4)
-                            .font(FontProvider.custom(.niceSugar, size: .caption2))
+                            .font(FontProvider.custom(.sassoon, size: .caption))
                             .multilineTextAlignment(.leading)
                             .padding(.top, 4)
                     }
                     .padding()
-                    .foregroundColor(.black)
                 }
             }
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))

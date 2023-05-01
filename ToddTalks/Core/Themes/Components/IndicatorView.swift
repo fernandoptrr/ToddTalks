@@ -19,6 +19,7 @@ struct IndicatorView: View {
                 Circle()
                     .fill(index == currentIndex ? indicatorColor : Color(.systemGray4))
                     .frame(width: indicatorSize, height: indicatorSize)
+                    .animation(.spring(), value: currentIndex == index )
             }
         }
     }

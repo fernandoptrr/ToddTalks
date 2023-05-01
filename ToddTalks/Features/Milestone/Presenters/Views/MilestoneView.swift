@@ -8,66 +8,32 @@
 import SwiftUI
 
 struct MilestoneView: View  {
-
     @State var currentIndex: Int = 0
-    @State var cards: [MilestoneCard] = data
-
+    @StateObject var viewModel = MilestoneViewModel()
 
     var body: some View {
-        
         ZStack{
-            
-            Color.pink
+            viewModel.milestones[currentIndex].colorTheme
                 .ignoresSafeArea()
-
+                .animation(.easeOut, value: currentIndex )
             VStack{
-                
                 Text("KataKecil")
-                    .font(.system(size:40))
-                    .padding(.top,20)
-                    
-                
-                SnapCarouselView(trailingSpace: 60, index: $currentIndex, items: cards){ card in
-
-                    GeometryReader { proxy in
-                        let size = proxy.size
-
-                        MilestoneCardView(
-                            illSrc: Lotties.crab,
-                            headline: "12 - 24 Months",
-                            subHeadline: "Pada tahap ini diharapkan sang anak dapat mengucapkan kata “p” , “w”, “z” dan “t” dengan benar.",
-                            progLabel: "5 / 30 Stars",
-                            progVal: 12,
-                            progMaxVal: 30,
-                            tips: ["""
-                            • You're a loyal and caring friend!
-                            • You're empathetic and have a strong sense of fairness and justice.
-                            """,
-                            """
-                            • You're a loyal and caring friend!
-                            • You're empathetic and have a strong sense of fairness and justice.
-                            """,
-                            """
-                            • You're a loyal and caring friend!
-                            • You're empathetic and have a strong sense of fairness and justice.
-                            """]
-                        )
-                            .aspectRatio(CGSize(width: 6.8, height: 10), contentMode: .fill)
-                            .frame(width:size.width)
-                            .cornerRadius(40)
-                            .shadow(color: .gray, radius: 2)
-                            
-                    }
+                    .font(FontProvider.custom(.niceSugar, size: .largeTitle))
+                    .foregroundColor(.primaryColor)
+                    .padding(.top,24)
+                SnapCarouselView(trailingSpace: 64, index: $currentIndex, items: viewModel.milestones){ milestone in
+                    MilestoneCardView(
+                        milestone: milestone,
+                        illScale: 1.8
+                    )
                 }
-                .padding(.bottom, 50)
-                .padding(.top, 25)
-
-                HStack (spacing: 10){
-                    ForEach(cards.indices) { index in
+                .padding(.top, 64)
+                HStack (spacing: 6){
+                    ForEach(viewModel.milestones.indices, id: \.self) { index in
                         Circle()
-                            .fill(.black.opacity(currentIndex == index ? 1: 0.1))
+                            .fill(currentIndex == index ? .primaryColor : Color(.systemGray4))
                             .frame(width: 10, height: 10)
-                            .scaleEffect(currentIndex == index ? 1.4 : 1)
+                            .scaleEffect(currentIndex == index ? 1 : 0.8)
                             .animation(.spring(), value: currentIndex == index )
                     }
                 }

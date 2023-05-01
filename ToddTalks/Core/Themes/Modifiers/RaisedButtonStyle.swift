@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct RaisedButtonStyle: ButtonStyle {
-    let offset: CGFloat = 6
+    let offset: CGFloat = 4
     
     func makeBody(configuration: Configuration) -> some View {
         ZStack {
@@ -19,7 +19,9 @@ struct RaisedButtonStyle: ButtonStyle {
                 .fill(Color.primaryColor)
                 .offset(y: configuration.isPressed ? offset : 0)
             configuration.label
-                .font(FontProvider.custom(.sassoonBold, size: .body))
+                .font(FontProvider.custom(.sassoon, size: .body)
+                    .weight(.bold)
+                )
                 .offset(y: configuration.isPressed ? offset : 0)
         }
     }

@@ -20,7 +20,8 @@ struct ProgressBarView: View {
                 .tint(Color.greenColor)
                 .overlay(alignment: .center) {
                     Text(label)
-                        .font(FontProvider.custom(.sassoon, size: .caption))
+                        .font(FontProvider.custom(.sassoon, size: .caption)
+                            .weight(.medium))
                 }
             Image(systemName: "shippingbox.fill")
                 .foregroundColor(.greenColor)

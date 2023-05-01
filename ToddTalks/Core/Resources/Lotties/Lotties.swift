@@ -9,6 +9,6 @@
 import Foundation
 
 enum Lotties {
-    static let crab = "crab"
+    static let baby = "baby"
 }
 

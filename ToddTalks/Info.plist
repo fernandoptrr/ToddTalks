@@ -4,10 +4,10 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string>/Core/Themes/Fonts/Sassoon/SassoonSansStd.otf</string>
-		<string>/Core/Themes/Fonts/Sassoon/SassoonSansStd-Medium.otf</string>
-		<string>/Core/Themes/Fonts/Sassoon/SassoonSansStd-Bold.otf</string>
-		<string>/Core/Themes/Fonts/NiceSugar/NiceSugar.ttf</string>
+		<string>SassoonSansStd.otf</string>
+		<string>SassoonSansStd-Medium.otf</string>
+		<string>SassoonSansStd-Bold.otf</string>
+		<string>NiceSugar.otf</string>
 	</array>
 </dict>
 </plist>
