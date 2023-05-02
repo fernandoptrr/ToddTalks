@@ -18,7 +18,7 @@ struct StageDialog: View {
     var body: some View {
         ZStack {
             Color.black
-                .opacity(0.64)
+                .opacity(0.6)
                 .onTapGesture {
                     close()
                 }
@@ -109,6 +109,7 @@ struct StageDialog: View {
             .fixedSize(horizontal: false, vertical: true)
         }
         .ignoresSafeArea()
+        .navigationBarBackButtonHidden()
     }
     
     func close() {

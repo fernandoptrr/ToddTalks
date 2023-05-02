@@ -12,7 +12,7 @@ struct MilestoneView: View  {
     @StateObject var viewModel = MilestoneViewModel()
 
     var body: some View {
-        NavigationStack {
+        NavigationView {
             ZStack{
                 viewModel.milestones[currentIndex].colorTheme
                     .ignoresSafeArea()
@@ -41,6 +41,7 @@ struct MilestoneView: View  {
                 }
             }
         }
+        .navigationViewStyle(.stack)
     }
 }
 

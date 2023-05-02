@@ -33,6 +33,9 @@
 		C449E91929ED983F00F9409F /* Lotties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C449E91829ED983F00F9409F /* Lotties.swift */; };
 		C449E91B29EE23F200F9409F /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C449E91A29EE23F200F9409F /* ProgressBarView.swift */; };
 		C449E91E29EE2AFC00F9409F /* HintText.swift in Sources */ = {isa = PBXBuildFile; fileRef = C449E91D29EE2AFC00F9409F /* HintText.swift */; };
+		C46F1D952A00B78800C34D62 /* SectionDetailSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46F1D942A00B78800C34D62 /* SectionDetailSheet.swift */; };
+		C46F1D972A00BAB500C34D62 /* SpeechBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46F1D962A00BAB500C34D62 /* SpeechBubble.swift */; };
+		C46F1D992A00BD2200C34D62 /* SectionGuideline.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46F1D982A00BD2200C34D62 /* SectionGuideline.swift */; };
 		C47F48A629FFF3650094BFA9 /* baby.json in Resources */ = {isa = PBXBuildFile; fileRef = C47F48A529FFF3650094BFA9 /* baby.json */; };
 		C47F48A82A0000800094BFA9 /* MilestoneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47F48A72A0000800094BFA9 /* MilestoneViewModel.swift */; };
 		C47F48AA2A00503B0094BFA9 /* StageSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47F48A92A00503B0094BFA9 /* StageSectionView.swift */; };
@@ -75,6 +78,9 @@
 		C449E91829ED983F00F9409F /* Lotties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lotties.swift; sourceTree = "<group>"; };
 		C449E91A29EE23F200F9409F /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
 		C449E91D29EE2AFC00F9409F /* HintText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintText.swift; sourceTree = "<group>"; };
+		C46F1D942A00B78800C34D62 /* SectionDetailSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionDetailSheet.swift; sourceTree = "<group>"; };
+		C46F1D962A00BAB500C34D62 /* SpeechBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechBubble.swift; sourceTree = "<group>"; };
+		C46F1D982A00BD2200C34D62 /* SectionGuideline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionGuideline.swift; sourceTree = "<group>"; };
 		C47F48A529FFF3650094BFA9 /* baby.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = baby.json; sourceTree = "<group>"; };
 		C47F48A72A0000800094BFA9 /* MilestoneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilestoneViewModel.swift; sourceTree = "<group>"; };
 		C47F48A92A00503B0094BFA9 /* StageSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageSectionView.swift; sourceTree = "<group>"; };
@@ -106,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				C40589D129F76B5500E76068 /* Stage.swift */,
+				C46F1D982A00BD2200C34D62 /* SectionGuideline.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -123,6 +130,7 @@
 			children = (
 				C40589CC29F7683700E76068 /* JourneyView.swift */,
 				C47F48A92A00503B0094BFA9 /* StageSectionView.swift */,
+				C46F1D942A00B78800C34D62 /* SectionDetailSheet.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -375,6 +383,7 @@
 				C449E91D29EE2AFC00F9409F /* HintText.swift */,
 				C420A64529F630D800C028D8 /* HintCarousel.swift */,
 				C420A64729F658E100C028D8 /* IndicatorView.swift */,
+				C46F1D962A00BAB500C34D62 /* SpeechBubble.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -507,9 +516,11 @@
 				C47F48A82A0000800094BFA9 /* MilestoneViewModel.swift in Sources */,
 				C449E90229ED8AC600F9409F /* Prompt.swift in Sources */,
 				C449E90429ED8AF500F9409F /* LottieView.swift in Sources */,
+				C46F1D972A00BAB500C34D62 /* SpeechBubble.swift in Sources */,
 				C40589DE29F77CE600E76068 /* StageCircle.swift in Sources */,
 				C449E8ED29ED7D5600F9409F /* Color+App.swift in Sources */,
 				C4E7682029FFE3FB00F92A56 /* PlayVideoButton.swift in Sources */,
+				C46F1D952A00B78800C34D62 /* SectionDetailSheet.swift in Sources */,
 				C449E8E629ED730600F9409F /* MilestoneView.swift in Sources */,
 				C449E8DA29ED729A00F9409F /* Persistence.swift in Sources */,
 				C4E7681129FFE1FC00F92A56 /* Milestone.swift in Sources */,
@@ -528,6 +539,7 @@
 				C4BAF53029F6D2D70077DD6D /* ShimmerEffect.swift in Sources */,
 				C4E7681D29FFE3D800F92A56 /* VideoModalSheetView.swift in Sources */,
 				C420A64629F630D800C028D8 /* HintCarousel.swift in Sources */,
+				C46F1D992A00BD2200C34D62 /* SectionGuideline.swift in Sources */,
 				C4E7680D29FFE18900F92A56 /* StageButton.swift in Sources */,
 				C449E91B29EE23F200F9409F /* ProgressBarView.swift in Sources */,
 				C4E7681329FFE22500F92A56 /* SnapCarouselView.swift in Sources */,

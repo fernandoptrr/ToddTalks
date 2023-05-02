@@ -10,22 +10,25 @@ import SwiftUI
 struct JourneyView: View {
     @StateObject var viewModel = StageViewModel()
     @State private var showStageDialog = false
-    
+
     var body: some View {
         ZStack {
             NavigationStack {
                 ScrollView {
                     VStack {
-                        ForEach(0..<3) { unit in
+                        ForEach(0..<3) { index in
                             StageSectionView(
                                 headline: "Section 1 (12 - 15 Months)",
                                 subHeadline: "Early Word Learning",
-                                stages: viewModel.stagses,
+                                stages: viewModel.stages,
+                                sectionGuideline: viewModel.sectionGuidelines[index],
                                 showStageDialog: $showStageDialog
                             )
                         }
                     }
                 }
+                .ignoresSafeArea()
+                .background(Color.blueColor)
             }
             if showStageDialog {
                 StageDialog(isPresented: $showStageDialog, stage: Stage(illPath: "play.fill", title: "Gesture 1", body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.", tips: "haha", starCount: 3),     primaryButtonAction: {},
@@ -34,7 +37,8 @@ struct JourneyView: View {
                 )
             }
         }
-        .navigationBarHidden(true)
+//        .navigationTitle("")
+//        .navigationBarHidden(true)
     }
 }
 

@@ -38,14 +38,14 @@ struct StageCircle: View {
             }
             .shadow(color: .yellow ,radius: 4)
             Button("", action: {
-                showStageDialog = true
+                showStageDialog.toggle()
             })
-                .frame(width: 40, height: 40)
+                .frame(width: 48, height: 48)
                 .foregroundColor(.white)
                 .buttonStyle(RaisedButtonStyle(radius: 100))
                 .overlay{
-                    Image(systemName: "play.fill")
-                        .font(.system(size: 16))
+                    Image(systemName: "hand.wave")
+                        .font(.system(size: 24))
                         .foregroundColor(.white)
                 }
             Text(stage.title)
