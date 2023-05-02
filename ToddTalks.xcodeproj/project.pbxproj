@@ -48,6 +48,31 @@
 		C4E7681D29FFE3D800F92A56 /* VideoModalSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E7681C29FFE3D800F92A56 /* VideoModalSheetView.swift */; };
 		C4E7682029FFE3FB00F92A56 /* PlayVideoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E7681F29FFE3FB00F92A56 /* PlayVideoButton.swift */; };
 		C4E7682529FFEF1E00F92A56 /* NiceSugar.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4E7682429FFEF1E00F92A56 /* NiceSugar.otf */; };
+		E1B676472A00E2BF009CC879 /* warna.json in Resources */ = {isa = PBXBuildFile; fileRef = E1B6762E2A00E2BE009CC879 /* warna.json */; };
+		E1B676482A00E2BF009CC879 /* senyum.json in Resources */ = {isa = PBXBuildFile; fileRef = E1B6762F2A00E2BE009CC879 /* senyum.json */; };
+		E1B676492A00E2BF009CC879 /* biru.json in Resources */ = {isa = PBXBuildFile; fileRef = E1B676302A00E2BE009CC879 /* biru.json */; };
+		E1B6764A2A00E2BF009CC879 /* pisang.json in Resources */ = {isa = PBXBuildFile; fileRef = E1B676312A00E2BE009CC879 /* pisang.json */; };
+		E1B6764B2A00E2BF009CC879 /* tunjuk.json in Resources */ = {isa = PBXBuildFile; fileRef = E1B676322A00E2BE009CC879 /* tunjuk.json */; };
+		E1B6764C2A00E2BF009CC879 /* pisang 2.json in Resources */ = {isa = PBXBuildFile; fileRef = E1B676332A00E2BE009CC879 /* pisang 2.json */; };
+		E1B6764D2A00E2BF009CC879 /* bye.json in Resources */ = {isa = PBXBuildFile; fileRef = E1B676342A00E2BE009CC879 /* bye.json */; };
+		E1B6764E2A00E2BF009CC879 /* bye2.json in Resources */ = {isa = PBXBuildFile; fileRef = E1B676352A00E2BE009CC879 /* bye2.json */; };
+		E1B6764F2A00E2BF009CC879 /* mobil.json in Resources */ = {isa = PBXBuildFile; fileRef = E1B676362A00E2BE009CC879 /* mobil.json */; };
+		E1B676502A00E2BF009CC879 /* tos.json in Resources */ = {isa = PBXBuildFile; fileRef = E1B676372A00E2BF009CC879 /* tos.json */; };
+		E1B676512A00E2BF009CC879 /* hijau.json in Resources */ = {isa = PBXBuildFile; fileRef = E1B676382A00E2BF009CC879 /* hijau.json */; };
+		E1B676522A00E2BF009CC879 /* blow kiss.json in Resources */ = {isa = PBXBuildFile; fileRef = E1B676392A00E2BF009CC879 /* blow kiss.json */; };
+		E1B676532A00E2BF009CC879 /* melon.json in Resources */ = {isa = PBXBuildFile; fileRef = E1B6763A2A00E2BF009CC879 /* melon.json */; };
+		E1B676542A00E2BF009CC879 /* hiu.json in Resources */ = {isa = PBXBuildFile; fileRef = E1B6763B2A00E2BF009CC879 /* hiu.json */; };
+		E1B676552A00E2BF009CC879 /* labu.json in Resources */ = {isa = PBXBuildFile; fileRef = E1B6763C2A00E2BF009CC879 /* labu.json */; };
+		E1B676562A00E2BF009CC879 /* halo.json in Resources */ = {isa = PBXBuildFile; fileRef = E1B6763D2A00E2BF009CC879 /* halo.json */; };
+		E1B676572A00E2BF009CC879 /* buku.json in Resources */ = {isa = PBXBuildFile; fileRef = E1B6763E2A00E2BF009CC879 /* buku.json */; };
+		E1B676582A00E2BF009CC879 /* tepuk tangan.json in Resources */ = {isa = PBXBuildFile; fileRef = E1B6763F2A00E2BF009CC879 /* tepuk tangan.json */; };
+		E1B676592A00E2BF009CC879 /* awan2.json in Resources */ = {isa = PBXBuildFile; fileRef = E1B676402A00E2BF009CC879 /* awan2.json */; };
+		E1B6765A2A00E2BF009CC879 /* awan.json in Resources */ = {isa = PBXBuildFile; fileRef = E1B676412A00E2BF009CC879 /* awan.json */; };
+		E1B6765B2A00E2BF009CC879 /* mama.json in Resources */ = {isa = PBXBuildFile; fileRef = E1B676422A00E2BF009CC879 /* mama.json */; };
+		E1B6765C2A00E2BF009CC879 /* papa.json in Resources */ = {isa = PBXBuildFile; fileRef = E1B676432A00E2BF009CC879 /* papa.json */; };
+		E1B6765D2A00E2BF009CC879 /* waktu.json in Resources */ = {isa = PBXBuildFile; fileRef = E1B676442A00E2BF009CC879 /* waktu.json */; };
+		E1B6765E2A00E2BF009CC879 /* sapi2.json in Resources */ = {isa = PBXBuildFile; fileRef = E1B676452A00E2BF009CC879 /* sapi2.json */; };
+		E1B6765F2A00E2BF009CC879 /* sapi.json in Resources */ = {isa = PBXBuildFile; fileRef = E1B676462A00E2BF009CC879 /* sapi.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +119,31 @@
 		C4E7681C29FFE3D800F92A56 /* VideoModalSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoModalSheetView.swift; sourceTree = "<group>"; };
 		C4E7681F29FFE3FB00F92A56 /* PlayVideoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayVideoButton.swift; sourceTree = "<group>"; };
 		C4E7682429FFEF1E00F92A56 /* NiceSugar.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NiceSugar.otf; sourceTree = "<group>"; };
+		E1B6762E2A00E2BE009CC879 /* warna.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = warna.json; sourceTree = "<group>"; };
+		E1B6762F2A00E2BE009CC879 /* senyum.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = senyum.json; sourceTree = "<group>"; };
+		E1B676302A00E2BE009CC879 /* biru.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = biru.json; sourceTree = "<group>"; };
+		E1B676312A00E2BE009CC879 /* pisang.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pisang.json; sourceTree = "<group>"; };
+		E1B676322A00E2BE009CC879 /* tunjuk.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tunjuk.json; sourceTree = "<group>"; };
+		E1B676332A00E2BE009CC879 /* pisang 2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "pisang 2.json"; sourceTree = "<group>"; };
+		E1B676342A00E2BE009CC879 /* bye.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bye.json; sourceTree = "<group>"; };
+		E1B676352A00E2BE009CC879 /* bye2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bye2.json; sourceTree = "<group>"; };
+		E1B676362A00E2BE009CC879 /* mobil.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mobil.json; sourceTree = "<group>"; };
+		E1B676372A00E2BF009CC879 /* tos.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tos.json; sourceTree = "<group>"; };
+		E1B676382A00E2BF009CC879 /* hijau.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hijau.json; sourceTree = "<group>"; };
+		E1B676392A00E2BF009CC879 /* blow kiss.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "blow kiss.json"; sourceTree = "<group>"; };
+		E1B6763A2A00E2BF009CC879 /* melon.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = melon.json; sourceTree = "<group>"; };
+		E1B6763B2A00E2BF009CC879 /* hiu.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hiu.json; sourceTree = "<group>"; };
+		E1B6763C2A00E2BF009CC879 /* labu.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = labu.json; sourceTree = "<group>"; };
+		E1B6763D2A00E2BF009CC879 /* halo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = halo.json; sourceTree = "<group>"; };
+		E1B6763E2A00E2BF009CC879 /* buku.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = buku.json; sourceTree = "<group>"; };
+		E1B6763F2A00E2BF009CC879 /* tepuk tangan.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "tepuk tangan.json"; sourceTree = "<group>"; };
+		E1B676402A00E2BF009CC879 /* awan2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awan2.json; sourceTree = "<group>"; };
+		E1B676412A00E2BF009CC879 /* awan.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awan.json; sourceTree = "<group>"; };
+		E1B676422A00E2BF009CC879 /* mama.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mama.json; sourceTree = "<group>"; };
+		E1B676432A00E2BF009CC879 /* papa.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = papa.json; sourceTree = "<group>"; };
+		E1B676442A00E2BF009CC879 /* waktu.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = waktu.json; sourceTree = "<group>"; };
+		E1B676452A00E2BF009CC879 /* sapi2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sapi2.json; sourceTree = "<group>"; };
+		E1B676462A00E2BF009CC879 /* sapi.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sapi.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -371,6 +421,31 @@
 			isa = PBXGroup;
 			children = (
 				C47F48A529FFF3650094BFA9 /* baby.json */,
+				E1B676412A00E2BF009CC879 /* awan.json */,
+				E1B676402A00E2BF009CC879 /* awan2.json */,
+				E1B676302A00E2BE009CC879 /* biru.json */,
+				E1B676392A00E2BF009CC879 /* blow kiss.json */,
+				E1B6763E2A00E2BF009CC879 /* buku.json */,
+				E1B676342A00E2BE009CC879 /* bye.json */,
+				E1B676352A00E2BE009CC879 /* bye2.json */,
+				E1B6763D2A00E2BF009CC879 /* halo.json */,
+				E1B676382A00E2BF009CC879 /* hijau.json */,
+				E1B6763B2A00E2BF009CC879 /* hiu.json */,
+				E1B6763C2A00E2BF009CC879 /* labu.json */,
+				E1B676422A00E2BF009CC879 /* mama.json */,
+				E1B6763A2A00E2BF009CC879 /* melon.json */,
+				E1B676362A00E2BE009CC879 /* mobil.json */,
+				E1B676432A00E2BF009CC879 /* papa.json */,
+				E1B676332A00E2BE009CC879 /* pisang 2.json */,
+				E1B676312A00E2BE009CC879 /* pisang.json */,
+				E1B676462A00E2BF009CC879 /* sapi.json */,
+				E1B676452A00E2BF009CC879 /* sapi2.json */,
+				E1B6762F2A00E2BE009CC879 /* senyum.json */,
+				E1B6763F2A00E2BF009CC879 /* tepuk tangan.json */,
+				E1B676372A00E2BF009CC879 /* tos.json */,
+				E1B676322A00E2BE009CC879 /* tunjuk.json */,
+				E1B676442A00E2BF009CC879 /* waktu.json */,
+				E1B6762E2A00E2BE009CC879 /* warna.json */,
 				C449E91829ED983F00F9409F /* Lotties.swift */,
 			);
 			path = Lotties;
@@ -494,12 +569,37 @@
 			buildActionMask = 2147483647;
 			files = (
 				C47F48A629FFF3650094BFA9 /* baby.json in Resources */,
+				E1B676532A00E2BF009CC879 /* melon.json in Resources */,
+				E1B676552A00E2BF009CC879 /* labu.json in Resources */,
+				E1B676512A00E2BF009CC879 /* hijau.json in Resources */,
+				E1B6764B2A00E2BF009CC879 /* tunjuk.json in Resources */,
+				E1B6765C2A00E2BF009CC879 /* papa.json in Resources */,
+				E1B676562A00E2BF009CC879 /* halo.json in Resources */,
+				E1B676502A00E2BF009CC879 /* tos.json in Resources */,
+				E1B676582A00E2BF009CC879 /* tepuk tangan.json in Resources */,
+				E1B6764F2A00E2BF009CC879 /* mobil.json in Resources */,
+				E1B6764A2A00E2BF009CC879 /* pisang.json in Resources */,
+				E1B6764E2A00E2BF009CC879 /* bye2.json in Resources */,
+				E1B676472A00E2BF009CC879 /* warna.json in Resources */,
+				E1B676522A00E2BF009CC879 /* blow kiss.json in Resources */,
+				E1B6765F2A00E2BF009CC879 /* sapi.json in Resources */,
 				C449E8F829ED88BB00F9409F /* SassoonSansStd-Medium.otf in Resources */,
 				C449E8F929ED88C300F9409F /* SassoonSansStd.otf in Resources */,
 				C449E8EB29ED7C1800F9409F /* Colors.xcassets in Resources */,
+				E1B6765E2A00E2BF009CC879 /* sapi2.json in Resources */,
+				E1B6765D2A00E2BF009CC879 /* waktu.json in Resources */,
+				E1B6765A2A00E2BF009CC879 /* awan.json in Resources */,
 				C449E8D829ED729A00F9409F /* Preview Assets.xcassets in Resources */,
+				E1B676542A00E2BF009CC879 /* hiu.json in Resources */,
+				E1B6764D2A00E2BF009CC879 /* bye.json in Resources */,
+				E1B6765B2A00E2BF009CC879 /* mama.json in Resources */,
 				C449E8F729ED88B900F9409F /* SassoonSansStd-Bold.otf in Resources */,
+				E1B676592A00E2BF009CC879 /* awan2.json in Resources */,
+				E1B676572A00E2BF009CC879 /* buku.json in Resources */,
+				E1B6764C2A00E2BF009CC879 /* pisang 2.json in Resources */,
 				C4E7682529FFEF1E00F92A56 /* NiceSugar.otf in Resources */,
+				E1B676492A00E2BF009CC879 /* biru.json in Resources */,
+				E1B676482A00E2BF009CC879 /* senyum.json in Resources */,
 				C449E8D529ED729A00F9409F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
