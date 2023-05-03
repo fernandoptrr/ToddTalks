@@ -12,5 +12,7 @@ extension Color {
     static let greenColor = Color("GreenColor")
     static let blueColor = Color("BlueColor")
     static let purpleColor = Color("PurpleColor")
+    static let secondaryButtonColor = Color("SecondaryButtonColor")
+    static let tealColor = Color("TealColor")
     // Add any additional custom colors here
 }
