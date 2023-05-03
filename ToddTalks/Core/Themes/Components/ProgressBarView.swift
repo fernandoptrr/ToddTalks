@@ -26,6 +26,8 @@ struct ProgressBarView: View {
             Image(systemName: "shippingbox.fill")
                 .foregroundColor(.greenColor)
                 .font(.title)
+                .shimmering()
+
         }
         .animation(.spring(), value: value)
         

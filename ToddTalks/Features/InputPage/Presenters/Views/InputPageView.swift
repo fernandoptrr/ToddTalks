@@ -19,7 +19,7 @@ struct InputPageView: View {
     
     var body: some View {
         
-        NavigationView {
+        NavigationStack {
             ZStack {
                 Color.purpleColor
                     .ignoresSafeArea()
@@ -107,9 +107,6 @@ struct InputPageView: View {
                 .padding(.horizontal, 30)
             }
         }
-        .navigationViewStyle(.stack)
-        
-        
     }
     
     func firstYear (){
