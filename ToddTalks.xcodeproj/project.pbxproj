@@ -30,7 +30,6 @@
 		C449E8FE29ED8A5600F9409F /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C449E8FD29ED8A5600F9409F /* AudioPlayer.swift */; };
 		C449E90229ED8AC600F9409F /* Prompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C449E90129ED8AC600F9409F /* Prompt.swift */; };
 		C449E90429ED8AF500F9409F /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C449E90329ED8AF500F9409F /* LottieView.swift */; };
-		C449E90729ED8B4B00F9409F /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = C449E90629ED8B4B00F9409F /* Lottie */; };
 		C449E91029ED8C8C00F9409F /* RaisedButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C449E90F29ED8C8C00F9409F /* RaisedButtonStyle.swift */; };
 		C449E91429ED92B300F9409F /* MilestoneCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C449E91329ED92B300F9409F /* MilestoneCardView.swift */; };
 		C449E91929ED983F00F9409F /* Lotties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C449E91829ED983F00F9409F /* Lotties.swift */; };
@@ -43,6 +42,7 @@
 		C46F1DA32A02039C00C34D62 /* AchievementRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46F1DA22A02039C00C34D62 /* AchievementRow.swift */; };
 		C46F1DA52A0203B900C34D62 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46F1DA42A0203B900C34D62 /* Achievement.swift */; };
 		C46F1DA72A02054700C34D62 /* AchievementListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46F1DA62A02054700C34D62 /* AchievementListView.swift */; };
+		C46F1DAA2A021DAF00C34D62 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = C46F1DA92A021DAF00C34D62 /* Lottie */; };
 		C47F48A629FFF3650094BFA9 /* baby.json in Resources */ = {isa = PBXBuildFile; fileRef = C47F48A529FFF3650094BFA9 /* baby.json */; };
 		C47F48A82A0000800094BFA9 /* MilestoneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47F48A72A0000800094BFA9 /* MilestoneViewModel.swift */; };
 		C47F48AA2A00503B0094BFA9 /* StageSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47F48A92A00503B0094BFA9 /* StageSectionView.swift */; };
@@ -173,7 +173,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C449E90729ED8B4B00F9409F /* Lottie in Frameworks */,
+				C46F1DAA2A021DAF00C34D62 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +275,7 @@
 			children = (
 				C449E8CF29ED729900F9409F /* ToddTalks */,
 				C449E8CE29ED729900F9409F /* Products */,
+				C46F1DA82A021DAF00C34D62 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -573,6 +574,13 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		C46F1DA82A021DAF00C34D62 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C4E7680A29FFE13B00F92A56 /* Videos */ = {
 			isa = PBXGroup;
 			children = (
@@ -682,7 +690,7 @@
 			);
 			name = ToddTalks;
 			packageProductDependencies = (
-				C449E90629ED8B4B00F9409F /* Lottie */,
+				C46F1DA92A021DAF00C34D62 /* Lottie */,
 			);
 			productName = ToddTalks;
 			productReference = C449E8CD29ED729900F9409F /* ToddTalks.app */;
@@ -1032,7 +1040,7 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		C449E90629ED8B4B00F9409F /* Lottie */ = {
+		C46F1DA92A021DAF00C34D62 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C449E90529ED8B4B00F9409F /* XCRemoteSwiftPackageReference "lottie-spm" */;
 			productName = Lottie;
