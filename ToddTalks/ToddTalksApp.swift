@@ -21,7 +21,8 @@ struct ToddTalksApp: App {
     }
     var body: some Scene {
         WindowGroup {
-            MilestoneView()
+//            MilestoneView()
+            SpeechToTextView()
         }
     }
 }
