@@ -21,18 +21,18 @@ struct StageSectionView: View {
             ZStack {
                 Image("cloud")
                     .resizable()
-                    .frame( height: 220)
+                    .frame( height: 180)
                 
                 HStack {
                     VStack(alignment: .leading) {
                         Text(headline)
                             .font(FontProvider.custom(.sassoon, size: .body)
-                                .weight(.bold)
+                                .weight(.medium)
                             )
                         Text(subHeadline)
                             .font(FontProvider.custom(.niceSugar, size: .title2))
                             .foregroundColor(.primaryColor)
-                            .padding(.top, 4)
+                            .padding(.top, 2)
                     }
                     Spacer()
                     Button(action: {
