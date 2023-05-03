@@ -12,7 +12,6 @@ struct MilestoneView: View  {
     @StateObject var viewModel = MilestoneViewModel()
     
     var body: some View {
-        NavigationView {
             ZStack{
                 viewModel.milestones[currentIndex].colorTheme
                     .ignoresSafeArea()
@@ -52,15 +51,17 @@ struct MilestoneView: View  {
                     }
                 }
             }
-        }
         .accentColor(Color(uiColor: .systemGray2))
         .navigationViewStyle(.stack)
+        .navigationBarBackButtonHidden()
     }
 }
 
 
 struct MilestoneView_Previews: PreviewProvider {
     static var previews: some View {
-        MilestoneView()
+        NavigationStack {
+            MilestoneView()
+        }
     }
 }

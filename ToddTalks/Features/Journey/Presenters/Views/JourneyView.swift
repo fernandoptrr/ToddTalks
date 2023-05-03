@@ -12,33 +12,32 @@ struct JourneyView: View {
     @State private var showStageDialog = false
     
     var body: some View {
-        NavigationStack {
         ZStack {
-                ScrollView {
-                    VStack {
-                        ForEach(0..<3) { index in
-                            StageSectionView(
-                                headline: "Section 1 (12 - 15 Months)",
-                                subHeadline: "Early Word Learning",
-                                stages: viewModel.stages,
-                                sectionGuideline: viewModel.sectionGuidelines[index],
-                                showStageDialog: $showStageDialog
-                            )
-                        }
+            ScrollView {
+                VStack {
+                    ForEach(0..<3) { index in
+                        StageSectionView(
+                            headline: "Section 1 (12 - 15 Months)",
+                            subHeadline: "Early Word Learning",
+                            stages: viewModel.stages,
+                            sectionGuideline: viewModel.sectionGuidelines[index],
+                            showStageDialog: $showStageDialog
+                        )
                     }
-                    .padding(.top, 48)
                 }
-                .ignoresSafeArea()
-                .background(Color.blueColor)
-                
-                if showStageDialog {
-                    StageDialog(isPresented: $showStageDialog, stage: Stage(illPath: "play.fill", title: "Gesture 1", body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.", tips: "haha", starCount: 3),     primaryButtonAction: {},
-                                secondaryButtonTitle: nil,
-                                secondaryButtonAction: nil
-                    )
-                }
+                .padding(.top, 48)
+            }
+            .ignoresSafeArea()
+            .background(Color.blueColor)
+            
+            if showStageDialog {
+                StageDialog(isPresented: $showStageDialog, stage: Stage(illPath: "play.fill", title: "Gesture 1", body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.", tips: "haha", starCount: 3),     primaryButtonAction: {},
+                            secondaryButtonTitle: nil,
+                            secondaryButtonAction: nil
+                )
             }
         }
+        .toolbarBackground(.hidden, for: .navigationBar)
     }
 }
 
