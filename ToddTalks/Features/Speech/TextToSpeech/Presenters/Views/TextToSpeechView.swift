@@ -21,7 +21,7 @@ struct TextToSpeechView: View {
                 utterance.voice = AVSpeechSynthesisVoice(language: "id-ID")
                 utterance.rate = counter%2 == 0 ? 0.15 : 0.4
                 utterance.volume = 1.0
-                utterance.pitchMultiplier = 1.8
+                utterance.pitchMultiplier = 1.5
                 counter += 1
                 synthesizer.speak(utterance)
             }) {
@@ -44,6 +44,7 @@ struct TextToSpeechView: View {
             }
             .foregroundColor(.blue)
             .bold()
+           
         }
     }
 }

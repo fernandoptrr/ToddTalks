@@ -16,6 +16,8 @@
 		6149CA5E2A01FD2E0070D658 /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6149CA5D2A01FD2E0070D658 /* PhotoView.swift */; };
 		6149CA602A01FD730070D658 /* SUImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6149CA5F2A01FD730070D658 /* SUImagePickerView.swift */; };
 		6149CA622A0210010070D658 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6149CA612A0210010070D658 /* CircleView.swift */; };
+		61C6D6B22A0346C000C2DB5F /* CameraContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C6D6B12A0346C000C2DB5F /* CameraContentView.swift */; };
+		61C6D6B42A03762A00C2DB5F /* FrameAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61C6D6B32A03762A00C2DB5F /* FrameAssets.xcassets */; };
 		6AAB7FAA2A01474900980A39 /* InputPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AAB7FA92A01474900980A39 /* InputPageView.swift */; };
 		6AAB7FAC2A01548000980A39 /* InputProfilePic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AAB7FAB2A01548000980A39 /* InputProfilePic.swift */; };
 		6AAB7FAE2A01589900980A39 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AAB7FAD2A01589900980A39 /* ImagePickerView.swift */; };
@@ -106,6 +108,8 @@
 		6149CA5D2A01FD2E0070D658 /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
 		6149CA5F2A01FD730070D658 /* SUImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUImagePickerView.swift; sourceTree = "<group>"; };
 		6149CA612A0210010070D658 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		61C6D6B12A0346C000C2DB5F /* CameraContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraContentView.swift; sourceTree = "<group>"; };
+		61C6D6B32A03762A00C2DB5F /* FrameAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = FrameAssets.xcassets; sourceTree = "<group>"; };
 		6AAB7FA92A01474900980A39 /* InputPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputPageView.swift; sourceTree = "<group>"; };
 		6AAB7FAB2A01548000980A39 /* InputProfilePic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputProfilePic.swift; sourceTree = "<group>"; };
 		6AAB7FAD2A01589900980A39 /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
@@ -313,6 +317,7 @@
 			children = (
 				6149CA5D2A01FD2E0070D658 /* PhotoView.swift */,
 				6149CA5F2A01FD730070D658 /* SUImagePickerView.swift */,
+				61C6D6B12A0346C000C2DB5F /* CameraContentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -454,6 +459,7 @@
 				C4E7680A29FFE13B00F92A56 /* Videos */,
 				C449E91529ED982E00F9409F /* Lotties */,
 				C449E8D429ED729A00F9409F /* Assets.xcassets */,
+				61C6D6B32A03762A00C2DB5F /* FrameAssets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -907,6 +913,7 @@
 				E1B676572A00E2BF009CC879 /* buku.json in Resources */,
 				E1B6764C2A00E2BF009CC879 /* pisang 2.json in Resources */,
 				C4E7682529FFEF1E00F92A56 /* NiceSugar.otf in Resources */,
+				61C6D6B42A03762A00C2DB5F /* FrameAssets.xcassets in Resources */,
 				E1B676492A00E2BF009CC879 /* biru.json in Resources */,
 				E1B676482A00E2BF009CC879 /* senyum.json in Resources */,
 				C449E8D529ED729A00F9409F /* Assets.xcassets in Resources */,
@@ -926,6 +933,7 @@
 				C47F48A82A0000800094BFA9 /* MilestoneViewModel.swift in Sources */,
 				6149CA562A01E7FE0070D658 /* CompletedStageModel.xcdatamodeld in Sources */,
 				6AAB7FAE2A01589900980A39 /* ImagePickerView.swift in Sources */,
+				61C6D6B22A0346C000C2DB5F /* CameraContentView.swift in Sources */,
 				C449E90229ED8AC600F9409F /* Prompt.swift in Sources */,
 				C449E90429ED8AF500F9409F /* LottieView.swift in Sources */,
 				C46F1D972A00BAB500C34D62 /* SpeechBubble.swift in Sources */,
