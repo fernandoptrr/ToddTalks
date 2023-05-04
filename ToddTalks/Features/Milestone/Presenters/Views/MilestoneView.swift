@@ -12,26 +12,16 @@ struct MilestoneView: View  {
     @StateObject var viewModel = MilestoneViewModel()
     
     var body: some View {
+        NavigationStack {
             ZStack{
                 viewModel.milestones[currentIndex].colorTheme
                     .ignoresSafeArea()
                     .animation(.easeOut, value: currentIndex )
                 VStack{
-                    HStack(alignment: .center) {
-                        Spacer()
-                        Text("KataKecil")
-                            .font(FontProvider.custom(.niceSugar, size: .largeTitle))
-                            .foregroundColor(.primaryColor)
-                        Spacer()
-                        NavigationLink(destination: AchievementListView()) {
-                            Image(systemName: "trophy.fill")
-                                .foregroundColor(.primaryColor)
-                                .font(.system(size: 24))
-                        }
-                        .offset(x: -4, y: -4)
-                    }
-                    .padding(.horizontal)
-                    .padding(.top,24)
+                    Text("KataKecil")
+                        .font(FontProvider.custom(.niceSugar, size: .largeTitle))
+                        .foregroundColor(.primaryColor)
+                        .padding(.top,24)
                     
                     SnapCarouselView(trailingSpace: 64, index: $currentIndex, items: viewModel.milestones){ milestone in
                         MilestoneCardView(
@@ -42,17 +32,15 @@ struct MilestoneView: View  {
                     .padding(.top, 64)
                     HStack (spacing: 6){
                         ForEach(viewModel.milestones.indices, id: \.self) { index in
-                            Circle()
-                                .fill(currentIndex == index ? .primaryColor : Color(.systemGray4))
-                                .frame(width: 10, height: 10)
-                                .scaleEffect(currentIndex == index ? 1 : 0.8)
+                            RoundedRectangle(cornerRadius: currentIndex == index ? 24 : 100, style: .continuous)
+                                .fill(currentIndex == index ? .primaryColor : Color(.systemGray2))
+                                .frame(width: currentIndex == index ? 25 : 10, height: 6)
                                 .animation(.spring(), value: currentIndex == index )
                         }
                     }
                 }
             }
-        .accentColor(Color(uiColor: .systemGray2))
-        .navigationViewStyle(.stack)
+        }
         .navigationBarBackButtonHidden()
     }
 }

@@ -10,18 +10,20 @@ import SwiftUI
 struct RaisedButtonStyle: ButtonStyle {
     let offset: CGFloat = 4
     let radius: CGFloat
+    let color: Color
     
-    init(radius: CGFloat = 24) {
+    init(radius: CGFloat = 24, color: Color = .primaryColor) {
         self.radius = radius
+        self.color = color
     }
     
     func makeBody(configuration: Configuration) -> some View {
         ZStack {
             RoundedRectangle(cornerRadius: radius, style: .continuous)
-                .fill(Color.primaryColor.opacity(0.6))
+                .fill(color.opacity(0.6))
                 .offset(y: offset)
             RoundedRectangle(cornerRadius: radius, style: .continuous)
-                .fill(Color.primaryColor)
+                .fill(color)
                 .offset(y: configuration.isPressed ? offset : 0)
             configuration.label
                 .font(FontProvider.custom(.sassoon, size: .body)

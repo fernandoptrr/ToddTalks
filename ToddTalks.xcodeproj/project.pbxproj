@@ -46,6 +46,10 @@
 		C449E91929ED983F00F9409F /* Lotties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C449E91829ED983F00F9409F /* Lotties.swift */; };
 		C449E91B29EE23F200F9409F /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C449E91A29EE23F200F9409F /* ProgressBarView.swift */; };
 		C449E91E29EE2AFC00F9409F /* HintText.swift in Sources */ = {isa = PBXBuildFile; fileRef = C449E91D29EE2AFC00F9409F /* HintText.swift */; };
+		C452B6B82A021F2F006EAF43 /* GameSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C452B6B72A021F2F006EAF43 /* GameSceneView.swift */; };
+		C452B6BA2A025BB1006EAF43 /* MovingCloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = C452B6B92A025BB1006EAF43 /* MovingCloud.swift */; };
+		C452B6BC2A0286ED006EAF43 /* TextBubbleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = C452B6BB2A0286ED006EAF43 /* TextBubbleShape.swift */; };
+		C452B6BE2A02BDAA006EAF43 /* AchievementDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C452B6BD2A02BDAA006EAF43 /* AchievementDetailView.swift */; };
 		C46F1D952A00B78800C34D62 /* SectionDetailSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46F1D942A00B78800C34D62 /* SectionDetailSheet.swift */; };
 		C46F1D972A00BAB500C34D62 /* SpeechBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46F1D962A00BAB500C34D62 /* SpeechBubble.swift */; };
 		C46F1D992A00BD2200C34D62 /* SectionGuideline.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46F1D982A00BD2200C34D62 /* SectionGuideline.swift */; };
@@ -60,11 +64,9 @@
 		C47F48AC2A0055C30094BFA9 /* StageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47F48AB2A0055C30094BFA9 /* StageViewModel.swift */; };
 		C4BAF53029F6D2D70077DD6D /* ShimmerEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BAF52F29F6D2D70077DD6D /* ShimmerEffect.swift */; };
 		C4C30C1629F61B5B006EC836 /* StageDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C30C1529F61B5B006EC836 /* StageDialog.swift */; };
-		C4E7680D29FFE18900F92A56 /* StageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E7680C29FFE18900F92A56 /* StageButton.swift */; };
 		C4E7681129FFE1FC00F92A56 /* Milestone.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E7681029FFE1FC00F92A56 /* Milestone.swift */; };
 		C4E7681329FFE22500F92A56 /* SnapCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E7681229FFE22500F92A56 /* SnapCarouselView.swift */; };
 		C4E7681D29FFE3D800F92A56 /* VideoModalSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E7681C29FFE3D800F92A56 /* VideoModalSheetView.swift */; };
-		C4E7682029FFE3FB00F92A56 /* PlayVideoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E7681F29FFE3FB00F92A56 /* PlayVideoButton.swift */; };
 		C4E7682529FFEF1E00F92A56 /* NiceSugar.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4E7682429FFEF1E00F92A56 /* NiceSugar.otf */; };
 		E1B676472A00E2BF009CC879 /* warna.json in Resources */ = {isa = PBXBuildFile; fileRef = E1B6762E2A00E2BE009CC879 /* warna.json */; };
 		E1B676482A00E2BF009CC879 /* senyum.json in Resources */ = {isa = PBXBuildFile; fileRef = E1B6762F2A00E2BE009CC879 /* senyum.json */; };
@@ -91,10 +93,6 @@
 		E1B6765D2A00E2BF009CC879 /* waktu.json in Resources */ = {isa = PBXBuildFile; fileRef = E1B676442A00E2BF009CC879 /* waktu.json */; };
 		E1B6765E2A00E2BF009CC879 /* sapi2.json in Resources */ = {isa = PBXBuildFile; fileRef = E1B676452A00E2BF009CC879 /* sapi2.json */; };
 		E1B6765F2A00E2BF009CC879 /* sapi.json in Resources */ = {isa = PBXBuildFile; fileRef = E1B676462A00E2BF009CC879 /* sapi.json */; };
-		E1B676672A00E4D0009CC879 /* GameSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B676662A00E4D0009CC879 /* GameSceneView.swift */; };
-		E1B676692A00E554009CC879 /* Checkmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B676682A00E554009CC879 /* Checkmark.swift */; };
-		E1B6766D2A00E58A009CC879 /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B6766C2A00E58A009CC879 /* ChatBubble.swift */; };
-		E1B6766F2A00E5C1009CC879 /* Audio and Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B6766E2A00E5C1009CC879 /* Audio and Video.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -140,6 +138,10 @@
 		C449E91829ED983F00F9409F /* Lotties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lotties.swift; sourceTree = "<group>"; };
 		C449E91A29EE23F200F9409F /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
 		C449E91D29EE2AFC00F9409F /* HintText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintText.swift; sourceTree = "<group>"; };
+		C452B6B72A021F2F006EAF43 /* GameSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSceneView.swift; sourceTree = "<group>"; };
+		C452B6B92A025BB1006EAF43 /* MovingCloud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovingCloud.swift; sourceTree = "<group>"; };
+		C452B6BB2A0286ED006EAF43 /* TextBubbleShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBubbleShape.swift; sourceTree = "<group>"; };
+		C452B6BD2A02BDAA006EAF43 /* AchievementDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementDetailView.swift; sourceTree = "<group>"; };
 		C46F1D942A00B78800C34D62 /* SectionDetailSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionDetailSheet.swift; sourceTree = "<group>"; };
 		C46F1D962A00BAB500C34D62 /* SpeechBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechBubble.swift; sourceTree = "<group>"; };
 		C46F1D982A00BD2200C34D62 /* SectionGuideline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionGuideline.swift; sourceTree = "<group>"; };
@@ -154,11 +156,9 @@
 		C4BAF52F29F6D2D70077DD6D /* ShimmerEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerEffect.swift; sourceTree = "<group>"; };
 		C4C30C1529F61B5B006EC836 /* StageDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageDialog.swift; sourceTree = "<group>"; };
 		C4E7680B29FFE14B00F92A56 /* mamaSong.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mamaSong.mp4; sourceTree = "<group>"; };
-		C4E7680C29FFE18900F92A56 /* StageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageButton.swift; sourceTree = "<group>"; };
 		C4E7681029FFE1FC00F92A56 /* Milestone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Milestone.swift; sourceTree = "<group>"; };
 		C4E7681229FFE22500F92A56 /* SnapCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapCarouselView.swift; sourceTree = "<group>"; };
 		C4E7681C29FFE3D800F92A56 /* VideoModalSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoModalSheetView.swift; sourceTree = "<group>"; };
-		C4E7681F29FFE3FB00F92A56 /* PlayVideoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayVideoButton.swift; sourceTree = "<group>"; };
 		C4E7682429FFEF1E00F92A56 /* NiceSugar.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NiceSugar.otf; sourceTree = "<group>"; };
 		E1B6762E2A00E2BE009CC879 /* warna.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = warna.json; sourceTree = "<group>"; };
 		E1B6762F2A00E2BE009CC879 /* senyum.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = senyum.json; sourceTree = "<group>"; };
@@ -185,10 +185,6 @@
 		E1B676442A00E2BF009CC879 /* waktu.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = waktu.json; sourceTree = "<group>"; };
 		E1B676452A00E2BF009CC879 /* sapi2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sapi2.json; sourceTree = "<group>"; };
 		E1B676462A00E2BF009CC879 /* sapi.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sapi.json; sourceTree = "<group>"; };
-		E1B676662A00E4D0009CC879 /* GameSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSceneView.swift; sourceTree = "<group>"; };
-		E1B676682A00E554009CC879 /* Checkmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkmark.swift; sourceTree = "<group>"; };
-		E1B6766C2A00E58A009CC879 /* ChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
-		E1B6766E2A00E5C1009CC879 /* Audio and Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Audio and Video.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -407,7 +403,6 @@
 			children = (
 				C4C30C1529F61B5B006EC836 /* StageDialog.swift */,
 				C40589DD29F77CE600E76068 /* StageCircle.swift */,
-				C4E7680C29FFE18900F92A56 /* StageButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -564,7 +559,6 @@
 				6149CA4C2A01E2AF0070D658 /* Photo */,
 				6149CA382A01BF380070D658 /* Speech */,
 				6AAB7FA52A01465E00980A39 /* InputPage */,
-				C4E7681929FFE3A000F92A56 /* VideoSheetPlayer */,
 				C420A64229F6246E00C028D8 /* Journey */,
 				C449E90929ED8B8B00F9409F /* Milestone */,
 			);
@@ -665,6 +659,7 @@
 				C420A64529F630D800C028D8 /* HintCarousel.swift */,
 				C420A64729F658E100C028D8 /* IndicatorView.swift */,
 				C46F1D962A00BAB500C34D62 /* SpeechBubble.swift */,
+				C452B6BB2A0286ED006EAF43 /* TextBubbleShape.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -716,6 +711,7 @@
 			isa = PBXGroup;
 			children = (
 				C46F1DA62A02054700C34D62 /* AchievementListView.swift */,
+				C452B6BD2A02BDAA006EAF43 /* AchievementDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -733,39 +729,6 @@
 				C4E7680B29FFE14B00F92A56 /* mamaSong.mp4 */,
 			);
 			path = Videos;
-			sourceTree = "<group>";
-		};
-		C4E7681929FFE3A000F92A56 /* VideoSheetPlayer */ = {
-			isa = PBXGroup;
-			children = (
-				C4E7681A29FFE3B800F92A56 /* Presenters */,
-			);
-			path = VideoSheetPlayer;
-			sourceTree = "<group>";
-		};
-		C4E7681A29FFE3B800F92A56 /* Presenters */ = {
-			isa = PBXGroup;
-			children = (
-				C4E7681E29FFE3F000F92A56 /* Components */,
-				C4E7681B29FFE3BF00F92A56 /* Views */,
-			);
-			path = Presenters;
-			sourceTree = "<group>";
-		};
-		C4E7681B29FFE3BF00F92A56 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				C4E7681C29FFE3D800F92A56 /* VideoModalSheetView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		C4E7681E29FFE3F000F92A56 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				C4E7681F29FFE3FB00F92A56 /* PlayVideoButton.swift */,
-			);
-			path = Components;
 			sourceTree = "<group>";
 		};
 		E1B676602A00E470009CC879 /* GameScene */ = {
@@ -804,9 +767,7 @@
 		E1B676642A00E4BE009CC879 /* Component */ = {
 			isa = PBXGroup;
 			children = (
-				E1B676682A00E554009CC879 /* Checkmark.swift */,
-				E1B6766C2A00E58A009CC879 /* ChatBubble.swift */,
-				E1B6766E2A00E5C1009CC879 /* Audio and Video.swift */,
+				C452B6B92A025BB1006EAF43 /* MovingCloud.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -814,7 +775,8 @@
 		E1B676652A00E4C4009CC879 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				E1B676662A00E4D0009CC879 /* GameSceneView.swift */,
+				C452B6B72A021F2F006EAF43 /* GameSceneView.swift */,
+				C4E7681C29FFE3D800F92A56 /* VideoModalSheetView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -937,12 +899,11 @@
 				C449E90229ED8AC600F9409F /* Prompt.swift in Sources */,
 				C449E90429ED8AF500F9409F /* LottieView.swift in Sources */,
 				C46F1D972A00BAB500C34D62 /* SpeechBubble.swift in Sources */,
-				E1B6766D2A00E58A009CC879 /* ChatBubble.swift in Sources */,
 				C40589DE29F77CE600E76068 /* StageCircle.swift in Sources */,
 				C449E8ED29ED7D5600F9409F /* Color+App.swift in Sources */,
 				C46F1DA12A02027E00C34D62 /* AchievementAvatar.swift in Sources */,
 				C46F1DA52A0203B900C34D62 /* Achievement.swift in Sources */,
-				C4E7682029FFE3FB00F92A56 /* PlayVideoButton.swift in Sources */,
+				C452B6BC2A0286ED006EAF43 /* TextBubbleShape.swift in Sources */,
 				C46F1D952A00B78800C34D62 /* SectionDetailSheet.swift in Sources */,
 				C449E8E629ED730600F9409F /* MilestoneView.swift in Sources */,
 				C449E8DA29ED729A00F9409F /* Persistence.swift in Sources */,
@@ -955,9 +916,12 @@
 				C4C30C1629F61B5B006EC836 /* StageDialog.swift in Sources */,
 				C449E91029ED8C8C00F9409F /* RaisedButtonStyle.swift in Sources */,
 				C420A64829F658E100C028D8 /* IndicatorView.swift in Sources */,
+				C452B6B82A021F2F006EAF43 /* GameSceneView.swift in Sources */,
+				C452B6BE2A02BDAA006EAF43 /* AchievementDetailView.swift in Sources */,
 				6149CA492A01CA820070D658 /* SpeechRecognizer.swift in Sources */,
 				6149CA5E2A01FD2E0070D658 /* PhotoView.swift in Sources */,
 				C449E8D129ED729900F9409F /* ToddTalksApp.swift in Sources */,
+				C452B6BA2A025BB1006EAF43 /* MovingCloud.swift in Sources */,
 				C449E8FE29ED8A5600F9409F /* AudioPlayer.swift in Sources */,
 				6149CA622A0210010070D658 /* CircleView.swift in Sources */,
 				C40589D229F76B5500E76068 /* Stage.swift in Sources */,
@@ -972,10 +936,8 @@
 				6149CA432A01C4320070D658 /* SpeechToTextView.swift in Sources */,
 				C4E7681D29FFE3D800F92A56 /* VideoModalSheetView.swift in Sources */,
 				C420A64629F630D800C028D8 /* HintCarousel.swift in Sources */,
-				E1B676672A00E4D0009CC879 /* GameSceneView.swift in Sources */,
 				6AAB7FAC2A01548000980A39 /* InputProfilePic.swift in Sources */,
 				C46F1D992A00BD2200C34D62 /* SectionGuideline.swift in Sources */,
-				C4E7680D29FFE18900F92A56 /* StageButton.swift in Sources */,
 				C46F1DA72A02054700C34D62 /* AchievementListView.swift in Sources */,
 				C449E91B29EE23F200F9409F /* ProgressBarView.swift in Sources */,
 				6149CA4B2A01D2E40070D658 /* SpeakButtonView.swift in Sources */,

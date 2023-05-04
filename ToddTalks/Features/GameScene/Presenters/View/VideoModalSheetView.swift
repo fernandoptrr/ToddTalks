@@ -9,26 +9,26 @@ import SwiftUI
 import AVKit
 import WebKit
 
-struct VideoModalSheetView: View {
-    
-    @State private var showModal = false
-    
-    var body: some View {
-        
-        Button {
-            showModal.toggle()
-        } label: {
-            PlayVideoButton()
-        }
-        .fullScreenCover(isPresented: $showModal, content: FullScreenModalView.init)
-    }
-}
-
-struct VideoModalSheetView_Previews: PreviewProvider {
-    static var previews: some View {
-        VideoModalSheetView()
-    }
-}
+//struct VideoModalSheetView: View {
+//
+//    @State private var showModal = false
+//
+//    var body: some View {
+//
+//        Button {
+//            showModal.toggle()
+//        } label: {
+//            PlayVideoButton()
+//        }
+//        .fullScreenCover(isPresented: $showModal, content: FullScreenModalView.init)
+//    }
+//}
+//
+//struct VideoModalSheetView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        VideoModalSheetView()
+//    }
+//}
 
 struct FullScreenModalView: View {
  
@@ -52,10 +52,8 @@ struct FullScreenModalView: View {
             
             VideoPlayer(player: AVPlayer(url: Bundle.main.url(forResource: "mamaSong", withExtension: "mp4")!))
                 .ignoresSafeArea()
-            //        YouTubeView(videoID: "73e3GNxcKvA")
-            //            .ignoresSafeArea()
-             
-           
+//                    YouTubeView(videoID: "73e3GNxcKvA")
+//                        .ignoresSafeArea()
         }
         
     }
@@ -75,5 +73,4 @@ struct YouTubeView: UIViewRepresentable {
         uiView.load(urlRequest)
     }
 }
-
 

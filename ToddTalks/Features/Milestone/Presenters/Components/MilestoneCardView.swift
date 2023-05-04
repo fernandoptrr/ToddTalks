@@ -34,13 +34,23 @@ struct MilestoneCardView: View {
                     .fixedSize(horizontal: false, vertical: true)
                     .multilineTextAlignment(.center)
                     .padding(.top, 8)
-                ProgressBarView(label: milestone.progLabel, value: milestone.progVal, maximum: milestone.progMaxVal)
-                    .padding(.top, 32)
+                HStack {
+                    ProgressBarView(label: milestone.progLabel, value: milestone.progVal, maximum: milestone.progMaxVal, color: .yellow)
+                        .foregroundColor(Color(uiColor: .darkGray))
+                    NavigationLink(destination: AchievementListView()) {
+                        Image(systemName: "trophy.fill")
+                            .foregroundColor(.primaryColor)
+                            .font(.title)
+                            .shimmering()
+
+                    }
+                }
+                .padding(.top, 32)
                 HintCarousel(carouselContent: milestone.tips)
                     .frame(height: 100)
                     .padding(.top, 8)
                     .foregroundColor(.black)
-                NavigationLink(destination: JourneyView()) {
+                NavigationLink(destination: JourneyView(colorTheme: milestone.colorTheme)) {
                     Text("Journey")
                 }
                 .buttonStyle(RaisedButtonStyle())

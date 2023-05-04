@@ -8,29 +8,26 @@
 import SwiftUI
 
 struct ProgressBarView: View {
-    var label: String
-    var value: Int
-    var maximum: Int
+    let label: String?
+    let value: Int
+    let maximum: Int
+    var scale: CGFloat = 1.3
+    var color: Color = Color.primaryColor
+    
     
     var body: some View {
-        HStack(alignment: .center) {
-            Gauge(value: Double(value), in: 0...Double(maximum)) {}
-                .gaugeStyle(.linearCapacity)
-                .scaleEffect(x: 1, y: 1.3, anchor: .center)
-                .tint(Color.greenColor)
-                .overlay(alignment: .center) {
+        Gauge(value: Double(value), in: 0...Double(maximum)) {}
+            .gaugeStyle(.linearCapacity)
+            .scaleEffect(x: 1, y: scale, anchor: .center)
+            .tint(color)
+            .overlay(alignment: .center) {
+                if let label = label {
                     Text(label)
                         .font(FontProvider.custom(.sassoon, size: .caption)
                             .weight(.medium))
                 }
-            Image(systemName: "shippingbox.fill")
-                .foregroundColor(.greenColor)
-                .font(.title)
-                .shimmering()
-
-        }
-        .animation(.spring(), value: value)
-        
+            }
+            .animation(.spring(), value: value)
     }
 }
 
