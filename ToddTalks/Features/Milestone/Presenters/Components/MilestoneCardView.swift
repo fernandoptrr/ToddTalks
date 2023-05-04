@@ -24,9 +24,15 @@ struct MilestoneCardView: View {
                     .font(FontProvider.custom(.niceSugar, size: .title))
                     .padding(.top, 84)
                     .overlay {
-                        LottieView(name: milestone.illPath, loopMode: .loop, animationSpeed: 0.8)
-                            .scaleEffect(illScale)
-                            .offset(y: -72)
+                        Image("anakcowo")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 200, height: 200)
+                            .offset(y: -90)
+                            .shadow(radius: 10)
+//                        LottieView(name: milestone.illPath, loopMode: .loop, animationSpeed: 0.8)
+//                            .scaleEffect(illScale)
+//                            .offset(y: -72)
                     }
                 Text(milestone.body)
                     .font(FontProvider.custom(.sassoon, size: .body)
