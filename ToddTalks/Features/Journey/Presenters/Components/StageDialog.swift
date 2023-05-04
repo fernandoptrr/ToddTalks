@@ -3,10 +3,10 @@ import SwiftUI
 struct StageDialog: View {
     @Binding var isPresented: Bool
     let stage: Stage
-    var primaryButtonTitle: String = "Start"
-    let primaryButtonAction: () -> Void
-    let secondaryButtonTitle: String?
-    let secondaryButtonAction: (() -> Void)?
+    var primaryButtonTitle: String = "Mulai"
+//    let primaryButtonAction: () -> Void
+//    let secondaryButtonTitle: String?
+//    let secondaryButtonAction: (() -> Void)?
     
     @State private var offset: CGFloat = 1000
 
@@ -39,21 +39,24 @@ struct StageDialog: View {
                         HintText(text: stage.tips!)
                         .padding(.top, 16)
                     }
-                    HStack {
+//                    HStack {
+                    NavigationLink(destination: GameSceneView()){
                         Button(primaryButtonTitle) {
-                            primaryButtonAction()
+//                            primaryButtonAction()
                             isPresented = false
                         }
-                        if let secondaryButtonTitle = secondaryButtonTitle,
-                           let secondaryButtonAction = secondaryButtonAction {
-                            Button(secondaryButtonTitle) {
-                                secondaryButtonAction()
-                                close()
-                            }
-                            .padding(.leading, 8)
-                        }
-                        
                     }
+                        
+//                        if let secondaryButtonTitle = secondaryButtonTitle,
+//                           let secondaryButtonAction = secondaryButtonAction {
+//                            Button(secondaryButtonTitle) {
+//                                secondaryButtonAction()
+//                                close()
+//                            }
+//                            .padding(.leading, 8)
+//                        }
+                        
+//                    }
                     .buttonStyle(RaisedButtonStyle())
                     .foregroundColor(.white)
                     .frame(height: 44)
@@ -124,10 +127,11 @@ struct DialogView_Previews: PreviewProvider {
     static var previews: some View {
         StageDialog(
             isPresented: .constant(true),
-            stage:             Stage(illPath: "play.fill", title: "Gesture 1", body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.", tips: "haha", starCount: 3),
-            primaryButtonAction: {},
-            secondaryButtonTitle: nil,
-            secondaryButtonAction: nil
+            stage:             Stage(illPath: "play.fill", title: "Gesture 1", body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.", tips: "haha", starCount: 3)
+//            ,
+//            primaryButtonAction: {},
+//            secondaryButtonTitle: nil,
+//            secondaryButtonAction: nil
         )
     }
 }

@@ -14,5 +14,6 @@ extension Color {
     static let purpleColor = Color("PurpleColor")
     static let secondaryButtonColor = Color("SecondaryButtonColor")
     static let tealColor = Color("TealColor")
+    static let skyColor = Color("SkyColor")
     // Add any additional custom colors here
 }

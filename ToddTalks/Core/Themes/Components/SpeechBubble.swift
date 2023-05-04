@@ -13,7 +13,7 @@ struct SpeechBubble: Shape {
 
     init(radius: CGFloat = 10) {
         self.radius = radius
-        tailSize = 20
+        tailSize = 24
     }
 
     func path(in rect: CGRect) -> Path {
