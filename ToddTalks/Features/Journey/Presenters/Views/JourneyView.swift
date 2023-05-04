@@ -10,6 +10,7 @@ import SwiftUI
 struct JourneyView: View {
     @StateObject var viewModel = StageViewModel()
     @State private var showStageDialog = false
+    let colorTheme: Color
     
     var body: some View {
         ZStack {
@@ -21,6 +22,7 @@ struct JourneyView: View {
                             subHeadline: "Early Word Learning",
                             stages: viewModel.stages,
                             sectionGuideline: viewModel.sectionGuidelines[index],
+                            colorTheme: colorTheme,
                             showStageDialog: $showStageDialog
                         )
                     }
@@ -28,12 +30,13 @@ struct JourneyView: View {
                 .padding(.top, 48)
             }
             .ignoresSafeArea()
-            .background(Color.blueColor)
+            .background(colorTheme)
             
             if showStageDialog {
-                StageDialog(isPresented: $showStageDialog, stage: Stage(illPath: "play.fill", title: "Gesture 1", body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.", tips: "haha", starCount: 3),     primaryButtonAction: {},
-                            secondaryButtonTitle: nil,
-                            secondaryButtonAction: nil
+                StageDialog(isPresented: $showStageDialog, stage: Stage(illPath: "play.fill", title: "Gesture 1", body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.", tips: "haha", starCount: 3)
+//                            ,     primaryButtonAction: {},
+//                            secondaryButtonTitle: nil,
+//                            secondaryButtonAction: nil
                 )
             }
         }
@@ -43,8 +46,6 @@ struct JourneyView: View {
 
 struct JourneyView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationStack{
-            JourneyView()
-        }
+        JourneyView(colorTheme: .blueColor)
     }
 }

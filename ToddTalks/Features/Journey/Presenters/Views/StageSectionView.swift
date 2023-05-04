@@ -12,6 +12,7 @@ struct StageSectionView: View {
     let subHeadline: String
     let stages: [[Stage]]
     let sectionGuideline: SectionGuideline
+    let colorTheme: Color
     
     @State private var showDetails = false
     @Binding var showStageDialog: Bool
@@ -19,7 +20,7 @@ struct StageSectionView: View {
     var body: some View {
         VStack(alignment: .center) {
             ZStack {
-                Image("cloud")
+                Image("cloudBig")
                     .resizable()
                     .frame( height: 180)
                 
@@ -62,7 +63,7 @@ struct StageSectionView: View {
                 }
             }
         }
-        .background(Color.blueColor)
+        .background(colorTheme)
     }
 }
 
@@ -73,7 +74,7 @@ struct StageSectionView_Previews: PreviewProvider {
             subHeadline: "Early Word Learning",
             stages: StageViewModel().stages,
             sectionGuideline: SectionGuideline(illPath: Lotties.baby, headline: "Section 1 Guideline", subHeadline: "Pelajari tips tata bahasa dan frasa kunci untuk unit ini", title: "FRASA KUNCI", body: "Memakai kata jamak", tips: ["Some really long text in the speech bubble over multiple lines.", "Some really long text in the speech bubble over multiple lines.", "Some really long text in the speech bubble over multiple lines."]),
-            showStageDialog: .constant(false)
+            colorTheme: .blueColor, showStageDialog: .constant(false)
         )
     }
 }
