@@ -129,6 +129,9 @@ struct GameSceneView: View {
         .onAppear {
             isAnimating = true
         }
+        .onChange(of: isCorrect, perform: { _ in
+            playSound(sound: "correct1", type: "mp3")
+        })
         .fullScreenCover(isPresented: $showVideoModal, content: FullScreenModalView.init)
     }
     
