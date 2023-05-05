@@ -7,6 +7,7 @@
 
 import SwiftUI
 import AVFoundation
+import Photos
 
 struct CameraContentView: View {
     var body: some View {
@@ -24,6 +25,8 @@ struct CameraContentView_Previews: PreviewProvider {
 struct CameraView :  View {
     @StateObject var camera = CameraModel()
     @State private var capturedImage: UIImage?
+    @Environment(\.managedObjectContext) var managedObjContext
+    @Environment(\.dismiss) var dismiss
     
     var body: some View {
         ZStack {
@@ -65,7 +68,10 @@ struct CameraView :  View {
                 HStack {
                     if camera.isTaken {
                         Button(action: {
-                            camera.savePic()
+                            guard let image = camera.savePic() else {
+                                return
+                            }
+                            saveToCoreData(achievementId: 1, image: image)
                         }, label: {
                             Text("Lanjut")
                                 .font(FontProvider.custom(.niceSugar, size: .title))  .buttonStyle(RaisedButtonStyle())
@@ -108,6 +114,10 @@ struct CameraView :  View {
         .onAppear(perform: {
             camera.Check()
         })
+    }
+    
+    func saveToCoreData(achievementId : Int16, image : Data) {
+        AchievementController().addCompletedAchievement(achievementId: achievementId, imageData: image, context: managedObjContext)
     }
 }
 
@@ -193,49 +203,56 @@ class CameraModel: NSObject,ObservableObject, AVCapturePhotoCaptureDelegate {
         
     }
     
-    func savePic(){
+    func savePic() -> Data?{
         let image = UIImage(data: self.pictData)!
         let overlay = UIImage(named: "frameAwan")
         let widthRect = image.size.width
         let heightRect = image.size.height
-        print(widthRect)
         let overlayRect = CGRect(x: 0, y: 0, width: widthRect, height: heightRect)
         guard let overlay = overlay else {
-            return
+            return nil
         }
         let newImage = addOverlayToImage(image: image, overlayImage: overlay, overlayRect: overlayRect)
         
         guard let newImage = newImage else {
-            return
+            return nil
         }
         UIImageWriteToSavedPhotosAlbum(newImage,nil,nil,nil)
         
+        guard let jpegData = newImage.jpegData(compressionQuality: 1.0) else {
+            return nil
+        }
+        
+        return jpegData
+        
+        
     }
-    
-    func addOverlayToImage(image: UIImage, overlayImage: UIImage, overlayRect: CGRect) -> UIImage? {
-        let size = image.size
-        let newSize = CGSize(width: image.size.width - 400, height: image.size.height - 400)
-        let scale = 0.9
-        // Buat sebuah konteks gambar dengan ukuran yang sama dengan gambar asli.
-        UIGraphicsBeginImageContextWithOptions(size, false, scale)
-
-        // Gambar gambar asli pada konteks gambar.
-        image.draw(in: CGRect(origin: .init(x: 220, y: 220) , size: newSize))
-
-        // Gambar overlay pada konteks gambar.
-        overlayImage.draw(in: overlayRect)
-
-        // Ambil gambar yang dihasilkan dari konteks gambar.
-        let newImage = UIGraphicsGetImageFromCurrentImageContext()
-
-        // Hentikan konteks gambar.
-        UIGraphicsEndImageContext()
-
-        // Kembalikan gambar yang telah dihasilkan.
-        return newImage
-    }
-
 }
+
+func addOverlayToImage(image: UIImage, overlayImage: UIImage, overlayRect: CGRect) -> UIImage? {
+    let size = image.size
+    let newSize = CGSize(width: image.size.width - 400, height: image.size.height - 400)
+    let scale = 0.9
+    // Buat sebuah konteks gambar dengan ukuran yang sama dengan gambar asli.
+    UIGraphicsBeginImageContextWithOptions(size, false, scale)
+    
+    // Gambar gambar asli pada konteks gambar.
+    image.draw(in: CGRect(origin: .init(x: 220, y: 220) , size: newSize))
+    
+    // Gambar overlay pada konteks gambar.
+    overlayImage.draw(in: overlayRect)
+    
+    // Ambil gambar yang dihasilkan dari konteks gambar.
+    let newImage = UIGraphicsGetImageFromCurrentImageContext()
+    
+    // Hentikan konteks gambar.
+    UIGraphicsEndImageContext()
+    
+    // Kembalikan gambar yang telah dihasilkan.
+    return newImage
+}
+
+
 
 struct frameView: View {
     var body: some View {

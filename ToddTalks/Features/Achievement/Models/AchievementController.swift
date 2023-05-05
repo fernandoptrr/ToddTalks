@@ -26,15 +26,16 @@ class AchievementController : ObservableObject {
             try context.save()
             print("Data SAVED")
         } catch {
-            print("Unable to save data")
+            print("Unable to save data \(error)")
         }
     }
     
-    func addCompletedAchievement(achievementID: Int16, imagePath: String, context: NSManagedObjectContext) {
+    func addCompletedAchievement(achievementId: Int16, imageData: Data, context: NSManagedObjectContext) {
         let completeAchievement = CompleteAchievement(context: context)
-        completeAchievement.achievementId = achievementID
-        completeAchievement.imagePath = imagePath
+        completeAchievement.achievementId = achievementId
+        completeAchievement.imageData = imageData
         
+        print(imageData)
         save(context: context)
     }
 

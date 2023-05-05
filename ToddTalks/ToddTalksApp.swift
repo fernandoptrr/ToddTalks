@@ -12,7 +12,7 @@ struct ToddTalksApp: App {
     var body: some Scene {
         WindowGroup {
 //            MilestoneView()
-            GameSceneView()
+            InputPageView()
         }
     }
 }
