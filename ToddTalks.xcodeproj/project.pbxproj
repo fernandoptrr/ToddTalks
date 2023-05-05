@@ -20,7 +20,6 @@
 		617330A82A0488B500ED3CB0 /* AchievementController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617330A72A0488B500ED3CB0 /* AchievementController.swift */; };
 		61C6D6B22A0346C000C2DB5F /* CameraContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C6D6B12A0346C000C2DB5F /* CameraContentView.swift */; };
 		61C6D6B42A03762A00C2DB5F /* FrameAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61C6D6B32A03762A00C2DB5F /* FrameAssets.xcassets */; };
-		61C6D6B62A03820B00C2DB5F /* confetti.json in Resources */ = {isa = PBXBuildFile; fileRef = 61C6D6B52A03820B00C2DB5F /* confetti.json */; };
 		6AAB7FAA2A01474900980A39 /* InputPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AAB7FA92A01474900980A39 /* InputPageView.swift */; };
 		6AAB7FAC2A01548000980A39 /* InputProfilePic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AAB7FAB2A01548000980A39 /* InputProfilePic.swift */; };
 		6AAB7FAE2A01589900980A39 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AAB7FAD2A01589900980A39 /* ImagePickerView.swift */; };
@@ -60,7 +59,6 @@
 		C46F1DA32A02039C00C34D62 /* AchievementRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46F1DA22A02039C00C34D62 /* AchievementRow.swift */; };
 		C46F1DA52A0203B900C34D62 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46F1DA42A0203B900C34D62 /* Achievement.swift */; };
 		C46F1DA72A02054700C34D62 /* AchievementListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46F1DA62A02054700C34D62 /* AchievementListView.swift */; };
-		C46F1DAA2A021DAF00C34D62 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = C46F1DA92A021DAF00C34D62 /* Lottie */; };
 		C47F48A629FFF3650094BFA9 /* baby.json in Resources */ = {isa = PBXBuildFile; fileRef = C47F48A529FFF3650094BFA9 /* baby.json */; };
 		C47F48A82A0000800094BFA9 /* MilestoneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47F48A72A0000800094BFA9 /* MilestoneViewModel.swift */; };
 		C47F48AA2A00503B0094BFA9 /* StageSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47F48A92A00503B0094BFA9 /* StageSectionView.swift */; };
@@ -71,6 +69,9 @@
 		C4E7681329FFE22500F92A56 /* SnapCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E7681229FFE22500F92A56 /* SnapCarouselView.swift */; };
 		C4E7681D29FFE3D800F92A56 /* VideoModalSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E7681C29FFE3D800F92A56 /* VideoModalSheetView.swift */; };
 		C4E7682529FFEF1E00F92A56 /* NiceSugar.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4E7682429FFEF1E00F92A56 /* NiceSugar.otf */; };
+		E158D0622A049C10008F0DD0 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = E158D0612A049C10008F0DD0 /* Lottie */; };
+		E158D0642A049CBC008F0DD0 /* confetti.json in Resources */ = {isa = PBXBuildFile; fileRef = E158D0632A049CBB008F0DD0 /* confetti.json */; };
+		E158D0672A04A6B6008F0DD0 /* correct1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E158D0662A04A6B6008F0DD0 /* correct1.mp3 */; };
 		E1B676472A00E2BF009CC879 /* warna.json in Resources */ = {isa = PBXBuildFile; fileRef = E1B6762E2A00E2BE009CC879 /* warna.json */; };
 		E1B676482A00E2BF009CC879 /* senyum.json in Resources */ = {isa = PBXBuildFile; fileRef = E1B6762F2A00E2BE009CC879 /* senyum.json */; };
 		E1B676492A00E2BF009CC879 /* biru.json in Resources */ = {isa = PBXBuildFile; fileRef = E1B676302A00E2BE009CC879 /* biru.json */; };
@@ -113,7 +114,6 @@
 		617330A72A0488B500ED3CB0 /* AchievementController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AchievementController.swift; path = ToddTalks/Features/Achievement/Models/AchievementController.swift; sourceTree = SOURCE_ROOT; };
 		61C6D6B12A0346C000C2DB5F /* CameraContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraContentView.swift; sourceTree = "<group>"; };
 		61C6D6B32A03762A00C2DB5F /* FrameAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = FrameAssets.xcassets; sourceTree = "<group>"; };
-		61C6D6B52A03820B00C2DB5F /* confetti.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = confetti.json; path = ../../../../../../../../Downloads/confetti.json; sourceTree = "<group>"; };
 		6AAB7FA92A01474900980A39 /* InputPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputPageView.swift; sourceTree = "<group>"; };
 		6AAB7FAB2A01548000980A39 /* InputProfilePic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputProfilePic.swift; sourceTree = "<group>"; };
 		6AAB7FAD2A01589900980A39 /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
@@ -166,6 +166,8 @@
 		C4E7681229FFE22500F92A56 /* SnapCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapCarouselView.swift; sourceTree = "<group>"; };
 		C4E7681C29FFE3D800F92A56 /* VideoModalSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoModalSheetView.swift; sourceTree = "<group>"; };
 		C4E7682429FFEF1E00F92A56 /* NiceSugar.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NiceSugar.otf; sourceTree = "<group>"; };
+		E158D0632A049CBB008F0DD0 /* confetti.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = confetti.json; sourceTree = "<group>"; };
+		E158D0662A04A6B6008F0DD0 /* correct1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = correct1.mp3; sourceTree = "<group>"; };
 		E1B6762E2A00E2BE009CC879 /* warna.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = warna.json; sourceTree = "<group>"; };
 		E1B6762F2A00E2BE009CC879 /* senyum.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = senyum.json; sourceTree = "<group>"; };
 		E1B676302A00E2BE009CC879 /* biru.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = biru.json; sourceTree = "<group>"; };
@@ -198,7 +200,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C46F1DAA2A021DAF00C34D62 /* Lottie in Frameworks */,
+				E158D0622A049C10008F0DD0 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,8 +458,9 @@
 		C449E8E429ED72AC00F9409F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				C449E8EE29ED7F4A00F9409F /* Fonts */,
 				C4E7680A29FFE13B00F92A56 /* Videos */,
+				E158D0652A04A69E008F0DD0 /* Sound */,
+				C449E8EE29ED7F4A00F9409F /* Fonts */,
 				C449E91529ED982E00F9409F /* Lotties */,
 				C449E8D429ED729A00F9409F /* Assets.xcassets */,
 				61C6D6B32A03762A00C2DB5F /* FrameAssets.xcassets */,
@@ -626,6 +629,7 @@
 		C449E91529ED982E00F9409F /* Lotties */ = {
 			isa = PBXGroup;
 			children = (
+				E158D0632A049CBB008F0DD0 /* confetti.json */,
 				C47F48A529FFF3650094BFA9 /* baby.json */,
 				E1B676412A00E2BF009CC879 /* awan.json */,
 				E1B676402A00E2BF009CC879 /* awan2.json */,
@@ -647,7 +651,6 @@
 				E1B676462A00E2BF009CC879 /* sapi.json */,
 				E1B676452A00E2BF009CC879 /* sapi2.json */,
 				E1B6762F2A00E2BE009CC879 /* senyum.json */,
-				61C6D6B52A03820B00C2DB5F /* confetti.json */,
 				E1B6763F2A00E2BF009CC879 /* tepuk tangan.json */,
 				E1B676372A00E2BF009CC879 /* tos.json */,
 				E1B676322A00E2BE009CC879 /* tunjuk.json */,
@@ -740,6 +743,14 @@
 			path = Videos;
 			sourceTree = "<group>";
 		};
+		E158D0652A04A69E008F0DD0 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				E158D0662A04A6B6008F0DD0 /* correct1.mp3 */,
+			);
+			path = Sound;
+			sourceTree = "<group>";
+		};
 		E1B676602A00E470009CC879 /* GameScene */ = {
 			isa = PBXGroup;
 			children = (
@@ -807,7 +818,7 @@
 			);
 			name = ToddTalks;
 			packageProductDependencies = (
-				C46F1DA92A021DAF00C34D62 /* Lottie */,
+				E158D0612A049C10008F0DD0 /* Lottie */,
 			);
 			productName = ToddTalks;
 			productReference = C449E8CD29ED729900F9409F /* ToddTalks.app */;
@@ -859,12 +870,13 @@
 				E1B676552A00E2BF009CC879 /* labu.json in Resources */,
 				E1B676512A00E2BF009CC879 /* hijau.json in Resources */,
 				E1B6764B2A00E2BF009CC879 /* tunjuk.json in Resources */,
+				E158D0672A04A6B6008F0DD0 /* correct1.mp3 in Resources */,
 				E1B6765C2A00E2BF009CC879 /* papa.json in Resources */,
 				E1B676562A00E2BF009CC879 /* halo.json in Resources */,
 				E1B676502A00E2BF009CC879 /* tos.json in Resources */,
 				E1B676582A00E2BF009CC879 /* tepuk tangan.json in Resources */,
 				E1B6764F2A00E2BF009CC879 /* mobil.json in Resources */,
-				61C6D6B62A03820B00C2DB5F /* confetti.json in Resources */,
+				E158D0642A049CBC008F0DD0 /* confetti.json in Resources */,
 				E1B6764A2A00E2BF009CC879 /* pisang.json in Resources */,
 				E1B6764E2A00E2BF009CC879 /* bye2.json in Resources */,
 				E1B676472A00E2BF009CC879 /* warna.json in Resources */,
@@ -1080,7 +1092,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ToddTalks/Preview Content\"";
-				DEVELOPMENT_TEAM = 6S38UULUK4;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ToddTalks/Info.plist;
@@ -1115,7 +1127,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ToddTalks/Preview Content\"";
-				DEVELOPMENT_TEAM = 6S38UULUK4;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ToddTalks/Info.plist;
@@ -1177,7 +1189,7 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		C46F1DA92A021DAF00C34D62 /* Lottie */ = {
+		E158D0612A049C10008F0DD0 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C449E90529ED8B4B00F9409F /* XCRemoteSwiftPackageReference "lottie-spm" */;
 			productName = Lottie;
