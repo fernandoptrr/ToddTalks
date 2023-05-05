@@ -11,7 +11,8 @@ struct GameSceneView: View {
     @Environment(\.dismiss) private var dismiss
     @State private var isAnimating: Bool = false
     @State private var showVideoModal = false
-
+    @State var isCorrect = false
+    
     
     var body: some View {
         GeometryReader { geometry in
@@ -51,7 +52,7 @@ struct GameSceneView: View {
                                         .foregroundColor(.primaryColor)
                                 }
                                 .fixedSize(horizontal: true, vertical: true)
-                                    .offset(y: 48)
+                                .offset(y: 48)
                             }
                         
                     }
@@ -73,17 +74,7 @@ struct GameSceneView: View {
                                         .font(FontProvider.custom(.sassoon, size: .title)
                                             .weight(.bold))
                                         .foregroundColor(.red)
-                                    Button( action: {
-                                    }) {
-                                        Image(systemName: "speaker.wave.2")
-                                            .font(.title3)
-                                            .foregroundColor(.white)
-                                            .padding(6)
-                                    }
-                                    .fixedSize(horizontal: true, vertical: true)
-                                    .buttonStyle(RaisedButtonStyle(color: .red))
-                                        .padding(.leading, 8)
-                                        .offset(y: -4)
+                                    TextToSpeechView(word: "pisang")
                                 }
                             }
                             .offset(y: -120)
@@ -100,16 +91,9 @@ struct GameSceneView: View {
                         }
                         .fixedSize(horizontal: true, vertical: true)
                         .buttonStyle(RaisedButtonStyle(color: .red))
-                        Button( action: {
-                        }) {
-                            Image(systemName: "waveform.and.mic")
-                                .font(.largeTitle)
-                                .foregroundColor(.white)
-                                .padding(24)
-                        }
-                        .fixedSize(horizontal: true, vertical: true)
-                        .buttonStyle(RaisedButtonStyle(radius: 100, color: .blue))
-                        .padding(.horizontal, 42)
+                        SpeakButtonView(word: "pisang", isCorrect: $isCorrect)
+                            .padding(.horizontal,42)
+                            
                         Button( action: {
                         }) {
                             Image(systemName: "checkmark")
@@ -124,12 +108,34 @@ struct GameSceneView: View {
                     .padding(.horizontal, 24)
                 }
             }
+            if (isCorrect){
+                ZStack{
+                    VStack {
+                        Spacer()
+                        HStack{
+                            Spacer()
+                            Text("Benar!").font(.custom("Nice Sugar", size: 80)).bold()
+                                .foregroundColor(.green)
+                                .padding(0)
+                            Spacer()
+                        }
+                        Spacer()
+                    }
+                    LottieView(name: Lotties.confetti, loopMode: .loop, animationSpeed: 1)
+                }
+            }
         }
         .navigationBarBackButtonHidden(true)
         .onAppear {
             isAnimating = true
         }
         .fullScreenCover(isPresented: $showVideoModal, content: FullScreenModalView.init)
+    }
+    
+    func resetState() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            isCorrect = false
+        }
     }
 }
 

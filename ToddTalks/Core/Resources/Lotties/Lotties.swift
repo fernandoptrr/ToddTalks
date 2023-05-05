@@ -35,5 +35,6 @@ enum Lotties {
     static let bye = "bye"
     static let bye2 = "bye2"
     static let tos = "tos"
+    static let confetti = "confetti"
 }
 

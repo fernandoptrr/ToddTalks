@@ -21,19 +21,18 @@ struct SpeakButtonView: View {
             self.isRecording = false
             speechRecognizer.stopTranscribing()
             speechRecognizer.transcript = ""
+            self.isCorrect = false
         }) {
             Circle()
-                .foregroundColor(.orange)
-                .frame(width: 200)
-                .scaleEffect(isRecording ? 1.5 : 1)
+                .foregroundColor(.blue)
+                .frame(width: 100)
+                .scaleEffect(isRecording ? 1.75 : 1)
                 .animation(animation)
                 .overlay {
                     VStack {
-                        Image(systemName:"mic")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .padding(30)
-                        
+                        Image(systemName: "waveform.and.mic")
+                            .font(.largeTitle)
+                            .foregroundColor(.white)
                     }
                     .foregroundStyle(.white)
                     .bold()
@@ -64,6 +63,7 @@ struct SpeakButtonView: View {
         print(transcriptArr)
         if(transcriptArr.contains(wordArr)){
             isCorrect = true
+            speechRecognizer.stopTranscribing()
         }
         
     }
