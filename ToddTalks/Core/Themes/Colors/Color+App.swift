@@ -15,5 +15,11 @@ extension Color {
     static let secondaryButtonColor = Color("SecondaryButtonColor")
     static let tealColor = Color("TealColor")
     static let skyColor = Color("SkyColor")
+    static let primaryBgColor = Color("PrimaryBgColor")
+    static let textColor = Color("TextColor")
+    static let bodyColor = Color("BodyColor")
+    static let creamColor = Color("CreamColor")
+    static let milestoneCardColor = Color("MilestoneCardColor")
+
     // Add any additional custom colors here
 }

@@ -21,14 +21,14 @@ struct InputPageView: View {
         
         NavigationStack {
             ZStack {
-                Color.purpleColor
+                Color.primaryBgColor
                     .ignoresSafeArea()
                 
                 VStack{
                     
                     Text("KataKecil")
                         .font(FontProvider.custom(.niceSugar, size: .largeTitle))
-                        .foregroundColor(.primaryColor)
+                        .foregroundColor(.textColor)
                         .padding(.top,24)
                     
                     NavigationLink{
@@ -40,14 +40,14 @@ struct InputPageView: View {
                     VStack (alignment: .leading){
                         Text("Nama Anak")
                             .font(FontProvider.custom(.niceSugar, size: .title))
-                            .foregroundColor(.primaryColor)
+                            .foregroundColor(.textColor)
                             .padding(.top,24)
                             .padding(.bottom, -5)
                             .padding(.leading, 10)
                         
                         TextField("masukkan nama anak", text: $namaAnak)
                             .font(.system(size: 15))
-                            .foregroundColor(.primaryColor)
+                            .foregroundColor(.textColor)
                             .padding()
                             .frame(maxWidth: .infinity)
                             .background(Color.white)
@@ -57,7 +57,7 @@ struct InputPageView: View {
                         
                         Text("Usia")
                             .font(FontProvider.custom(.niceSugar, size: .title))
-                            .foregroundColor(.primaryColor)
+                            .foregroundColor(.textColor)
                             .padding(.top,24)
                             .padding(.bottom, -5)
                             .padding(.leading, 10)
@@ -79,7 +79,7 @@ struct InputPageView: View {
                             }
                         }
                         .font(.system(size: 15))
-                        .foregroundColor(.primaryColor)
+                        .foregroundColor(.textColor)
                         .padding()
                         .frame(maxWidth: .infinity)
                         .frame(maxHeight: 55)
@@ -90,10 +90,10 @@ struct InputPageView: View {
                         Spacer()
                                         
                         NavigationLink(destination: MilestoneView()) {
-                            Text("MASUK")
-                                .font(FontProvider.custom(.niceSugar, size: .largeTitle))
+                            Text("Masuk")
+                                .font(FontProvider.custom(.sassoon, size: .title3).weight(.bold))
                         }
-                        .buttonStyle(RaisedButtonStyle())
+                        .buttonStyle(RaisedButtonStyle(color: .textColor))
                         .frame(height: 58)
                         .foregroundColor(.white)
                         .padding()

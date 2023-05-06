@@ -7,12 +7,9 @@
 
 import SwiftUI
 
-struct InformationDialog: View {
+struct BabyChatBubbles: View {
     
-    let babyText: String
-    let parentText: String
-    let babyImage: String
-    let parentImage: String
+    let data: BabyChat
     let babyColor: Color = Color.tealColor
     let parentColor: Color = Color.purpleColor
     
@@ -20,29 +17,28 @@ struct InformationDialog: View {
         GeometryReader { geometry in
             VStack (alignment: .leading){
                 HStack {
-                    Image(babyImage)
+                    Image(data.babyImage)
                         .resizable()
-                        .frame(width: 32, height: 32)
+                        .frame(width: 42, height: 42)
                         .clipShape(Circle())
-//                        .overlay(
-//                            Circle()
-//                                .stroke()
-//                                .foregroundColor(babyColor)
-//                        )
+                        .overlay(
+                            Circle()
+                                .stroke()
+                                .foregroundColor(babyColor)
+                        )
                         .padding(.trailing, 8)
                     ZStack {
                         SpeechBubble()
                             .fill(Color.tealColor)
-//                            .stroke(babyColor, lineWidth: 1)
-//                            .background(.white)
-                        
-                        Text(babyText)
+                        Text(data.babyChat)
                             .font(FontProvider.custom(.sassoon, size: .body))
+                            .fontWeight(.medium)
+                            .lineSpacing(2)
+                            .multilineTextAlignment(.leading)
                             .padding()
                     }
-                    .frame(width: geometry.size.width/2)
+                    .frame(width: geometry.size.width/2.3)
                     .frame(minHeight: 64)
-//                    .frame(minWidth: geometry.size.width/2, maxWidth: geometry.size.width/2, minHeight: 68)
                     .fixedSize(horizontal: true, vertical: true)
                 }
                 
@@ -51,20 +47,20 @@ struct InformationDialog: View {
                     ZStack {
                         SpeechBubble()
                             .fill(parentColor)
-//                            .stroke(parentColor, lineWidth: 1)
                             .scaleEffect(x: -1, y: 1)
-                        
-                        Text(parentText)
-                            .font(FontProvider.custom(.sassoon, size: .title3))
+                        Text(data.parentChat)
+                            .font(FontProvider.custom(.sassoon, size: .body))
+                            .fontWeight(.medium)
+                            .lineSpacing(4)
                             .multilineTextAlignment(.trailing)
                             .padding()
                     }
                     .frame(width: geometry.size.width/1.6 )
                     .frame(minHeight: 64)
                     .fixedSize(horizontal: true, vertical: true)
-                    Image(parentImage)
+                    Image(data.parentImage)
                         .resizable()
-                        .frame(width: 32, height: 32)
+                        .frame(width: 42, height: 42)
                         .clipShape(Circle())
                         .overlay(
                             Circle()
@@ -75,15 +71,15 @@ struct InformationDialog: View {
                 }
                 .padding(.top, 8)
             }
-            .foregroundColor(.white)
+            .foregroundColor(Color(uiColor: .darkGray))
             .padding(.bottom, 8)
         }
         .padding()
     }
 }
 
-struct InformationDialog_Previews: PreviewProvider {
+struct BabyChatBubbles_Previews: PreviewProvider {
     static var previews: some View {
-        InformationDialog(babyText: "", parentText: "", babyImage: "", parentImage: "")
+        BabyChatBubbles(data: BabyChat(babyImage: "babyimage", parentImage: "parentimage", babyChat: "Mommy, Pisang itu apa?", parentChat: "Kamu nanyeaa? kamu bertanya tanyeaaa? Follow dulu yeaa"))
     }
 }

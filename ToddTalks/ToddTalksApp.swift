@@ -11,8 +11,7 @@ import SwiftUI
 struct ToddTalksApp: App {
     var body: some Scene {
         WindowGroup {
-//            MilestoneView()
-            SpeechToTextView()
+            InputPageView()
         }
     }
 }

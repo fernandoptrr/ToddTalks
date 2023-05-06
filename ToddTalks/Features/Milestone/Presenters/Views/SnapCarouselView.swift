@@ -112,7 +112,8 @@ struct SnapCarouselView_Previews: PreviewProvider {
     static var previews: some View {
         MilestoneCardView(
             milestone: Milestone(
-                illPath: Lotties.baby,
+                id: "milestone1",
+                image: Lotties.baby,
                 title: "12 - 24 Bulan",
                 body: "Pada tahap ini diharapkan sang anak dapat mengucapkan kata “p” , “w”, “z” dan “t” dengan benar.",
                 progVal: 5,
@@ -129,7 +130,9 @@ struct SnapCarouselView_Previews: PreviewProvider {
             • You're a loyal and caring friend!
             • You're empathetic and have a strong sense of fairness and justice.
             """],
-                colorTheme: .purpleColor)
+                colorTheme: .purpleColor,
+                journey: [SectionData.section1M1, SectionData.section2M1]
+            )
         )
     }
 }

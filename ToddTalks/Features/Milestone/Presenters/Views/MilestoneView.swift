@@ -24,10 +24,7 @@ struct MilestoneView: View  {
                         .padding(.top,24)
                     
                     SnapCarouselView(trailingSpace: 64, index: $currentIndex, items: viewModel.milestones){ milestone in
-                        MilestoneCardView(
-                            milestone: milestone,
-                            illScale: 1.8
-                        )
+                        MilestoneCardView(milestone: milestone)
                     }
                     .padding(.top, 64)
                     HStack (spacing: 6){

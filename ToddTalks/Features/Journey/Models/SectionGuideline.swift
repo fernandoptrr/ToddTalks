@@ -7,9 +7,8 @@
 
 import Foundation
 
-struct SectionGuideline: Hashable, Identifiable {
-    let id = UUID()
-    let illPath: String
+struct SectionGuideline: Hashable {
+    let lottie: String
     let headline: String
     let subHeadline: String
     let title: String
