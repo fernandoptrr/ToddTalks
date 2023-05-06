@@ -35,7 +35,7 @@ struct GameSceneView: View {
         .onAppear {
             isAnimating = true
         }
-        .fullScreenCover(isPresented: $showVideoModal, content: FullScreenModalView.init)
+        .fullScreenCover(isPresented: $showVideoModal, content: VideoModalSheetView.init)
     }
 }
 
