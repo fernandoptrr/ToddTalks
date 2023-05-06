@@ -3,20 +3,25 @@ import SwiftUI
 struct StageDialog: View {
     @Binding var isPresented: Bool
     let stage: Stage
-    var primaryButtonTitle: String = "Mulai"
-//    let primaryButtonAction: () -> Void
-//    let secondaryButtonTitle: String?
-//    let secondaryButtonAction: (() -> Void)?
-    
     @State private var offset: CGFloat = 1000
-
+    @StateObject private var gameViewModel: GameViewModel
+    @State private var isStarted = false
     
-    private func getStarIc(value: Int) -> String {
-        return stage.starCount >= value ? "star.fill" : "star"
+    init(isPresented: Binding<Bool>, stage: Stage) {
+        self._isPresented = isPresented
+        self.stage = stage
+        self._gameViewModel = StateObject(wrappedValue: GameViewModel(games: stage.games))
+    }
+    
+    private func getStarColor(value: Int) -> Color {
+        return stage.starCount >= value ? Color.yellow : Color(uiColor: .systemGray4)
     }
     
     var body: some View {
         ZStack {
+            NavigationLink(destination: GameSceneView().environmentObject(gameViewModel), isActive: $isStarted) {
+                EmptyView()
+            }
             Color.black
                 .opacity(0.6)
                 .onTapGesture {
@@ -37,32 +42,17 @@ struct StageDialog: View {
                         .padding(.top, 4)
                     if stage.tips != nil {
                         HintText(text: stage.tips!)
-                        .padding(.top, 16)
+                            .padding(.top, 16)
                     }
-//                    HStack {
-                    NavigationLink(destination: GameSceneView()){
-                        Button(primaryButtonTitle) {
-//                            primaryButtonAction()
-                            isPresented = false
-                        }
+                    Button("Mulai") {
+                        close()
+                        isStarted = true
                     }
-                        
-//                        if let secondaryButtonTitle = secondaryButtonTitle,
-//                           let secondaryButtonAction = secondaryButtonAction {
-//                            Button(secondaryButtonTitle) {
-//                                secondaryButtonAction()
-//                                close()
-//                            }
-//                            .padding(.leading, 8)
-//                        }
-                        
-//                    }
                     .buttonStyle(RaisedButtonStyle())
                     .foregroundColor(.white)
                     .frame(height: 44)
                     .padding(.top, 16)
                     .padding()
-                    
                 }
                 .padding()
                 .background(.white)
@@ -79,27 +69,48 @@ struct StageDialog: View {
                 }
                 .overlay(alignment: .top){
                     HStack {
-                        Image(systemName: getStarIc(value: 1))
-                            .foregroundColor(.yellow)
-                            .font(.system(size: 48))
-                            .rotationEffect(.degrees(58))
-                            .shimmering()
-                            .offset(x: 6)
-                        Image(systemName: getStarIc(value: 2))
-                            .foregroundColor(.yellow)
-                            .font(.system(size: 56))
-                            .shimmering()
-                            .offset(y: -14)
-                        Image(systemName: getStarIc(value: 3))
-                            .foregroundColor(.yellow)
-                            .font(.system(size: 48))
-                            .rotationEffect(.degrees(-58))
-                            .shimmering()
-                            .offset(x: -6)
+                        if stage.starCount >= 1 {
+                            Image(systemName: "star.fill")
+                                .foregroundColor(getStarColor(value: 1))
+                                .font(.system(size: 48))
+                                .rotationEffect(.degrees(58))
+                                .shimmering()
+                                .offset(y: 6)
+                        } else {
+                            Image(systemName: "star.fill")
+                                .foregroundColor(getStarColor(value: 1))
+                                .font(.system(size: 48))
+                                .rotationEffect(.degrees(58))
+                                .offset(y: 6)
+                        }
+                        if stage.starCount >= 2 {
+                            Image(systemName: "star.fill")
+                                .foregroundColor(getStarColor(value: 2))
+                                .font(.system(size: 56))
+                                .shimmering()
+                                .offset(y: -14)
+                        } else {
+                            Image(systemName: "star.fill")
+                                .foregroundColor(getStarColor(value: 2))
+                                .font(.system(size: 56))
+                                .offset(y: -14)
+                        }
+                        if stage.starCount >= 3 {
+                            Image(systemName: "star.fill")
+                                .foregroundColor(getStarColor(value: 3))
+                                .font(.system(size: 48))
+                                .rotationEffect(.degrees(-58))
+                                .shimmering()
+                                .offset(x: -6)
+                        } else {
+                            Image(systemName: "star.fill")
+                                .foregroundColor(getStarColor(value: 3))
+                                .font(.system(size: 48))
+                                .rotationEffect(.degrees(-58))
+                                .offset(x: -6)
+                        }
                     }
                     .offset(y: -28)
-                    .shadow(color: .yellow ,radius: 4)
-                    
                 }
                 .onAppear {
                     withAnimation(.spring()) {
@@ -118,7 +129,7 @@ struct StageDialog: View {
     func close() {
         withAnimation(.spring()) {
             offset = 1000
-            isPresented = false
+            isPresented.toggle()
         }
     }
 }
@@ -127,11 +138,8 @@ struct DialogView_Previews: PreviewProvider {
     static var previews: some View {
         StageDialog(
             isPresented: .constant(true),
-            stage:             Stage(illPath: "play.fill", title: "Gesture 1", body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.", tips: "haha", starCount: 3)
-//            ,
-//            primaryButtonAction: {},
-//            secondaryButtonTitle: nil,
-//            secondaryButtonAction: nil
+            stage:             StageData.stage1M1U1
         )
+        .environmentObject(GameViewModel(games: GameData.gamesM1U1S1))
     }
 }

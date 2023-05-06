@@ -8,35 +8,49 @@
 import SwiftUI
 
 struct JourneyView: View {
-    @StateObject var viewModel = StageViewModel()
     @State private var showStageDialog = false
+    @State private var selectedStage: Stage = StageData.stage1M1U1
+
+    let sections: [Section]
     let colorTheme: Color
     
     var body: some View {
         ZStack {
             ScrollView {
-                VStack {
-                    ForEach(0..<3) { index in
-                        StageSectionView(
-                            headline: "Section 1 (12 - 15 Months)",
-                            subHeadline: "Early Word Learning",
-                            stages: viewModel.stages,
-                            sectionGuideline: viewModel.sectionGuidelines[index],
-                            colorTheme: colorTheme,
-                            showStageDialog: $showStageDialog
-                        )
+                ZStack {
+                    
+                    VStack {
+                        ForEach(sections) { section in
+                            SectionView(
+                                data: section,
+                                colorTheme: colorTheme,
+                                showStageDialog: $showStageDialog,
+                                selectedStage: $selectedStage
+                            )
+                        }
                     }
+                    .padding(.top, 48)
+                    Image("Burung")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 42)
+                        .offset(x: -150, y: 700)
+                    Image("Pesawat")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 80)
+                        .offset(x: 140, y: -660)
+                    Image("BalonUdara")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 64)
+                        .offset(y: 220)
                 }
-                .padding(.top, 48)
             }
             .ignoresSafeArea()
             .background(colorTheme)
-            
             if showStageDialog {
-                StageDialog(isPresented: $showStageDialog, stage: Stage(illPath: "play.fill", title: "Gesture 1", body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.", tips: "haha", starCount: 3)
-//                            ,     primaryButtonAction: {},
-//                            secondaryButtonTitle: nil,
-//                            secondaryButtonAction: nil
+                StageDialog(isPresented: $showStageDialog, stage: selectedStage
                 )
             }
         }
@@ -46,6 +60,6 @@ struct JourneyView: View {
 
 struct JourneyView_Previews: PreviewProvider {
     static var previews: some View {
-        JourneyView(colorTheme: .blueColor)
+        JourneyView(sections: [SectionData.section1M1, SectionData.section2M1, SectionData.section3M1], colorTheme: .blueColor)
     }
 }

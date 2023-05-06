@@ -7,15 +7,14 @@
 
 import SwiftUI
 
-struct StageSectionView: View {
-    let headline: String
-    let subHeadline: String
-    let stages: [[Stage]]
-    let sectionGuideline: SectionGuideline
+struct SectionView: View {
+    let data: Section
     let colorTheme: Color
     
     @State private var showDetails = false
     @Binding var showStageDialog: Bool
+    @Binding var selectedStage: Stage
+
     
     var body: some View {
         VStack(alignment: .center) {
@@ -24,13 +23,15 @@ struct StageSectionView: View {
                     .resizable()
                     .frame( height: 180)
                 
+                
+                
                 HStack {
                     VStack(alignment: .leading) {
-                        Text(headline)
+                        Text(data.headline)
                             .font(FontProvider.custom(.sassoon, size: .body)
                                 .weight(.medium)
                             )
-                        Text(subHeadline)
+                        Text(data.subHeadline)
                             .font(FontProvider.custom(.niceSugar, size: .title2))
                             .foregroundColor(.primaryColor)
                             .padding(.top, 2)
@@ -48,16 +49,17 @@ struct StageSectionView: View {
                     .background(Color.primaryColor)
                     .cornerRadius(12)
                     .sheet(isPresented: $showDetails) {
-                        SectionDetailSheet(data: sectionGuideline)
+                        SectionDetailSheet(data: data.guideline)
                     }
                 }
                 .padding(.vertical, 24)
                 .padding(.horizontal)
             }
-            ForEach(stages, id: \.self) { stageList in
+            ForEach(data.stages, id: \.self) { stageList in
                 LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: stageList.count),  alignment: .center){
                     ForEach(stageList, id: \.self) { stage in
-                        StageCircle(stage: stage,  showStageDialog: $showStageDialog)
+                        StageCircle(stage: stage,  showStageDialog: $showStageDialog,
+                        selectedStage: $selectedStage)
                             .padding(.vertical, 32)
                     }
                 }
@@ -69,12 +71,10 @@ struct StageSectionView: View {
 
 struct StageSectionView_Previews: PreviewProvider {
     static var previews: some View {
-        StageSectionView(
-            headline: "Section 1 (12 - 15 Months)",
-            subHeadline: "Early Word Learning",
-            stages: StageViewModel().stages,
-            sectionGuideline: SectionGuideline(illPath: Lotties.baby, headline: "Section 1 Guideline", subHeadline: "Pelajari tips tata bahasa dan frasa kunci untuk unit ini", title: "FRASA KUNCI", body: "Memakai kata jamak", tips: ["Some really long text in the speech bubble over multiple lines.", "Some really long text in the speech bubble over multiple lines.", "Some really long text in the speech bubble over multiple lines."]),
-            colorTheme: .blueColor, showStageDialog: .constant(false)
+        SectionView(
+            data: SectionData.section1M1,
+            colorTheme: .blueColor, showStageDialog: .constant(false),
+            selectedStage: .constant(StageData.stage1M1U1)
         )
     }
 }

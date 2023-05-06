@@ -8,10 +8,13 @@
 import Foundation
 
 struct Stage: Hashable, Identifiable {
-    let id = UUID()
-    let illPath: String
+    let id: String
+    let icon: String
+    let label: String
     let title: String
     let body: String
     let tips: String?
-    let starCount: Int
+    let games: [Game]
+    var starCount: Int
 }
+

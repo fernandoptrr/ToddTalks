@@ -24,6 +24,11 @@
 		C40589DE29F77CE600E76068 /* StageCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40589DD29F77CE600E76068 /* StageCircle.swift */; };
 		C420A64629F630D800C028D8 /* HintCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C420A64529F630D800C028D8 /* HintCarousel.swift */; };
 		C420A64829F658E100C028D8 /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C420A64729F658E100C028D8 /* IndicatorView.swift */; };
+		C423B45C2A04296B0096C4FD /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = C423B45B2A04296B0096C4FD /* Section.swift */; };
+		C423B45E2A0429F30096C4FD /* SectionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C423B45D2A0429F30096C4FD /* SectionData.swift */; };
+		C423B4632A049CB30096C4FD /* MilestoneData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C423B4622A049CB30096C4FD /* MilestoneData.swift */; };
+		C423B4652A04E8000096C4FD /* tos2.json in Resources */ = {isa = PBXBuildFile; fileRef = C423B4642A04E8000096C4FD /* tos2.json */; };
+		C423B4672A04FD5D0096C4FD /* hati.json in Resources */ = {isa = PBXBuildFile; fileRef = C423B4662A04FD5D0096C4FD /* hati.json */; };
 		C449E8D129ED729900F9409F /* ToddTalksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C449E8D029ED729900F9409F /* ToddTalksApp.swift */; };
 		C449E8D529ED729A00F9409F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C449E8D429ED729A00F9409F /* Assets.xcassets */; };
 		C449E8D829ED729A00F9409F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C449E8D729ED729A00F9409F /* Preview Assets.xcassets */; };
@@ -48,6 +53,8 @@
 		C452B6BA2A025BB1006EAF43 /* MovingCloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = C452B6B92A025BB1006EAF43 /* MovingCloud.swift */; };
 		C452B6BC2A0286ED006EAF43 /* TextBubbleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = C452B6BB2A0286ED006EAF43 /* TextBubbleShape.swift */; };
 		C452B6BE2A02BDAA006EAF43 /* AchievementDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C452B6BD2A02BDAA006EAF43 /* AchievementDetailView.swift */; };
+		C452B6C42A03E55A006EAF43 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = C452B6C32A03E55A006EAF43 /* Game.swift */; };
+		C452B6C72A03E8CD006EAF43 /* GameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C452B6C62A03E8CD006EAF43 /* GameData.swift */; };
 		C46F1D952A00B78800C34D62 /* SectionDetailSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46F1D942A00B78800C34D62 /* SectionDetailSheet.swift */; };
 		C46F1D972A00BAB500C34D62 /* SpeechBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46F1D962A00BAB500C34D62 /* SpeechBubble.swift */; };
 		C46F1D992A00BD2200C34D62 /* SectionGuideline.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46F1D982A00BD2200C34D62 /* SectionGuideline.swift */; };
@@ -58,16 +65,17 @@
 		C46F1DAA2A021DAF00C34D62 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = C46F1DA92A021DAF00C34D62 /* Lottie */; };
 		C47F48A629FFF3650094BFA9 /* baby.json in Resources */ = {isa = PBXBuildFile; fileRef = C47F48A529FFF3650094BFA9 /* baby.json */; };
 		C47F48A82A0000800094BFA9 /* MilestoneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47F48A72A0000800094BFA9 /* MilestoneViewModel.swift */; };
-		C47F48AA2A00503B0094BFA9 /* StageSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47F48A92A00503B0094BFA9 /* StageSectionView.swift */; };
-		C47F48AC2A0055C30094BFA9 /* StageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47F48AB2A0055C30094BFA9 /* StageViewModel.swift */; };
+		C47F48AA2A00503B0094BFA9 /* SectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47F48A92A00503B0094BFA9 /* SectionView.swift */; };
 		C4BAF53029F6D2D70077DD6D /* ShimmerEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BAF52F29F6D2D70077DD6D /* ShimmerEffect.swift */; };
 		C4C30C1629F61B5B006EC836 /* StageDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C30C1529F61B5B006EC836 /* StageDialog.swift */; };
+		C4DB180B2A0409C600F46E8E /* BabyChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DB180A2A0409C600F46E8E /* BabyChat.swift */; };
+		C4DB180D2A04117800F46E8E /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DB180C2A04117800F46E8E /* GameViewModel.swift */; };
+		C4DB18102A04129100F46E8E /* StageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DB180F2A04129100F46E8E /* StageData.swift */; };
 		C4E7681129FFE1FC00F92A56 /* Milestone.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E7681029FFE1FC00F92A56 /* Milestone.swift */; };
 		C4E7681329FFE22500F92A56 /* SnapCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E7681229FFE22500F92A56 /* SnapCarouselView.swift */; };
 		C4E7681D29FFE3D800F92A56 /* VideoModalSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E7681C29FFE3D800F92A56 /* VideoModalSheetView.swift */; };
 		C4E7682529FFEF1E00F92A56 /* NiceSugar.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4E7682429FFEF1E00F92A56 /* NiceSugar.otf */; };
-		E156B8BA2A036AA6006DBB2D /* InformationDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = E156B8B92A036AA6006DBB2D /* InformationDialog.swift */; };
-		E156B8BC2A03784F006DBB2D /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E156B8BB2A03784F006DBB2D /* InformationView.swift */; };
+		E156B8BA2A036AA6006DBB2D /* BabyChatBubbles.swift in Sources */ = {isa = PBXBuildFile; fileRef = E156B8B92A036AA6006DBB2D /* BabyChatBubbles.swift */; };
 		E1B676472A00E2BF009CC879 /* warna.json in Resources */ = {isa = PBXBuildFile; fileRef = E1B6762E2A00E2BE009CC879 /* warna.json */; };
 		E1B676482A00E2BF009CC879 /* senyum.json in Resources */ = {isa = PBXBuildFile; fileRef = E1B6762F2A00E2BE009CC879 /* senyum.json */; };
 		E1B676492A00E2BF009CC879 /* biru.json in Resources */ = {isa = PBXBuildFile; fileRef = E1B676302A00E2BE009CC879 /* biru.json */; };
@@ -114,6 +122,11 @@
 		C40589DD29F77CE600E76068 /* StageCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageCircle.swift; sourceTree = "<group>"; };
 		C420A64529F630D800C028D8 /* HintCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintCarousel.swift; sourceTree = "<group>"; };
 		C420A64729F658E100C028D8 /* IndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
+		C423B45B2A04296B0096C4FD /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		C423B45D2A0429F30096C4FD /* SectionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionData.swift; sourceTree = "<group>"; };
+		C423B4622A049CB30096C4FD /* MilestoneData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilestoneData.swift; sourceTree = "<group>"; };
+		C423B4642A04E8000096C4FD /* tos2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tos2.json; sourceTree = "<group>"; };
+		C423B4662A04FD5D0096C4FD /* hati.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hati.json; sourceTree = "<group>"; };
 		C449E8CD29ED729900F9409F /* ToddTalks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToddTalks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C449E8D029ED729900F9409F /* ToddTalksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToddTalksApp.swift; sourceTree = "<group>"; };
 		C449E8D429ED729A00F9409F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -140,6 +153,8 @@
 		C452B6B92A025BB1006EAF43 /* MovingCloud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovingCloud.swift; sourceTree = "<group>"; };
 		C452B6BB2A0286ED006EAF43 /* TextBubbleShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBubbleShape.swift; sourceTree = "<group>"; };
 		C452B6BD2A02BDAA006EAF43 /* AchievementDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementDetailView.swift; sourceTree = "<group>"; };
+		C452B6C32A03E55A006EAF43 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Game.swift; path = ToddTalks/Features/GameScene/Presenters/Component/Game.swift; sourceTree = SOURCE_ROOT; };
+		C452B6C62A03E8CD006EAF43 /* GameData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameData.swift; sourceTree = "<group>"; };
 		C46F1D942A00B78800C34D62 /* SectionDetailSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionDetailSheet.swift; sourceTree = "<group>"; };
 		C46F1D962A00BAB500C34D62 /* SpeechBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechBubble.swift; sourceTree = "<group>"; };
 		C46F1D982A00BD2200C34D62 /* SectionGuideline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionGuideline.swift; sourceTree = "<group>"; };
@@ -149,17 +164,18 @@
 		C46F1DA62A02054700C34D62 /* AchievementListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementListView.swift; sourceTree = "<group>"; };
 		C47F48A529FFF3650094BFA9 /* baby.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = baby.json; sourceTree = "<group>"; };
 		C47F48A72A0000800094BFA9 /* MilestoneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilestoneViewModel.swift; sourceTree = "<group>"; };
-		C47F48A92A00503B0094BFA9 /* StageSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageSectionView.swift; sourceTree = "<group>"; };
-		C47F48AB2A0055C30094BFA9 /* StageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageViewModel.swift; sourceTree = "<group>"; };
+		C47F48A92A00503B0094BFA9 /* SectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionView.swift; sourceTree = "<group>"; };
 		C4BAF52F29F6D2D70077DD6D /* ShimmerEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerEffect.swift; sourceTree = "<group>"; };
 		C4C30C1529F61B5B006EC836 /* StageDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageDialog.swift; sourceTree = "<group>"; };
+		C4DB180A2A0409C600F46E8E /* BabyChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BabyChat.swift; path = ToddTalks/Features/GameScene/Models/BabyChat.swift; sourceTree = SOURCE_ROOT; };
+		C4DB180C2A04117800F46E8E /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		C4DB180F2A04129100F46E8E /* StageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageData.swift; sourceTree = "<group>"; };
 		C4E7680B29FFE14B00F92A56 /* mamaSong.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mamaSong.mp4; sourceTree = "<group>"; };
 		C4E7681029FFE1FC00F92A56 /* Milestone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Milestone.swift; sourceTree = "<group>"; };
 		C4E7681229FFE22500F92A56 /* SnapCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapCarouselView.swift; sourceTree = "<group>"; };
 		C4E7681C29FFE3D800F92A56 /* VideoModalSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoModalSheetView.swift; sourceTree = "<group>"; };
 		C4E7682429FFEF1E00F92A56 /* NiceSugar.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NiceSugar.otf; sourceTree = "<group>"; };
-		E156B8B92A036AA6006DBB2D /* InformationDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationDialog.swift; sourceTree = "<group>"; };
-		E156B8BB2A03784F006DBB2D /* InformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationView.swift; sourceTree = "<group>"; };
+		E156B8B92A036AA6006DBB2D /* BabyChatBubbles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyChatBubbles.swift; sourceTree = "<group>"; };
 		E1B6762E2A00E2BE009CC879 /* warna.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = warna.json; sourceTree = "<group>"; };
 		E1B6762F2A00E2BE009CC879 /* senyum.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = senyum.json; sourceTree = "<group>"; };
 		E1B676302A00E2BE009CC879 /* biru.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = biru.json; sourceTree = "<group>"; };
@@ -356,6 +372,7 @@
 			children = (
 				C40589D129F76B5500E76068 /* Stage.swift */,
 				C46F1D982A00BD2200C34D62 /* SectionGuideline.swift */,
+				C423B45B2A04296B0096C4FD /* Section.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -363,7 +380,6 @@
 		C40589CF29F76B3C00E76068 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				C47F48AB2A0055C30094BFA9 /* StageViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -372,7 +388,7 @@
 			isa = PBXGroup;
 			children = (
 				C40589CC29F7683700E76068 /* JourneyView.swift */,
-				C47F48A92A00503B0094BFA9 /* StageSectionView.swift */,
+				C47F48A92A00503B0094BFA9 /* SectionView.swift */,
 				C46F1D942A00B78800C34D62 /* SectionDetailSheet.swift */,
 			);
 			path = Views;
@@ -381,6 +397,7 @@
 		C420A64229F6246E00C028D8 /* Journey */ = {
 			isa = PBXGroup;
 			children = (
+				C4DB180E2A04128100F46E8E /* Resources */,
 				C40589CF29F76B3C00E76068 /* ViewModels */,
 				C40589CE29F76B3500E76068 /* Models */,
 				C420A64329F6247A00C028D8 /* Presenters */,
@@ -404,6 +421,14 @@
 				C40589DD29F77CE600E76068 /* StageCircle.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		C423B4612A049C890096C4FD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C423B4622A049CB30096C4FD /* MilestoneData.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		C449E8C429ED729900F9409F = {
@@ -566,6 +591,7 @@
 		C449E90929ED8B8B00F9409F /* Milestone */ = {
 			isa = PBXGroup;
 			children = (
+				C423B4612A049C890096C4FD /* Resources */,
 				C449E90B29ED8BA500F9409F /* Presenters */,
 				C449E90A29ED8B9E00F9409F /* Models */,
 				C449E90C29ED8BB700F9409F /* ViewModels */,
@@ -629,6 +655,7 @@
 				E1B6763D2A00E2BF009CC879 /* halo.json */,
 				E1B676382A00E2BF009CC879 /* hijau.json */,
 				E1B6763B2A00E2BF009CC879 /* hiu.json */,
+				C423B4662A04FD5D0096C4FD /* hati.json */,
 				E1B6763C2A00E2BF009CC879 /* labu.json */,
 				E1B676422A00E2BF009CC879 /* mama.json */,
 				E1B6763A2A00E2BF009CC879 /* melon.json */,
@@ -641,6 +668,7 @@
 				E1B6762F2A00E2BE009CC879 /* senyum.json */,
 				E1B6763F2A00E2BF009CC879 /* tepuk tangan.json */,
 				E1B676372A00E2BF009CC879 /* tos.json */,
+				C423B4642A04E8000096C4FD /* tos2.json */,
 				E1B676322A00E2BE009CC879 /* tunjuk.json */,
 				E1B676442A00E2BF009CC879 /* waktu.json */,
 				E1B6762E2A00E2BE009CC879 /* warna.json */,
@@ -660,6 +688,14 @@
 				C452B6BB2A0286ED006EAF43 /* TextBubbleShape.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		C452B6C52A03E8C1006EAF43 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C452B6C62A03E8CD006EAF43 /* GameData.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		C46F1D9A2A0200C400C34D62 /* Achievement */ = {
@@ -721,6 +757,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C4DB180E2A04128100F46E8E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C4DB180F2A04129100F46E8E /* StageData.swift */,
+				C423B45D2A0429F30096C4FD /* SectionData.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		C4E7680A29FFE13B00F92A56 /* Videos */ = {
 			isa = PBXGroup;
 			children = (
@@ -732,6 +777,7 @@
 		E1B676602A00E470009CC879 /* GameScene */ = {
 			isa = PBXGroup;
 			children = (
+				C452B6C52A03E8C1006EAF43 /* Resources */,
 				E1B676612A00E482009CC879 /* ViewModels */,
 				E1B676622A00E497009CC879 /* Models */,
 				E1B676632A00E49C009CC879 /* Presenters */,
@@ -742,6 +788,7 @@
 		E1B676612A00E482009CC879 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				C4DB180C2A04117800F46E8E /* GameViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -749,6 +796,8 @@
 		E1B676622A00E497009CC879 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C452B6C32A03E55A006EAF43 /* Game.swift */,
+				C4DB180A2A0409C600F46E8E /* BabyChat.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -766,7 +815,7 @@
 			isa = PBXGroup;
 			children = (
 				C452B6B92A025BB1006EAF43 /* MovingCloud.swift */,
-				E156B8B92A036AA6006DBB2D /* InformationDialog.swift */,
+				E156B8B92A036AA6006DBB2D /* BabyChatBubbles.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -776,7 +825,6 @@
 			children = (
 				C452B6B72A021F2F006EAF43 /* GameSceneView.swift */,
 				C4E7681C29FFE3D800F92A56 /* VideoModalSheetView.swift */,
-				E156B8BB2A03784F006DBB2D /* InformationView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -864,7 +912,9 @@
 				C449E8F929ED88C300F9409F /* SassoonSansStd.otf in Resources */,
 				C449E8EB29ED7C1800F9409F /* Colors.xcassets in Resources */,
 				E1B6765E2A00E2BF009CC879 /* sapi2.json in Resources */,
+				C423B4672A04FD5D0096C4FD /* hati.json in Resources */,
 				E1B6765D2A00E2BF009CC879 /* waktu.json in Resources */,
+				C423B4652A04E8000096C4FD /* tos2.json in Resources */,
 				E1B6765A2A00E2BF009CC879 /* awan.json in Resources */,
 				C449E8D829ED729A00F9409F /* Preview Assets.xcassets in Resources */,
 				E1B676542A00E2BF009CC879 /* hiu.json in Resources */,
@@ -888,25 +938,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4DB18102A04129100F46E8E /* StageData.swift in Sources */,
+				C423B45E2A0429F30096C4FD /* SectionData.swift in Sources */,
 				C449E91929ED983F00F9409F /* Lotties.swift in Sources */,
 				C449E8DD29ED729A00F9409F /* ToddTalks.xcdatamodeld in Sources */,
 				6AAB7FAA2A01474900980A39 /* InputPageView.swift in Sources */,
+				C4DB180D2A04117800F46E8E /* GameViewModel.swift in Sources */,
 				C47F48A82A0000800094BFA9 /* MilestoneViewModel.swift in Sources */,
+				C423B45C2A04296B0096C4FD /* Section.swift in Sources */,
 				6149CA562A01E7FE0070D658 /* CompletedStageModel.xcdatamodeld in Sources */,
 				6AAB7FAE2A01589900980A39 /* ImagePickerView.swift in Sources */,
 				C449E90229ED8AC600F9409F /* Prompt.swift in Sources */,
+				C452B6C72A03E8CD006EAF43 /* GameData.swift in Sources */,
 				C449E90429ED8AF500F9409F /* LottieView.swift in Sources */,
 				C46F1D972A00BAB500C34D62 /* SpeechBubble.swift in Sources */,
 				C40589DE29F77CE600E76068 /* StageCircle.swift in Sources */,
 				C449E8ED29ED7D5600F9409F /* Color+App.swift in Sources */,
 				C46F1DA12A02027E00C34D62 /* AchievementAvatar.swift in Sources */,
 				C46F1DA52A0203B900C34D62 /* Achievement.swift in Sources */,
+				C4DB180B2A0409C600F46E8E /* BabyChat.swift in Sources */,
 				C452B6BC2A0286ED006EAF43 /* TextBubbleShape.swift in Sources */,
+				C452B6C42A03E55A006EAF43 /* Game.swift in Sources */,
 				C46F1D952A00B78800C34D62 /* SectionDetailSheet.swift in Sources */,
 				C449E8E629ED730600F9409F /* MilestoneView.swift in Sources */,
 				C449E8DA29ED729A00F9409F /* Persistence.swift in Sources */,
 				C4E7681129FFE1FC00F92A56 /* Milestone.swift in Sources */,
-				C47F48AA2A00503B0094BFA9 /* StageSectionView.swift in Sources */,
+				C47F48AA2A00503B0094BFA9 /* SectionView.swift in Sources */,
 				6149CA3F2A01C08A0070D658 /* TextToSpeechView.swift in Sources */,
 				6149CA522A01E5140070D658 /* CompletedStageController.swift in Sources */,
 				C449E8F629ED809000F9409F /* Fonts.swift in Sources */,
@@ -923,21 +980,20 @@
 				C449E8FE29ED8A5600F9409F /* AudioPlayer.swift in Sources */,
 				6149CA622A0210010070D658 /* CircleView.swift in Sources */,
 				C40589D229F76B5500E76068 /* Stage.swift in Sources */,
-				C47F48AC2A0055C30094BFA9 /* StageViewModel.swift in Sources */,
 				6149CA602A01FD730070D658 /* SUImagePickerView.swift in Sources */,
 				C449E91E29EE2AFC00F9409F /* HintText.swift in Sources */,
+				C423B4632A049CB30096C4FD /* MilestoneData.swift in Sources */,
 				C40589CD29F7683700E76068 /* JourneyView.swift in Sources */,
 				C46F1DA32A02039C00C34D62 /* AchievementRow.swift in Sources */,
 				C4BAF53029F6D2D70077DD6D /* ShimmerEffect.swift in Sources */,
 				6149CA432A01C4320070D658 /* SpeechToTextView.swift in Sources */,
-				E156B8BA2A036AA6006DBB2D /* InformationDialog.swift in Sources */,
+				E156B8BA2A036AA6006DBB2D /* BabyChatBubbles.swift in Sources */,
 				C4E7681D29FFE3D800F92A56 /* VideoModalSheetView.swift in Sources */,
 				C420A64629F630D800C028D8 /* HintCarousel.swift in Sources */,
 				6AAB7FAC2A01548000980A39 /* InputProfilePic.swift in Sources */,
 				C46F1D992A00BD2200C34D62 /* SectionGuideline.swift in Sources */,
 				C46F1DA72A02054700C34D62 /* AchievementListView.swift in Sources */,
 				C449E91B29EE23F200F9409F /* ProgressBarView.swift in Sources */,
-				E156B8BC2A03784F006DBB2D /* InformationView.swift in Sources */,
 				6149CA4B2A01D2E40070D658 /* SpeakButtonView.swift in Sources */,
 				C4E7681329FFE22500F92A56 /* SnapCarouselView.swift in Sources */,
 			);
@@ -1065,10 +1121,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = PurpleColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ToddTalks/Preview Content\"";
-				DEVELOPMENT_TEAM = 6S38UULUK4;
+				DEVELOPMENT_TEAM = WRQ5UZA34D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ToddTalks/Info.plist;
@@ -1099,10 +1156,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = PurpleColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ToddTalks/Preview Content\"";
-				DEVELOPMENT_TEAM = 6S38UULUK4;
+				DEVELOPMENT_TEAM = WRQ5UZA34D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ToddTalks/Info.plist;
