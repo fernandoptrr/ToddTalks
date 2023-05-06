@@ -16,9 +16,10 @@
 		6149CA5E2A01FD2E0070D658 /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6149CA5D2A01FD2E0070D658 /* PhotoView.swift */; };
 		6149CA602A01FD730070D658 /* SUImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6149CA5F2A01FD730070D658 /* SUImagePickerView.swift */; };
 		6149CA622A0210010070D658 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6149CA612A0210010070D658 /* CircleView.swift */; };
+		6A1258D82A06559D00D9708F /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1258D72A06559D00D9708F /* ImagePicker.swift */; };
+		6A1258DA2A0655F600D9708F /* ProfilePicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1258D92A0655F600D9708F /* ProfilePicture.swift */; };
+		6A1258DC2A065D1500D9708F /* PopUpActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1258DB2A065D1500D9708F /* PopUpActionSheet.swift */; };
 		6AAB7FAA2A01474900980A39 /* InputPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AAB7FA92A01474900980A39 /* InputPageView.swift */; };
-		6AAB7FAC2A01548000980A39 /* InputProfilePic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AAB7FAB2A01548000980A39 /* InputProfilePic.swift */; };
-		6AAB7FAE2A01589900980A39 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AAB7FAD2A01589900980A39 /* ImagePickerView.swift */; };
 		C40589CD29F7683700E76068 /* JourneyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40589CC29F7683700E76068 /* JourneyView.swift */; };
 		C40589D229F76B5500E76068 /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40589D129F76B5500E76068 /* Stage.swift */; };
 		C40589DE29F77CE600E76068 /* StageCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40589DD29F77CE600E76068 /* StageCircle.swift */; };
@@ -114,9 +115,10 @@
 		6149CA5D2A01FD2E0070D658 /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
 		6149CA5F2A01FD730070D658 /* SUImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUImagePickerView.swift; sourceTree = "<group>"; };
 		6149CA612A0210010070D658 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		6A1258D72A06559D00D9708F /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		6A1258D92A0655F600D9708F /* ProfilePicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePicture.swift; sourceTree = "<group>"; };
+		6A1258DB2A065D1500D9708F /* PopUpActionSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpActionSheet.swift; sourceTree = "<group>"; };
 		6AAB7FA92A01474900980A39 /* InputPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputPageView.swift; sourceTree = "<group>"; };
-		6AAB7FAB2A01548000980A39 /* InputProfilePic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputProfilePic.swift; sourceTree = "<group>"; };
-		6AAB7FAD2A01589900980A39 /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
 		C40589CC29F7683700E76068 /* JourneyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyView.swift; sourceTree = "<group>"; };
 		C40589D129F76B5500E76068 /* Stage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stage.swift; sourceTree = "<group>"; };
 		C40589DD29F77CE600E76068 /* StageCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageCircle.swift; sourceTree = "<group>"; };
@@ -353,7 +355,9 @@
 		6AAB7FA72A01467E00980A39 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				6AAB7FAB2A01548000980A39 /* InputProfilePic.swift */,
+				6A1258D72A06559D00D9708F /* ImagePicker.swift */,
+				6A1258D92A0655F600D9708F /* ProfilePicture.swift */,
+				6A1258DB2A065D1500D9708F /* PopUpActionSheet.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -362,7 +366,6 @@
 			isa = PBXGroup;
 			children = (
 				6AAB7FA92A01474900980A39 /* InputPageView.swift */,
-				6AAB7FAD2A01589900980A39 /* ImagePickerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -941,14 +944,15 @@
 				C4DB18102A04129100F46E8E /* StageData.swift in Sources */,
 				C423B45E2A0429F30096C4FD /* SectionData.swift in Sources */,
 				C449E91929ED983F00F9409F /* Lotties.swift in Sources */,
+				6A1258D82A06559D00D9708F /* ImagePicker.swift in Sources */,
 				C449E8DD29ED729A00F9409F /* ToddTalks.xcdatamodeld in Sources */,
 				6AAB7FAA2A01474900980A39 /* InputPageView.swift in Sources */,
 				C4DB180D2A04117800F46E8E /* GameViewModel.swift in Sources */,
 				C47F48A82A0000800094BFA9 /* MilestoneViewModel.swift in Sources */,
 				C423B45C2A04296B0096C4FD /* Section.swift in Sources */,
 				6149CA562A01E7FE0070D658 /* CompletedStageModel.xcdatamodeld in Sources */,
-				6AAB7FAE2A01589900980A39 /* ImagePickerView.swift in Sources */,
 				C449E90229ED8AC600F9409F /* Prompt.swift in Sources */,
+				6A1258DC2A065D1500D9708F /* PopUpActionSheet.swift in Sources */,
 				C452B6C72A03E8CD006EAF43 /* GameData.swift in Sources */,
 				C449E90429ED8AF500F9409F /* LottieView.swift in Sources */,
 				C46F1D972A00BAB500C34D62 /* SpeechBubble.swift in Sources */,
@@ -989,8 +993,8 @@
 				6149CA432A01C4320070D658 /* SpeechToTextView.swift in Sources */,
 				E156B8BA2A036AA6006DBB2D /* BabyChatBubbles.swift in Sources */,
 				C4E7681D29FFE3D800F92A56 /* VideoModalSheetView.swift in Sources */,
+				6A1258DA2A0655F600D9708F /* ProfilePicture.swift in Sources */,
 				C420A64629F630D800C028D8 /* HintCarousel.swift in Sources */,
-				6AAB7FAC2A01548000980A39 /* InputProfilePic.swift in Sources */,
 				C46F1D992A00BD2200C34D62 /* SectionGuideline.swift in Sources */,
 				C46F1DA72A02054700C34D62 /* AchievementListView.swift in Sources */,
 				C449E91B29EE23F200F9409F /* ProgressBarView.swift in Sources */,
@@ -1125,11 +1129,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ToddTalks/Preview Content\"";
-				DEVELOPMENT_TEAM = WRQ5UZA34D;
+				DEVELOPMENT_TEAM = CYJ9M367B2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ToddTalks/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "Allow us to use camera";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please Allow KataKecil to Access Your Camera";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Allow us to use your microphone";
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Allow to use speech recognition";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -1143,7 +1147,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.fernandoptr.ToddTalks;
+				PRODUCT_BUNDLE_IDENTIFIER = co.angelicapinonkuan.ToddTalks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1160,11 +1164,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ToddTalks/Preview Content\"";
-				DEVELOPMENT_TEAM = WRQ5UZA34D;
+				DEVELOPMENT_TEAM = CYJ9M367B2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ToddTalks/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "Allow us to use camera";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please Allow KataKecil to Access Your Camera";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Allow us to use your microphone";
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Allow to use speech recognition";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -1178,7 +1182,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.fernandoptr.ToddTalks;
+				PRODUCT_BUNDLE_IDENTIFIER = co.angelicapinonkuan.ToddTalks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
