@@ -18,6 +18,7 @@
 		6149CA622A0210010070D658 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6149CA612A0210010070D658 /* CircleView.swift */; };
 		6A1258D82A06559D00D9708F /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1258D72A06559D00D9708F /* ImagePicker.swift */; };
 		6A1258DA2A0655F600D9708F /* ProfilePicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1258D92A0655F600D9708F /* ProfilePicture.swift */; };
+		6A1258E02A0684E500D9708F /* mamaSong.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 6A1258DF2A0684E500D9708F /* mamaSong.mp4 */; };
 		6AAB7FAA2A01474900980A39 /* InputPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AAB7FA92A01474900980A39 /* InputPageView.swift */; };
 		C40589CD29F7683700E76068 /* JourneyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40589CC29F7683700E76068 /* JourneyView.swift */; };
 		C40589D229F76B5500E76068 /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40589D129F76B5500E76068 /* Stage.swift */; };
@@ -116,6 +117,7 @@
 		6149CA612A0210010070D658 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		6A1258D72A06559D00D9708F /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		6A1258D92A0655F600D9708F /* ProfilePicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePicture.swift; sourceTree = "<group>"; };
+		6A1258DF2A0684E500D9708F /* mamaSong.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = mamaSong.mp4; path = ToddTalks/Core/Resources/Video/mamaSong.mp4; sourceTree = SOURCE_ROOT; };
 		6AAB7FA92A01474900980A39 /* InputPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputPageView.swift; sourceTree = "<group>"; };
 		C40589CC29F7683700E76068 /* JourneyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyView.swift; sourceTree = "<group>"; };
 		C40589D129F76B5500E76068 /* Stage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stage.swift; sourceTree = "<group>"; };
@@ -170,7 +172,6 @@
 		C4DB180A2A0409C600F46E8E /* BabyChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BabyChat.swift; path = ToddTalks/Features/GameScene/Models/BabyChat.swift; sourceTree = SOURCE_ROOT; };
 		C4DB180C2A04117800F46E8E /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		C4DB180F2A04129100F46E8E /* StageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageData.swift; sourceTree = "<group>"; };
-		C4E7680B29FFE14B00F92A56 /* mamaSong.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mamaSong.mp4; sourceTree = "<group>"; };
 		C4E7681029FFE1FC00F92A56 /* Milestone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Milestone.swift; sourceTree = "<group>"; };
 		C4E7681229FFE22500F92A56 /* SnapCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapCarouselView.swift; sourceTree = "<group>"; };
 		C4E7681C29FFE3D800F92A56 /* VideoModalSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoModalSheetView.swift; sourceTree = "<group>"; };
@@ -769,7 +770,7 @@
 		C4E7680A29FFE13B00F92A56 /* Videos */ = {
 			isa = PBXGroup;
 			children = (
-				C4E7680B29FFE14B00F92A56 /* mamaSong.mp4 */,
+				6A1258DF2A0684E500D9708F /* mamaSong.mp4 */,
 			);
 			path = Videos;
 			sourceTree = "<group>";
@@ -915,6 +916,7 @@
 				C423B4672A04FD5D0096C4FD /* hati.json in Resources */,
 				E1B6765D2A00E2BF009CC879 /* waktu.json in Resources */,
 				C423B4652A04E8000096C4FD /* tos2.json in Resources */,
+				6A1258E02A0684E500D9708F /* mamaSong.mp4 in Resources */,
 				E1B6765A2A00E2BF009CC879 /* awan.json in Resources */,
 				C449E8D829ED729A00F9409F /* Preview Assets.xcassets in Resources */,
 				E1B676542A00E2BF009CC879 /* hiu.json in Resources */,

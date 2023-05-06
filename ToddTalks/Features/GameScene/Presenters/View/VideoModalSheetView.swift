@@ -10,7 +10,7 @@ import AVKit
 import WebKit
 
 
-struct FullScreenModalView: View {
+struct VideoModalSheetView: View {
  
     @Environment(\.presentationMode) var presentationMode
      
@@ -32,8 +32,6 @@ struct FullScreenModalView: View {
             
             VideoPlayer(player: AVPlayer(url: Bundle.main.url(forResource: "mamaSong", withExtension: "mp4")!))
                 .ignoresSafeArea()
-//                    YouTubeView(videoID: "73e3GNxcKvA")
-//                        .ignoresSafeArea()
         }
         
     }
