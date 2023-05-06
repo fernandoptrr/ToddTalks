@@ -33,11 +33,7 @@ struct InputPageView: View {
                         .padding(.top,24)
                     
                     
-                    Button{
-                        
-                    } label: {
-                        ProfilePicture()
-                    }
+                    ProfilePicture()
 
                     VStack (alignment: .leading){
                         Text("Nama Anak")
