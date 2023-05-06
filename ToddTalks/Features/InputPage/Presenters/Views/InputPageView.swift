@@ -12,6 +12,7 @@ struct InputPageView: View {
     @State private var namaAnak: String = ""
     @State private var usia: String = ""
     @State private var usiaButtonTitle = "12 - 24 bulan"
+    @State private var showActionSheet = false
     
     
     @State private var selectedOption = "Option 1"
@@ -31,12 +32,13 @@ struct InputPageView: View {
                         .foregroundColor(.textColor)
                         .padding(.top,24)
                     
-                    NavigationLink{
-                        ImagePickerView()
-                    } label: {
-                        InputProfilePic()
-                    }
                     
+                    Button{
+                        
+                    } label: {
+                        ProfilePicture()
+                    }
+
                     VStack (alignment: .leading){
                         Text("Nama Anak")
                             .font(FontProvider.custom(.niceSugar, size: .title))
