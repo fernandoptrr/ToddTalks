@@ -7,37 +7,65 @@
 
 import SwiftUI
 
+
 struct StageCircle: View {
     let stage: Stage
     @Binding var showStageDialog: Bool
-    
-    private func getStarIc(value: Int) -> String {
-        return stage.starCount >= value ? "star.fill" : "star"
+    @Binding var selectedStage: Stage
+
+    private func getStarColor(value: Int) -> Color {
+        return stage.starCount >= value ? Color.yellow : Color(uiColor: .systemGray4)
     }
-    
+
     var body: some View {
         VStack(alignment: .center) {
             HStack {
-                Image(systemName: getStarIc(value: 1))
-                    .foregroundColor(.yellow)
-                    .font(.system(size: 18))
-                    .rotationEffect(.degrees(45))
-                    .shimmering()
+                if stage.starCount >= 1 {
+                    Image(systemName: "star.fill")
+                        .foregroundColor(getStarColor(value: 1))
+                        .font(.system(size: 18))
+                        .rotationEffect(.degrees(45))
+                        .shimmering()
                     .offset(y: 8)
-                Image(systemName: getStarIc(value: 2))
-                    .foregroundColor(.yellow)
-                    .font(.system(size: 18))
-                    .shimmering()
-                    .offset(y: -4)
-                Image(systemName: getStarIc(value: 3))
-                    .foregroundColor(.yellow)
-                    .font(.system(size: 18))
-                    .rotationEffect(.degrees(-45))
-                    .shimmering()
+                } else {
+                    Image(systemName: "star.fill")
+                        .foregroundColor(getStarColor(value: 1))
+                        .font(.system(size: 18))
+                        .rotationEffect(.degrees(45))
                     .offset(y: 8)
+                    
+                }
+                if stage.starCount >= 2 {
+                    Image(systemName: "star.fill")
+                        .foregroundColor(getStarColor(value: 2))
+                        .font(.system(size: 18))
+                        .shimmering()
+                        .offset(y: -4)
+                } else {
+                    Image(systemName: "star.fill")
+                        .foregroundColor(getStarColor(value: 2))
+                        .font(.system(size: 18))
+                        .offset(y: -4)
+                }
+                if stage.starCount >= 3 {
+                    Image(systemName: "star.fill")
+                        .foregroundColor(getStarColor(value: 3))
+                        .font(.system(size: 18))
+                        .rotationEffect(.degrees(-45))
+                        .shimmering()
+                        .offset(y: 8)
+                }
+                else {
+                    Image(systemName: "star.fill")
+                        .foregroundColor(getStarColor(value: 3))
+                        .font(.system(size: 18))
+                        .rotationEffect(.degrees(-45))
+                        .offset(y: 8)
+                }
+                
             }
-            .shadow(color: .yellow ,radius: 4)
             Button( action: {
+                selectedStage = stage
                 showStageDialog.toggle()
             }) {
                 Image(systemName: "hand.wave")
@@ -47,7 +75,7 @@ struct StageCircle: View {
             .frame(width: 48, height: 48)
             .foregroundColor(.white)
             .buttonStyle(RaisedButtonStyle(radius: 100))
-            Text(stage.title)
+            Text(stage.label)
                 .font(FontProvider.custom(.sassoon, size: .body).weight(.medium))
                 .multilineTextAlignment(.center)
                 .fixedSize(horizontal: false, vertical: true)
@@ -61,8 +89,8 @@ struct StageCircle: View {
 
 struct StageCircle_Previews: PreviewProvider {
     static var previews: some View {
-        StageCircle(stage: Stage(illPath: "play.fill", title: "Gesture 1", body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.", tips: "haha", starCount: 3),
-                    showStageDialog: .constant(false))
+        StageCircle(stage: StageData.stage1M1U1,
+                    showStageDialog: .constant(false), selectedStage: .constant(StageData.stage1M1U1))
         .previewLayout(.sizeThatFits)
     }
 }

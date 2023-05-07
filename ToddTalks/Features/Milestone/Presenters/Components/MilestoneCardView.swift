@@ -18,15 +18,17 @@ struct MilestoneCardView: View {
                 .fill(Color(uiColor: .systemGray4))
                 .offset(y: offset)
             RoundedRectangle(cornerRadius: 32, style: .continuous)
-                .fill(.white)
+                .fill(Color.milestoneCardColor)
             VStack {
                 Text(milestone.title)
                     .font(FontProvider.custom(.niceSugar, size: .title))
                     .padding(.top, 84)
                     .overlay {
-                        LottieView(name: milestone.illPath, loopMode: .loop, animationSpeed: 0.8)
-                            .scaleEffect(illScale)
-                            .offset(y: -72)
+                        Image("anakcowo")
+                            .resizable()
+                            .scaledToFit()
+                            .frame( height: 180)
+                            .offset(y: -76)
                     }
                 Text(milestone.body)
                     .font(FontProvider.custom(.sassoon, size: .body)
@@ -50,7 +52,7 @@ struct MilestoneCardView: View {
                     .frame(height: 100)
                     .padding(.top, 8)
                     .foregroundColor(.black)
-                NavigationLink(destination: JourneyView(colorTheme: milestone.colorTheme)) {
+                NavigationLink(destination: JourneyView(sections: milestone.journey, colorTheme: milestone.colorTheme)) {
                     Text("Journey")
                 }
                 .buttonStyle(RaisedButtonStyle())
@@ -69,10 +71,11 @@ struct MilestoneCardView: View {
 struct MilestoneCardView_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
-            Color.blueColor.ignoresSafeArea()
+            Color.primaryBgColor.ignoresSafeArea()
             MilestoneCardView(
                 milestone: Milestone(
-                    illPath: Lotties.baby,
+                    id: "milestone1",
+                    image: Lotties.baby,
                     title: "12 - 24 Bulan",
                     body: "Pada tahap ini diharapkan sang anak dapat mengucapkan kata “p” , “w”, “z” dan “t” dengan benar.",
                     progVal: 5,
@@ -89,7 +92,9 @@ struct MilestoneCardView_Previews: PreviewProvider {
                 • You're a loyal and caring friend!
                 • You're empathetic and have a strong sense of fairness and justice.
                 """],
-                    colorTheme: .purpleColor),
+                    colorTheme: .purpleColor,
+                    journey: [SectionData.section1M1, SectionData.section2M1]
+                ),
                 illScale: 1.8
             )
             .padding(.horizontal, 32)

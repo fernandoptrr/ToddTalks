@@ -13,7 +13,7 @@ struct SectionDetailSheet: View {
     var body: some View {
         ScrollView(showsIndicators: false) {
             VStack{
-                LottieView(name: data.illPath, loopMode: .loop, animationSpeed: 0.8)
+                LottieView(name: data.lottie, loopMode: .loop, animationSpeed: 0.8)
                     .frame(height: 164)
                     .scaleEffect(1.4)
                 Text(data.headline)
@@ -69,6 +69,6 @@ struct SectionDetailSheet: View {
 
 struct SectionDetailSheet_Previews: PreviewProvider {
     static var previews: some View {
-        SectionDetailSheet(data: SectionGuideline(illPath: Lotties.baby, headline: "Section 1 Guideline", subHeadline: "Pelajari tips tata bahasa dan frasa kunci untuk unit ini", title: "FRASA KUNCI", body: "Memakai kata jamak", tips: ["Some really long text in the speech bubble over multiple lines.", "Some really long text in the speech bubble over multiple lines.", "Some really long text in the speech bubble over multiple lines."]))
+        SectionDetailSheet(data: SectionGuideline(lottie: Lotties.baby, headline: "Section 1 Guideline", subHeadline: "Pelajari tips tata bahasa dan frasa kunci untuk unit ini", title: "FRASA KUNCI", body: "Memakai kata jamak", tips: ["Some really long text in the speech bubble over multiple lines.", "Some really long text in the speech bubble over multiple lines.", "Some really long text in the speech bubble over multiple lines."]))
     }
 }
