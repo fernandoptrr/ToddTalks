@@ -73,7 +73,7 @@ struct CameraView :  View {
                                 return
                             }
                             
-                            AchievementController().addCompletedAchievement(achievementId: "test1", imageData: image, context: managedObjContext)
+                            AchievementController().addCompletedAchievement(achievementId: "test2", imageData: image, context: managedObjContext)
                             dismiss()
                         }, label: {
                             Text("Lanjut")

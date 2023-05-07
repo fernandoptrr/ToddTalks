@@ -13,7 +13,7 @@ struct StageData {
                            label: "Gesture",
                            title: "Gesture",
                            body: "Body 1",
-                           games: GameData.gamesM1U1S1, starCount: 0)
+                           games: GameData.gamesM1U1S1, starCount: 3)
     
     static var stage2M1U1 = Stage(id: "stage2M1U1",
                            icon: "play.fill",

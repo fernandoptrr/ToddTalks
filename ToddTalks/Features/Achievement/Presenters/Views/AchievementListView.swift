@@ -13,6 +13,7 @@ struct AchievementListView: View {
     @Environment(\.managedObjectContext) var managedObjContext
     @FetchRequest(sortDescriptors: [SortDescriptor(\.achievementId, order: .reverse)]) var completeAchievement: FetchedResults<CompleteAchievement>
     @Binding var username: String
+    @State var starCount = 0
 
     var body: some View {
         NavigationView{
@@ -38,7 +39,7 @@ struct AchievementListView: View {
                     }
                     List {
                         ForEach(achievements) { achievement in
-                            AchievementRow(data: achievement)
+                            AchievementRow(data: achievement,starCount: $starCount)
                                 .environment(\.managedObjectContext, managedObjContext)
                         }
                     }
