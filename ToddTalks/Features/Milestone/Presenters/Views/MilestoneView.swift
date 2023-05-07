@@ -38,6 +38,18 @@ struct MilestoneView: View  {
                         }
                     }
                 }
+                if (currentIndex != 0) {
+                    ZStack {
+                        Color(.black).opacity(0.8)
+                        .ignoresSafeArea()
+                        Text("Coming Soon!")
+                            .font(FontProvider.custom(.niceSugar, size: .largeTitle))
+                            .foregroundColor(.primaryColor)
+                            .padding(.top,24)
+                    }
+                    .animation(.easeInOut(duration: 2), value: currentIndex)
+                    .allowsHitTesting(false)
+                }
             }
         }
         .navigationBarBackButtonHidden()

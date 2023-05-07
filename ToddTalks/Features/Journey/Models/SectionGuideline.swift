@@ -11,7 +11,5 @@ struct SectionGuideline: Hashable {
     let lottie: String
     let headline: String
     let subHeadline: String
-    let title: String
-    let body: String
     let tips: [String]
 }

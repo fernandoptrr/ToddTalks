@@ -18,7 +18,6 @@ struct JourneyView: View {
         ZStack {
             ScrollView {
                 ZStack {
-                    
                     VStack {
                         ForEach(sections) { section in
                             SectionView(

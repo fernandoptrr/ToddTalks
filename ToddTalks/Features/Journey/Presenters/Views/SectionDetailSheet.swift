@@ -21,7 +21,7 @@ struct SectionDetailSheet: View {
                         .weight(.bold)
                     )
                     .multilineTextAlignment(.center)
-                    .foregroundColor(.gray)
+                    .foregroundColor(.primaryColor)
                 Text(data.subHeadline)
                     .font(FontProvider.custom(.sassoon, size: .body)
                         .weight(.medium)
@@ -29,37 +29,27 @@ struct SectionDetailSheet: View {
                     .multilineTextAlignment(.center)
                     .padding(.top, 2)
             }
-            .padding(.horizontal)
-                Divider()
-                    .padding(.vertical, 16)
-            VStack(alignment: .leading) {
-                Text(data.title)
-                    .font(FontProvider.custom(.sassoon, size: .body)
-                        .weight(.bold)
-                    )
-                    .foregroundColor(.primaryColor)
-                Text(data.body)
-                    .font(FontProvider.custom(.sassoon, size: .subheadline)
-                        .weight(.medium)
-                    )
-                    .padding(.vertical, 4)
-                VStack {
-                    ForEach(data.tips, id: \.self) { tip in
-                        ZStack {
-                            SpeechBubble()
-                                .stroke(Color(uiColor: .systemGray4), lineWidth: 1)
+            Divider()
+                .padding(16)
+            
+            VStack {
+                ForEach(data.tips, id: \.self) { tip in
+                    ZStack {
+                        SpeechBubble()
+                            .stroke(Color(uiColor: .systemGray4), lineWidth: 1)
+                        ScrollView {
                             Text(tip)
-                                .font(FontProvider.custom(.sassoon, size: .body))
-                                .padding()
+                                .font(FontProvider.custom(.sassoon, size: .callout))
                         }
-                        .padding(.vertical, 8)
+                        .padding()
                     }
+                    .padding(.vertical, 8)
                 }
                 .padding(.horizontal, 8)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
-            .padding(.horizontal)
         }
+        .padding(.horizontal)
         .padding(.vertical, 32)
         .ignoresSafeArea()
         .presentationDetents([.large, .fraction(0.80)])
@@ -69,6 +59,6 @@ struct SectionDetailSheet: View {
 
 struct SectionDetailSheet_Previews: PreviewProvider {
     static var previews: some View {
-        SectionDetailSheet(data: SectionGuideline(lottie: Lotties.baby, headline: "Section 1 Guideline", subHeadline: "Pelajari tips tata bahasa dan frasa kunci untuk unit ini", title: "FRASA KUNCI", body: "Memakai kata jamak", tips: ["Some really long text in the speech bubble over multiple lines.", "Some really long text in the speech bubble over multiple lines.", "Some really long text in the speech bubble over multiple lines."]))
+        SectionDetailSheet(data: SectionData.section1M1.guideline)
     }
 }

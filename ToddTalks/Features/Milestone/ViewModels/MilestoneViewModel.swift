@@ -8,5 +8,5 @@
 import Foundation
 
 class MilestoneViewModel: ObservableObject {
-    @Published var milestones: [Milestone] = [MilestoneData.milestone1, MilestoneData.milestone2]
+    @Published var milestones: [Milestone] = [MilestoneData.milestone1, MilestoneData.milestone2, MilestoneData.milestone3]
 }
