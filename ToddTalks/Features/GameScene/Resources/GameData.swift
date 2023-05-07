@@ -260,4 +260,111 @@ struct GameData {
         )
     ]
     
+    static let gamesM1U3S1 = [
+        Game(
+            id: "game1M1U3S1",
+            content: "Buku Mama",
+            lottie: Lotties.bacabuku,
+            infoScene: BabyChat(
+                babyImage: "babyimage",
+                parentImage: "parentimage",
+                babyChat: "Ma, ini buku mama?",
+                parentChat: "Iya nak, ini buku kepunyaan mama. Mama suka membaca buku karena banyak hal yang bisa mama pelajari dari buku ini!"
+            )
+        ),
+        Game(
+            id: "game2M1U3S1",
+            content: "Mobil Biru",
+            lottie: Lotties.mobilbiru,
+            infoScene: BabyChat(
+                babyImage: "babyimage",
+                parentImage: "parentimage",
+                babyChat: "Ma, mobilnya warna apa?",
+                parentChat: "Ini mobil berwarna biru. Banyak orang menyukai warna biru dan mereka membuat barang yang sering mereka gunakan menjadi warna biru!"
+            )
+        ),
+        Game(
+            id: "game3M1U3S1",
+            content: "Labu Manis",
+            lottie: Lotties.labumanis,
+            infoScene: BabyChat(
+                babyImage: "babyimage",
+                parentImage: "parentimage",
+                babyChat: "Ma, labu rasanya apa?",
+                parentChat: "Labu rasanya sangat enak dan manis seperti gula! Ketika kamu mencicipinya, akan terasa teksturnya yang lembut dan berair di mulutmu. Labu juga mengandung banyak vitamin dan nutrisi yang baik untuk tubuhmu."
+                )
+        )
+    ]
+    
+    static let gamesM1U3S2 = [
+        Game(
+            id: "game1M1U3S2",
+            content: "Halo Papa",
+            lottie: Lotties.halopapa,
+            infoScene: BabyChat(
+                babyImage: "babyimage",
+                parentImage: "parentimage",
+                babyChat: "Ma, kenapa harus bilang Halo Papa?",
+                parentChat: "Halo Papa perlu kita ucapkan kepada papa atau ayah sebagai ucapan salam dan juga ungkapan kasih sayang kita."
+            )
+        ),
+        Game(
+            id: "game2M1U3S2",
+            content: "Hati Putih",
+            lottie: Lotties.hatiputih,
+            infoScene: BabyChat(
+                babyImage: "babyimage",
+                parentImage: "parentimage",
+                babyChat: "Ma, apa itu hati putih?",
+                parentChat: "Hati putih bisa digunakan sebagai ungkapan rasa syukur dan bahagia atas sebuah pencapaian. Hati putih juga bisa digunakan sebagai ungkapan kasih sayang yang suci dan murni seperti cinta mama ke kamu!"
+            )
+        ),
+        Game(
+            id: "game3M1U3S2",
+            content: "Pensil Hitam",
+            lottie: Lotties.pensilhitam,
+            infoScene: BabyChat(
+                babyImage: "babyimage",
+                parentImage: "parentimage",
+                babyChat: "Ma, pensil hitam itu apa?",
+                parentChat: "Pensil hitam adalah alat tulis yang digunakan untuk menggambar atau menulis di atas kertas. Pensil hitam memiliki warna gelap yang khas, sehingga dapat memberikan hasil garisan yang jelas dan tegas di atas kertas putih."
+                )
+        )
+    ]
+    
+    static let gamesM1U3S3 = [
+        Game(
+            id: "game1M1U3S3",
+            content: "Warna Hijau",
+            lottie: Lotties.warnahijau,
+            infoScene: BabyChat(
+                babyImage: "babyimage",
+                parentImage: "parentimage",
+                babyChat: "Ma, warna hijau itu apa?",
+                parentChat: "Hijau adalah salah satu warna yang sangat indah dan menyenangkan! Warna hijau bisa kita temukan pada daun pohon, rumput, dan tanaman lainnya. Ketika kita melihat warna hijau, kita merasa tenang dan sejuk, seperti berada di alam."
+            )
+        ),
+        Game(
+            id: "game2M1U3S3",
+            content: "Awan Biru",
+            lottie: Lotties.awanbiru,
+            infoScene: BabyChat(
+                babyImage: "babyimage",
+                parentImage: "parentimage",
+                babyChat: "Ma, awan biru itu apa?",
+                parentChat: "Awan biru adalah awan yang terlihat berwarna biru langit cerah yang indah di siang hari. Kita dapat merasakan keindahan langit yang biru dan awan-awan yang bergerak di dalamnya."
+            )
+        ),
+        Game(
+            id: "game3M1U3S3",
+            content: "Waktu Makan",
+            lottie: Lotties.waktumakan,
+            infoScene: BabyChat(
+                babyImage: "babyimage",
+                parentImage: "parentimage",
+                babyChat: "Ma, waktu makan itu apa?",
+                parentChat: "Waktu makan adalah saat yang sangat penting dalam keseharian kita. Saat makan, kita memberikan energi dan nutrisi yang dibutuhkan oleh tubuh kita untuk tumbuh dan berkembang dengan baik!"
+                )
+        )
+    ]
 }

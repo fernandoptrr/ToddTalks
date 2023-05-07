@@ -70,7 +70,7 @@ struct StageData {
                            title: "Huruf B, M",
                            body: "Huruf B, M",
                            tips: "Huruf B, M",
-                           games: GameData.gamesM1U2S5, starCount: 0)
+                           games: GameData.gamesM1U3S1, starCount: 0)
     
     static var stage2M1U3 = Stage(id: "stage2M1U3",
                            icon: "play.fill",
@@ -78,7 +78,7 @@ struct StageData {
                            title: "Huruf P, H",
                            body: "Huruf P, H",
                            tips: "Huruf P, H",
-                           games: GameData.gamesM1U2S5, starCount: 0)
+                           games: GameData.gamesM1U3S2, starCount: 0)
     
     static var stage3M1U3 = Stage(id: "stage3M1U3",
                            icon: "play.fill",
@@ -86,5 +86,5 @@ struct StageData {
                            title: "Huruf W, H/B/M",
                            body: "Huruf W, H/B/M",
                            tips: "Huruf W, H/B/M",
-                           games: GameData.gamesM1U2S5, starCount: 0)
+                           games: GameData.gamesM1U3S3, starCount: 0)
 }
