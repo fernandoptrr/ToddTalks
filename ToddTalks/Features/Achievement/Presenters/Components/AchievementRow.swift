@@ -46,6 +46,6 @@ struct AchievementRow: View {
 
 struct AchievementRow_Previews: PreviewProvider {
     static var previews: some View {
-        AchievementRow(data: Achievement(id: 1,imagePath: "achievement1", name: "Completed first project", date: Date(), body: "I just completed my first project and I'm feeling great!"))
+        AchievementRow(data: Achievement(id: "test1",imagePath: "achievement1", name: "Completed first project", date: Date(), body: "I just completed my first project and I'm feeling great!"))
     }
 }

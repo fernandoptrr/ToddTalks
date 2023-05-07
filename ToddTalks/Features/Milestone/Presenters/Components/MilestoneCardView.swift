@@ -11,6 +11,7 @@ struct MilestoneCardView: View {
     let milestone: Milestone
     var illScale: CGFloat = 1.6
     private let offset: CGFloat = 6
+    @Environment(\.managedObjectContext) var managedObjContext
     
     var body: some View {
         ZStack(alignment: .top){
@@ -52,7 +53,7 @@ struct MilestoneCardView: View {
                     .frame(height: 100)
                     .padding(.top, 8)
                     .foregroundColor(.black)
-                NavigationLink(destination: JourneyView(sections: milestone.journey, colorTheme: milestone.colorTheme)) {
+                NavigationLink(destination: JourneyView(sections: milestone.journey, colorTheme: milestone.colorTheme) .environment(\.managedObjectContext, managedObjContext)) {
                     Text("Journey")
                 }
                 .buttonStyle(RaisedButtonStyle())

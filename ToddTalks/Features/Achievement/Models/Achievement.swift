@@ -8,7 +8,7 @@
 import Foundation
 
 struct Achievement: Identifiable {
-    let id : Int16
+    let id : String
     let imagePath: String
     let name: String
     let date: Date
@@ -18,9 +18,10 @@ struct Achievement: Identifiable {
 }
 
 var achievements = [
-    Achievement(id: 1,imagePath: "achievement1", name: "Completed first project", date: Date(), body: "I just completed my first project and I'm feeling great!", isEmpty: true),
-    Achievement(id: 2,imagePath: "achievement2", name: "Learned a new programming language", date: Date(), body: "I just learned a new programming language and I'm excited to start using it in my projects."),
-    Achievement(id: 3, imagePath: "achievement3", name: "Published an app on the App Store", date: Date(), body: "My app is now live on the App Store!", isEmpty: true),
+    Achievement(id: "test1",imagePath: "achievement1", name: "Kata Pertama!", date: Date(), body: "Langkah pertama yang sangat mengesankan !!!", isEmpty: true),
+    Achievement(id: "test2",imagePath: "achievement1", name: "Completed first project", date: Date(), body: "I just completed my first project and I'm feeling great!", isEmpty: true),
+    Achievement(id: "test3",imagePath: "achievement2", name: "Learned a new programming language", date: Date(), body: "I just learned a new programming language and I'm excited to start using it in my projects."),
+    Achievement(id: "test4", imagePath: "achievement3", name: "Published an app on the App Store", date: Date(), body: "My app is now live on the App Store!", isEmpty: true),
 //
 //    Achievement(imagePath: "achievement4", name: "Presented at a tech conference", date: Date(), body: "I just gave a presentation at a tech conference and it was amazing!"),
 //    Achievement(imagePath: "achievement5", name: "Won a programming competition", date: Date(), body: "I just won a programming competition and I couldn't be happier!", isEmpty: false),

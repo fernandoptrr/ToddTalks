@@ -11,7 +11,7 @@ import CoreData
 import SwiftUI
 
 class AchievementController : ObservableObject {
-    let container = NSPersistentContainer(name : "AchievementDataModel")
+    let container = NSPersistentContainer(name : "completeAchievement")
     
     init() {
         container.loadPersistentStores{desc, error in
@@ -31,9 +31,8 @@ class AchievementController : ObservableObject {
         }
     }
     
-    func addCompletedAchievement(achievementId: Int16, imageData: Data, context: NSManagedObjectContext) {
+    func addCompletedAchievement(achievementId: String, imageData: Data, context: NSManagedObjectContext) {
         let completeAchievement = CompleteAchievement(context: context)
-        completeAchievement.id = UUID()
         completeAchievement.achievementId = achievementId
         completeAchievement.imageData = imageData
         

@@ -34,14 +34,10 @@ struct AchievementListView: View {
                 }
                 List {
                     ForEach(achievements) { achievement in
-                        
                         AchievementRow(data: achievement)
                             .environment(\.managedObjectContext, managedObjContext)
-                        
-                        
                     }
                 }
-  
             }
             .listStyle(PlainListStyle())
         }

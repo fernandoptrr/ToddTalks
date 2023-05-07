@@ -23,25 +23,17 @@ struct SpeakButtonView: View {
             speechRecognizer.transcript = ""
             self.isCorrect = false
         }) {
-            Circle()
-                .foregroundColor(.blue)
-                .frame(width: 100)
-                .scaleEffect(isRecording ? 1.75 : 1)
-                .animation(animation)
-                .overlay {
-                    VStack {
-                        Image(systemName: "waveform.and.mic")
-                            .font(.largeTitle)
-                            .foregroundColor(.white)
-                    }
-                    .foregroundStyle(.white)
-                    .bold()
-                }
-        }.simultaneousGesture(LongPressGesture(minimumDuration: 0.1).onEnded({_ in
-            self.isRecording = true
-            checkWord()
-            speechRecognizer.startTranscribing()
-        }))
+            Image(systemName: "waveform.and.mic")
+                .font(.largeTitle)
+                .foregroundColor(.white)
+                .padding(24)
+        }       .fixedSize(horizontal: true, vertical: true)
+            .buttonStyle(RaisedButtonStyle(radius: 100, color: .blue))
+            .padding(.horizontal, 42).simultaneousGesture(LongPressGesture(minimumDuration: 0.1).onEnded({_ in
+                self.isRecording = true
+                checkWord()
+                speechRecognizer.startTranscribing()
+            }))
         
         
     }

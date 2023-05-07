@@ -73,7 +73,7 @@ struct CameraView :  View {
                                 return
                             }
                             
-                            AchievementController().addCompletedAchievement(achievementId: 1, imageData: image, context: managedObjContext)
+                            AchievementController().addCompletedAchievement(achievementId: "test1", imageData: image, context: managedObjContext)
                             dismiss()
                         }, label: {
                             Text("Lanjut")
@@ -120,7 +120,7 @@ struct CameraView :  View {
         })
     }
     
-    func saveToCoreData(achievementId : Int16, image : Data) {
+    func saveToCoreData(achievementId : String, image : Data) {
         AchievementController().addCompletedAchievement(achievementId: achievementId, imageData: image, context: self.managedObjContext)
     }
 }

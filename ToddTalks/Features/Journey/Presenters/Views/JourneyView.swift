@@ -10,7 +10,7 @@ import SwiftUI
 struct JourneyView: View {
     @State private var showStageDialog = false
     @State private var selectedStage: Stage = StageData.stage1M1U1
-
+    @Environment(\.managedObjectContext) var managedObjContext
     let sections: [Section]
     let colorTheme: Color
     
@@ -51,7 +51,7 @@ struct JourneyView: View {
             .background(colorTheme)
             if showStageDialog {
                 StageDialog(isPresented: $showStageDialog, stage: selectedStage
-                )
+                ).environment(\.managedObjectContext, managedObjContext)
             }
         }
         .toolbarBackground(.hidden, for: .navigationBar)
