@@ -8,6 +8,7 @@
 import SwiftUI
 import AVFoundation
 import Photos
+import CoreData
 
 struct CameraContentView: View {
     var body: some View {
@@ -71,7 +72,9 @@ struct CameraView :  View {
                             guard let image = camera.savePic() else {
                                 return
                             }
-                            saveToCoreData(achievementId: 1, image: image)
+                            
+                            AchievementController().addCompletedAchievement(achievementId: 1, imageData: image, context: managedObjContext)
+                            dismiss()
                         }, label: {
                             Text("Lanjut")
                                 .font(FontProvider.custom(.niceSugar, size: .title))  .buttonStyle(RaisedButtonStyle())
@@ -81,6 +84,7 @@ struct CameraView :  View {
                         .foregroundColor(.white)
                         .padding()
                         .padding(.top, 16)
+                        .environment(\.managedObjectContext, managedObjContext)
                     }
                     else {
                         
@@ -117,7 +121,7 @@ struct CameraView :  View {
     }
     
     func saveToCoreData(achievementId : Int16, image : Data) {
-        AchievementController().addCompletedAchievement(achievementId: achievementId, imageData: image, context: managedObjContext)
+        AchievementController().addCompletedAchievement(achievementId: achievementId, imageData: image, context: self.managedObjContext)
     }
 }
 

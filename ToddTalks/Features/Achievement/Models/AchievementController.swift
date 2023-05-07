@@ -26,12 +26,14 @@ class AchievementController : ObservableObject {
             try context.save()
             print("Data SAVED")
         } catch {
+            print(error.localizedDescription)
             print("Unable to save data \(error)")
         }
     }
     
     func addCompletedAchievement(achievementId: Int16, imageData: Data, context: NSManagedObjectContext) {
         let completeAchievement = CompleteAchievement(context: context)
+        completeAchievement.id = UUID()
         completeAchievement.achievementId = achievementId
         completeAchievement.imageData = imageData
         

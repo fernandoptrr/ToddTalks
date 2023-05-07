@@ -9,10 +9,12 @@ import SwiftUI
 
 @main
 struct ToddTalksApp: App {
+    @StateObject private var achievementController = AchievementController()
     var body: some Scene {
         WindowGroup {
 //            MilestoneView()
-            InputPageView()
+//            CameraContentView().environment(\.managedObjectContext, achievementController.container.viewContext)
+            AchievementListView().environment(\.managedObjectContext, achievementController.container.viewContext)
         }
     }
 }
