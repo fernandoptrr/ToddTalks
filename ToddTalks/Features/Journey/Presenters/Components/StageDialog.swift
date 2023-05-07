@@ -37,14 +37,8 @@ struct StageDialog: View {
                         .font(FontProvider.custom(.niceSugar, size: .title))
                         .foregroundColor(.primaryColor)
                         .padding(.top, 32)
-                    Text(stage.body)
-                        .font(FontProvider.custom(.sassoon, size: .body))
-                        .multilineTextAlignment(.center)
-                        .padding(.top, 4)
-                    if stage.tips != nil {
-                        HintText(text: stage.tips!)
+                        HintText(text: stage.body)
                             .padding(.top, 16)
-                    }
                     Button("Mulai") {
                         close()
                         isStarted = true

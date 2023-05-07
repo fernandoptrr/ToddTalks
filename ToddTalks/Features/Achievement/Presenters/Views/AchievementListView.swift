@@ -12,35 +12,39 @@ struct AchievementListView: View {
     
     @Environment(\.managedObjectContext) var managedObjContext
     @FetchRequest(sortDescriptors: [SortDescriptor(\.achievementId, order: .reverse)]) var completeAchievement: FetchedResults<CompleteAchievement>
-    @State var starCount: Int = 0
+    @Binding var username: String
+
     var body: some View {
         NavigationView{
-            VStack {
+            ZStack {
                 VStack {
-                    Text("Achievement")
-                        .font(FontProvider.custom(.niceSugar, size: .largeTitle))
-                        .foregroundColor(.primaryColor)
-                    HStack {
-                        Text("\(starCount) / \(achievements.count)")
-                            .font(FontProvider.custom(.sassoon, size: .body))
-                        Image(systemName: "trophy.fill")
-                            .foregroundColor(.primaryColor)
-                            .font(.title3)
-                            .shimmering()
-                            .offset(y: -4)
+                    VStack {
+                        Text("Pencapaian\n\(username)")
+                            .font(FontProvider.custom(.niceSugar, size: .largeTitle))
+                            .multilineTextAlignment(.center)
+                            .foregroundColor(.textColor)
+                        HStack {
+                            Text("\(starCount) / \(achievements.count)")
+                                .font(FontProvider.custom(.sassoon, size: .body))
+                            Image(systemName: "trophy.fill")
+                                .foregroundColor(.primaryColor)
+                                .font(.title3)
+                                .shimmering()
+                                .offset(y: -4)
+                        }
+                        .padding(.top, -16)
+                        Divider()
+                        
                     }
-                    .padding(.top, -16)
-                    Divider()
-                    
-                }
-                List {
-                    ForEach(achievements) { achievement in
-                        AchievementRow(data: achievement,starCount: $starCount)
-                            .environment(\.managedObjectContext, managedObjContext)
+                    List {
+                        ForEach(achievements) { achievement in
+                            AchievementRow(data: achievement)
+                                .environment(\.managedObjectContext, managedObjContext)
+                        }
                     }
                 }
+                .listStyle(PlainListStyle())
             }
-            .listStyle(PlainListStyle())
         }
     }
     
@@ -51,7 +55,7 @@ struct AchievementListView: View {
 struct AchievementList_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
-            AchievementListView()
+            AchievementListView(username: .constant("Sanz"))
         }
     }
 }

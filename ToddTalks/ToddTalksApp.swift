@@ -10,11 +10,16 @@ import SwiftUI
 @main
 struct ToddTalksApp: App {
     @StateObject private var achievementController = AchievementController()
+    @State private var username: String = ""
+
     var body: some Scene {
         WindowGroup {
-            //            AchievementListView().environment(\.managedObjectContext, achievementController.container.viewContext)
-//            GameSceneView().environmentObject(gameViewModel)
-            MilestoneView().environment(\.managedObjectContext, achievementController.container.viewContext)
+            if (username.isEmpty) {
+                InputPageView(username: $username)
+            }
+            else {
+                MilestoneView(username: $username).environment(\.managedObjectContext, achievementController.container.viewContext)
+            }
         }
     }
 }
