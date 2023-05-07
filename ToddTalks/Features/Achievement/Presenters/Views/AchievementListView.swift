@@ -24,7 +24,7 @@ struct AchievementListView: View {
                             .multilineTextAlignment(.center)
                             .foregroundColor(.textColor)
                         HStack {
-                            Text("2 / 10")
+                            Text("\(starCount) / \(achievements.count)")
                                 .font(FontProvider.custom(.sassoon, size: .body))
                             Image(systemName: "trophy.fill")
                                 .foregroundColor(.primaryColor)
