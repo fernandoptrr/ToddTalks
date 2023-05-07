@@ -28,7 +28,7 @@ struct GameSceneView: View {
                     Spacer()
                     GameContent(lottie: viewModel.games[viewModel.currentGameIndex].lottie, content: viewModel.games[viewModel.currentGameIndex].content, isInfoScene: viewModel.isInfoScene)
                     Spacer()
-                    GameFooter(isCorrect: $isCorrect, lottie: viewModel.games[viewModel.currentGameIndex].content)
+                    GameFooter(isCorrect: $isCorrect, content: viewModel.games[viewModel.currentGameIndex].content)
                 }
             }
             if (isCorrect){
@@ -179,7 +179,7 @@ struct GameContent: View {
 struct GameFooter: View {
     @EnvironmentObject private var viewModel: GameViewModel
     @Binding var isCorrect : Bool
-    let lottie : String
+    let content : String
     var body: some View {
         ZStack {
             Button( action: {
@@ -207,7 +207,7 @@ struct GameFooter: View {
                 }
                 .fixedSize(horizontal: true, vertical: true)
                 .buttonStyle(RaisedButtonStyle(color: .red))
-                SpeakButtonView(word: lottie, isCorrect: $isCorrect)
+                SpeakButtonView(word: content, isCorrect: $isCorrect)
                 Button( action: {
                     viewModel.setGameCompleted()
                 }) {
