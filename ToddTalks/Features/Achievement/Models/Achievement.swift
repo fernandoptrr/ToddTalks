@@ -28,5 +28,4 @@ var achievements = [
     Achievement(id: "test1",imagePath: "achievement1", name: "Stage B, M", date: Date(), body: "Luar biasa! Kamu dapat menyusun dua kata berbunyi B dan M!", isEmpty: true),
     Achievement(id: "test1",imagePath: "achievement1", name: "Stage P, H", date: Date(), body: "Selamat! Kamu berhasil mengucapkan dua kata dengan bunyi P dan H dengan sangat baik!!", isEmpty: true),
     Achievement(id: "test1",imagePath: "achievement1", name: "Stage W, H/B/M", date: Date(), body: "Yes! Kamu sudah bisa menyusun dua kata dengan bunyi huruf W!!", isEmpty: true),
-
 ]

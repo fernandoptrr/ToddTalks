@@ -11,7 +11,7 @@ struct SectionData {
     static let section1M1: Section = Section(
         id: "section1M1",
         headline: "Bagian 1 (12 - 15 Bulan)",
-        subHeadline: "Basic Communication Skill",
+        subHeadline: "Komunikasi Dasar",
         stages: [
             [StageData.stage1M1U1],
             [StageData.stage2M1U1]
@@ -32,7 +32,7 @@ struct SectionData {
     static let section2M1: Section = Section(
         id: "section2M1",
         headline: "Bagian 2 (16 - 19 Bulan)",
-        subHeadline: "Early Word Learning",
+        subHeadline: "Belajar Abjad",
         stages: [
             [StageData.stage1M1U2],
             [StageData.stage2M1U2, StageData.stage3M1U2],
@@ -54,7 +54,7 @@ struct SectionData {
     static let section3M1: Section = Section(
         id: "section3M1",
         headline: "Bagian 3 (20 - 24 Bulan)",
-        subHeadline: "Combining Words",
+        subHeadline: "Belajar Gabungan Abjad",
         stages: [
             [StageData.stage1M1U3],
             [StageData.stage2M1U3, StageData.stage3M1U3]
