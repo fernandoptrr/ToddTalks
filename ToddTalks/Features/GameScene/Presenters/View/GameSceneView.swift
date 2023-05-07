@@ -28,7 +28,7 @@ struct GameSceneView: View {
                     Spacer()
                     GameContent(lottie: viewModel.games[viewModel.currentGameIndex].lottie, content: viewModel.games[viewModel.currentGameIndex].content, isInfoScene: viewModel.isInfoScene)
                     Spacer()
-                    GameFooter(isCorrect: $isCorrect, lottie: viewModel.games[viewModel.currentGameIndex].lottie)
+                    GameFooter(isCorrect: $isCorrect, lottie: viewModel.games[viewModel.currentGameIndex].content)
                 }
             }
             if (isCorrect){
@@ -161,11 +161,11 @@ struct GameContent: View {
                         .frame(height: 90)
                         .scaleEffect(x: 1.4, y: 1.2)
                     HStack(alignment: .firstTextBaseline) {
-                        Text(lottie)
+                        Text(content)
                             .font(FontProvider.custom(.sassoon, size: .title)
                                 .weight(.bold))
                             .foregroundColor(.red)
-                        TextToSpeechView(word: lottie)
+                        TextToSpeechView(word: content)
                     }
                 }
                 .offset(y: -120)
