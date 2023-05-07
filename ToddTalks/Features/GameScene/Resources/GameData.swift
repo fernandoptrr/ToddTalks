@@ -34,7 +34,7 @@ struct GameData {
         Game(
             id: "game3M1U1S1",
             content: "Dadah",
-            lottie: Lotties.bye2,
+            lottie: Lotties.bye,
             infoScene: BabyChat(
                 babyImage: "babyimage",
                 parentImage: "parentimage",

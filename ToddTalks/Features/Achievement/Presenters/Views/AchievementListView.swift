@@ -12,6 +12,7 @@ struct AchievementListView: View {
     
     @Environment(\.managedObjectContext) var managedObjContext
     @FetchRequest(sortDescriptors: [SortDescriptor(\.achievementId, order: .reverse)]) var completeAchievement: FetchedResults<CompleteAchievement>
+    @State var starCount: Int = 0
     var body: some View {
         NavigationView{
             VStack {
@@ -20,7 +21,7 @@ struct AchievementListView: View {
                         .font(FontProvider.custom(.niceSugar, size: .largeTitle))
                         .foregroundColor(.primaryColor)
                     HStack {
-                        Text("2 / 10")
+                        Text("\(starCount) / \(achievements.count)")
                             .font(FontProvider.custom(.sassoon, size: .body))
                         Image(systemName: "trophy.fill")
                             .foregroundColor(.primaryColor)
@@ -34,7 +35,7 @@ struct AchievementListView: View {
                 }
                 List {
                     ForEach(achievements) { achievement in
-                        AchievementRow(data: achievement)
+                        AchievementRow(data: achievement,starCount: $starCount)
                             .environment(\.managedObjectContext, managedObjContext)
                     }
                 }

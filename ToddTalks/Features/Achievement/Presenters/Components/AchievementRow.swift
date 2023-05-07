@@ -14,6 +14,7 @@ struct AchievementRow: View {
     @FetchRequest(sortDescriptors: [SortDescriptor(\.achievementId, order: .reverse)]) var completeAchievement: FetchedResults<CompleteAchievement>
     @State var isEmpty = true
     @State var imageData : Data?
+    @Binding var starCount : Int
     
     var body: some View {
         NavigationLink(destination: AchievementDetailView(name: data.name, bodyData: data.body, imageData: imageData)) {
@@ -39,6 +40,7 @@ struct AchievementRow: View {
             if (item.achievementId == data.id) {
                 self.isEmpty = false
                 self.imageData = item.imageData
+                return
             }
         }
     }
@@ -46,6 +48,6 @@ struct AchievementRow: View {
 
 struct AchievementRow_Previews: PreviewProvider {
     static var previews: some View {
-        AchievementRow(data: Achievement(id: "test1",imagePath: "achievement1", name: "Completed first project", date: Date(), body: "I just completed my first project and I'm feeling great!"))
+        AchievementRow(data: Achievement(id: "test1",imagePath: "achievement1", name: "Completed first project", date: Date(), body: "I just completed my first project and I'm feeling great!"), starCount: .constant(0))
     }
 }

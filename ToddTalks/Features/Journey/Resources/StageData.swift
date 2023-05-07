@@ -8,7 +8,7 @@
 import Foundation
 
 struct StageData {
-    static let stage1M1U1 = Stage(id: "stage1M1U1",
+    static var stage1M1U1 = Stage(id: "stage1M1U1",
                            icon: "play.fill",
                            label: "Gesture",
                            title: "Gesture",
@@ -16,7 +16,7 @@ struct StageData {
                            tips: "Tips 1",
                            games: GameData.gamesM1U1S1, starCount: 0)
     
-    static let stage2M1U1 = Stage(id: "stage2M1U1",
+    static var stage2M1U1 = Stage(id: "stage2M1U1",
                            icon: "play.fill",
                            label: "Body Languange",
                            title: "Body Languange",
@@ -24,7 +24,7 @@ struct StageData {
                            tips: "Tips 2",
                            games: GameData.gamesM1U1S2, starCount: 0)
     
-    static let stage1M1U2 = Stage(id: "stage1M1U2",
+    static var stage1M1U2 = Stage(id: "stage1M1U2",
                            icon: "play.fill",
                            label: "Huruf P",
                            title: "Huruf P",
@@ -32,7 +32,7 @@ struct StageData {
                            tips: "Huruf P",
                            games: GameData.gamesM1U2S1, starCount: 0)
     
-    static let stage2M1U2 = Stage(id: "stage2M1U2",
+    static var stage2M1U2 = Stage(id: "stage2M1U2",
                            icon: "play.fill",
                            label: "Huruf B",
                            title: "Huruf B",
@@ -40,7 +40,7 @@ struct StageData {
                            tips: "Huruf B",
                            games: GameData.gamesM1U2S2, starCount: 0)
     
-    static let stage3M1U2 = Stage(id: "stage3M1U2",
+    static var stage3M1U2 = Stage(id: "stage3M1U2",
                            icon: "play.fill",
                            label: "Huruf W",
                            title: "Huruf W",
@@ -48,7 +48,7 @@ struct StageData {
                            tips: "Huruf W",
                            games: GameData.gamesM1U2S3, starCount: 0)
     
-    static let stage4M1U2 = Stage(id: "stage4M1U2",
+    static var stage4M1U2 = Stage(id: "stage4M1U2",
                            icon: "play.fill",
                            label: "Huruf M",
                            title: "Huruf M",
@@ -56,7 +56,7 @@ struct StageData {
                            tips: "Huruf M",
                            games: GameData.gamesM1U2S4, starCount: 0)
     
-    static let stage5M1U2 = Stage(id: "stage5M1U2",
+    static var stage5M1U2 = Stage(id: "stage5M1U2",
                            icon: "play.fill",
                            label: "Huruf H",
                            title: "Huruf H",
@@ -64,7 +64,7 @@ struct StageData {
                            tips: "Huruf H",
                            games: GameData.gamesM1U2S5, starCount: 0)
     
-    static let stage1M1U3 = Stage(id: "stage1M1U3",
+    static var stage1M1U3 = Stage(id: "stage1M1U3",
                            icon: "play.fill",
                            label: "Huruf B, M",
                            title: "Huruf B, M",
@@ -72,7 +72,7 @@ struct StageData {
                            tips: "Huruf B, M",
                            games: GameData.gamesM1U2S5, starCount: 0)
     
-    static let stage2M1U3 = Stage(id: "stage2M1U3",
+    static var stage2M1U3 = Stage(id: "stage2M1U3",
                            icon: "play.fill",
                            label: "Huruf P, H",
                            title: "Huruf P, H",
@@ -80,7 +80,7 @@ struct StageData {
                            tips: "Huruf P, H",
                            games: GameData.gamesM1U2S5, starCount: 0)
     
-    static let stage3M1U3 = Stage(id: "stage3M1U3",
+    static var stage3M1U3 = Stage(id: "stage3M1U3",
                            icon: "play.fill",
                            label: "Huruf W, H/B/M",
                            title: "Huruf W, H/B/M",

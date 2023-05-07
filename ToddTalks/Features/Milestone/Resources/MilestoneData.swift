@@ -16,17 +16,14 @@ struct MilestoneData {
         progVal: 0,
         progMaxVal: 10,
         tips: ["""
-    • You're a loyal and caring friend!
-    • You're empathetic and have a strong sense of fairness and justice.
-    """,
-    """
-    • You're a loyal and caring friend!
-    • You're empathetic and have a strong sense of fairness and justice.
-    """,
-    """
-    • You're a loyal and caring friend!
-    • You're empathetic and have a strong sense of fairness and justice.
-    """],
+            • Membimbing anak untuk berbicara secara sabar
+            """,
+            """
+            • Jangan memaksa anak untuk berbicara jika mereka merasa tidak nyaman atau tidak siap
+            """,
+            """
+            • Memberikan pujian atau dukungan saat anak berhasil ataupun tidak dalam mengucapkan kata-kata
+            """],
         colorTheme: .primaryBgColor,
         journey: [SectionData.section1M1, SectionData.section2M1, SectionData.section3M1]
     )
