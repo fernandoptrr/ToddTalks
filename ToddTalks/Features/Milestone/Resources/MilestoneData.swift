@@ -15,15 +15,10 @@ struct MilestoneData {
         body: "Pada tahap ini diharapkan sang anak dapat mengucapkan kata “p” , “w”, “z” dan “t” dengan benar.",
         progVal: 0,
         progMaxVal: 10,
-        tips: ["""
-            • Membimbing anak untuk berbicara secara sabar
-            """,
-            """
-            • Jangan memaksa anak untuk berbicara jika mereka merasa tidak nyaman atau tidak siap
-            """,
-            """
-            • Memberikan pujian atau dukungan saat anak berhasil ataupun tidak dalam mengucapkan kata-kata
-            """],
+        tips: [
+               "Jangan memaksa anak untuk berbicara jika mereka merasa tidak nyaman atau tidak siap",
+               "Memberikan pujian atau dukungan saat anak berhasil ataupun tidak dalam mengucapkan kata-kata",
+               "Membimbing anak untuk berbicara secara sabar"],
         colorTheme: .primaryBgColor,
         journey: [SectionData.section1M1, SectionData.section2M1, SectionData.section3M1]
     )

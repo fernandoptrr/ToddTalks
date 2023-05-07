@@ -38,5 +38,14 @@ enum Lotties {
     static let confetti = "confetti"
     static let tos2 = "tos2"
     static let hati = "hati"
+    static let bacabuku = "bacabuku"
+    static let mobilbiru = "mobilbiru"
+    static let labumanis = "labumanis"
+    static let pensilhitam = "pensilhitam"
+    static let hatiputih = "hatiputih"
+    static let halopapa = "halopapa"
+    static let warnahijau = "warnahijau"
+    static let awanbiru = "awanbiru"
+    static let waktumakan = "waktumakan"
 }
 

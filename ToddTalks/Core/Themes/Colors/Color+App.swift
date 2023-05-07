@@ -20,6 +20,7 @@ extension Color {
     static let bodyColor = Color("BodyColor")
     static let creamColor = Color("CreamColor")
     static let milestoneCardColor = Color("MilestoneCardColor")
+    static let darkGreenColor = Color("DarkGreenColor")
 
     // Add any additional custom colors here
 }

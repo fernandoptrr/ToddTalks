@@ -79,6 +79,15 @@
 		C4E7681329FFE22500F92A56 /* SnapCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E7681229FFE22500F92A56 /* SnapCarouselView.swift */; };
 		C4E7681D29FFE3D800F92A56 /* VideoModalSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E7681C29FFE3D800F92A56 /* VideoModalSheetView.swift */; };
 		C4E7682529FFEF1E00F92A56 /* NiceSugar.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4E7682429FFEF1E00F92A56 /* NiceSugar.otf */; };
+		E11B31302A07E4DF00B1B2EC /* mobilbiru.json in Resources */ = {isa = PBXBuildFile; fileRef = E11B312D2A07E4DF00B1B2EC /* mobilbiru.json */; };
+		E11B31312A07E4DF00B1B2EC /* bacabuku.json in Resources */ = {isa = PBXBuildFile; fileRef = E11B312E2A07E4DF00B1B2EC /* bacabuku.json */; };
+		E11B31322A07E4DF00B1B2EC /* labumanis.json in Resources */ = {isa = PBXBuildFile; fileRef = E11B312F2A07E4DF00B1B2EC /* labumanis.json */; };
+		E11B31362A07E50C00B1B2EC /* halopapa.json in Resources */ = {isa = PBXBuildFile; fileRef = E11B31332A07E50C00B1B2EC /* halopapa.json */; };
+		E11B31372A07E50C00B1B2EC /* hatiputih.json in Resources */ = {isa = PBXBuildFile; fileRef = E11B31342A07E50C00B1B2EC /* hatiputih.json */; };
+		E11B31382A07E50C00B1B2EC /* pensilhitam.json in Resources */ = {isa = PBXBuildFile; fileRef = E11B31352A07E50C00B1B2EC /* pensilhitam.json */; };
+		E11B313C2A07E52A00B1B2EC /* waktumakan.json in Resources */ = {isa = PBXBuildFile; fileRef = E11B31392A07E52A00B1B2EC /* waktumakan.json */; };
+		E11B313D2A07E52A00B1B2EC /* warnahijau.json in Resources */ = {isa = PBXBuildFile; fileRef = E11B313A2A07E52A00B1B2EC /* warnahijau.json */; };
+		E11B313E2A07E52A00B1B2EC /* awanbiru.json in Resources */ = {isa = PBXBuildFile; fileRef = E11B313B2A07E52A00B1B2EC /* awanbiru.json */; };
 		E156B8BA2A036AA6006DBB2D /* BabyChatBubbles.swift in Sources */ = {isa = PBXBuildFile; fileRef = E156B8B92A036AA6006DBB2D /* BabyChatBubbles.swift */; };
 		E158D0622A049C10008F0DD0 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = E158D0612A049C10008F0DD0 /* Lottie */; };
 		E158D0642A049CBC008F0DD0 /* confetti.json in Resources */ = {isa = PBXBuildFile; fileRef = E158D0632A049CBB008F0DD0 /* confetti.json */; };
@@ -186,6 +195,15 @@
 		C4E7681229FFE22500F92A56 /* SnapCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapCarouselView.swift; sourceTree = "<group>"; };
 		C4E7681C29FFE3D800F92A56 /* VideoModalSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoModalSheetView.swift; sourceTree = "<group>"; };
 		C4E7682429FFEF1E00F92A56 /* NiceSugar.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NiceSugar.otf; sourceTree = "<group>"; };
+		E11B312D2A07E4DF00B1B2EC /* mobilbiru.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mobilbiru.json; sourceTree = "<group>"; };
+		E11B312E2A07E4DF00B1B2EC /* bacabuku.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bacabuku.json; sourceTree = "<group>"; };
+		E11B312F2A07E4DF00B1B2EC /* labumanis.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = labumanis.json; sourceTree = "<group>"; };
+		E11B31332A07E50C00B1B2EC /* halopapa.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = halopapa.json; sourceTree = "<group>"; };
+		E11B31342A07E50C00B1B2EC /* hatiputih.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hatiputih.json; sourceTree = "<group>"; };
+		E11B31352A07E50C00B1B2EC /* pensilhitam.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pensilhitam.json; sourceTree = "<group>"; };
+		E11B31392A07E52A00B1B2EC /* waktumakan.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = waktumakan.json; sourceTree = "<group>"; };
+		E11B313A2A07E52A00B1B2EC /* warnahijau.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = warnahijau.json; sourceTree = "<group>"; };
+		E11B313B2A07E52A00B1B2EC /* awanbiru.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awanbiru.json; sourceTree = "<group>"; };
 		E156B8B92A036AA6006DBB2D /* BabyChatBubbles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BabyChatBubbles.swift; sourceTree = "<group>"; };
 		E158D0632A049CBB008F0DD0 /* confetti.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = confetti.json; sourceTree = "<group>"; };
 		E158D0662A04A6B6008F0DD0 /* correct1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = correct1.mp3; sourceTree = "<group>"; };
@@ -660,6 +678,15 @@
 		C449E91529ED982E00F9409F /* Lotties */ = {
 			isa = PBXGroup;
 			children = (
+				E11B312E2A07E4DF00B1B2EC /* bacabuku.json */,
+				E11B312D2A07E4DF00B1B2EC /* mobilbiru.json */,
+				E11B312F2A07E4DF00B1B2EC /* labumanis.json */,
+				E11B31352A07E50C00B1B2EC /* pensilhitam.json */,
+				E11B31342A07E50C00B1B2EC /* hatiputih.json */,
+				E11B31332A07E50C00B1B2EC /* halopapa.json */,
+				E11B31392A07E52A00B1B2EC /* waktumakan.json */,
+				E11B313A2A07E52A00B1B2EC /* warnahijau.json */,
+				E11B313B2A07E52A00B1B2EC /* awanbiru.json */,
 				E158D0632A049CBB008F0DD0 /* confetti.json */,
 				C47F48A529FFF3650094BFA9 /* baby.json */,
 				E1B676412A00E2BF009CC879 /* awan.json */,
@@ -920,7 +947,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E11B31312A07E4DF00B1B2EC /* bacabuku.json in Resources */,
 				C47F48A629FFF3650094BFA9 /* baby.json in Resources */,
+				E11B31382A07E50C00B1B2EC /* pensilhitam.json in Resources */,
 				E1B676532A00E2BF009CC879 /* melon.json in Resources */,
 				E1B676552A00E2BF009CC879 /* labu.json in Resources */,
 				E1B676512A00E2BF009CC879 /* hijau.json in Resources */,
@@ -932,8 +961,11 @@
 				E1B676582A00E2BF009CC879 /* tepuk tangan.json in Resources */,
 				E1B6764F2A00E2BF009CC879 /* mobil.json in Resources */,
 				E158D0642A049CBC008F0DD0 /* confetti.json in Resources */,
+				E11B313D2A07E52A00B1B2EC /* warnahijau.json in Resources */,
 				E1B6764A2A00E2BF009CC879 /* pisang.json in Resources */,
+				E11B313E2A07E52A00B1B2EC /* awanbiru.json in Resources */,
 				E1B6764E2A00E2BF009CC879 /* bye2.json in Resources */,
+				E11B31322A07E4DF00B1B2EC /* labumanis.json in Resources */,
 				E1B676472A00E2BF009CC879 /* warna.json in Resources */,
 				E1B676522A00E2BF009CC879 /* blow kiss.json in Resources */,
 				E1B6765F2A00E2BF009CC879 /* sapi.json in Resources */,
@@ -948,8 +980,10 @@
 				E1B6765A2A00E2BF009CC879 /* awan.json in Resources */,
 				C449E8D829ED729A00F9409F /* Preview Assets.xcassets in Resources */,
 				E1B676542A00E2BF009CC879 /* hiu.json in Resources */,
+				E11B31372A07E50C00B1B2EC /* hatiputih.json in Resources */,
 				E1B6764D2A00E2BF009CC879 /* bye.json in Resources */,
 				E1B6765B2A00E2BF009CC879 /* mama.json in Resources */,
+				E11B31302A07E4DF00B1B2EC /* mobilbiru.json in Resources */,
 				C449E8F729ED88B900F9409F /* SassoonSansStd-Bold.otf in Resources */,
 				E1B676592A00E2BF009CC879 /* awan2.json in Resources */,
 				E1B676572A00E2BF009CC879 /* buku.json in Resources */,
@@ -957,6 +991,8 @@
 				C4E7682529FFEF1E00F92A56 /* NiceSugar.otf in Resources */,
 				61C6D6B42A03762A00C2DB5F /* FrameAssets.xcassets in Resources */,
 				E1B676492A00E2BF009CC879 /* biru.json in Resources */,
+				E11B31362A07E50C00B1B2EC /* halopapa.json in Resources */,
+				E11B313C2A07E52A00B1B2EC /* waktumakan.json in Resources */,
 				E1B676482A00E2BF009CC879 /* senyum.json in Resources */,
 				C449E8D529ED729A00F9409F /* Assets.xcassets in Resources */,
 			);
