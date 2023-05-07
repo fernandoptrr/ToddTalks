@@ -6,38 +6,45 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct AchievementListView: View {
+    
+    @Environment(\.managedObjectContext) var managedObjContext
+    @FetchRequest(sortDescriptors: [SortDescriptor(\.achievementId, order: .reverse)]) var completeAchievement: FetchedResults<CompleteAchievement>
     var body: some View {
-        VStack {
+        NavigationView{
             VStack {
-                Text("Achievement")
-                    .font(FontProvider.custom(.niceSugar, size: .largeTitle))
-                    .foregroundColor(.primaryColor)
-                HStack {
-                    Text("2 / 10")
-                        .font(FontProvider.custom(.sassoon, size: .body))
-                    Image(systemName: "trophy.fill")
+                VStack {
+                    Text("Achievement")
+                        .font(FontProvider.custom(.niceSugar, size: .largeTitle))
                         .foregroundColor(.primaryColor)
-                        .font(.title3)
-                        .shimmering()
-                        .offset(y: -4)
-                }
-                .padding(.top, -16)
-                Divider()
-                
-            }
-            List {
-                ForEach(achievements) { achievement in
-                    NavigationLink(destination: EmptyView()) {
-                        AchievementRow(data: achievement)
+                    HStack {
+                        Text("2 / 10")
+                            .font(FontProvider.custom(.sassoon, size: .body))
+                        Image(systemName: "trophy.fill")
+                            .foregroundColor(.primaryColor)
+                            .font(.title3)
+                            .shimmering()
+                            .offset(y: -4)
                     }
-                    .disabled(achievement.isEmpty)
+                    .padding(.top, -16)
+                    Divider()
+                    
+                }
+                List {
+                    ForEach(achievements) { achievement in
+                        AchievementRow(data: achievement)
+                            .environment(\.managedObjectContext, managedObjContext)
+                    }
                 }
             }
+            .listStyle(PlainListStyle())
         }
-        .listStyle(PlainListStyle())
     }
+    
+ 
+    
 }
 
 struct AchievementList_Previews: PreviewProvider {

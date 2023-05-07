@@ -10,6 +10,8 @@ import SwiftUI
 struct MilestoneView: View  {
     @State var currentIndex: Int = 0
     @StateObject var viewModel = MilestoneViewModel()
+    @Environment(\.managedObjectContext) var managedObjContext
+    
     
     var body: some View {
         NavigationStack {
@@ -24,7 +26,7 @@ struct MilestoneView: View  {
                         .padding(.top,24)
                     
                     SnapCarouselView(trailingSpace: 64, index: $currentIndex, items: viewModel.milestones){ milestone in
-                        MilestoneCardView(milestone: milestone)
+                        MilestoneCardView(milestone: milestone) .environment(\.managedObjectContext, managedObjContext)
                     }
                     .padding(.top, 64)
                     HStack (spacing: 6){

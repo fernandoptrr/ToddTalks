@@ -13,38 +13,25 @@ struct TextToSpeechView: View {
     @State var counter = 0
     @State var synthesizer = AVSpeechSynthesizer()
     var body: some View {
-        VStack{
-            Text(word)
-                .padding()
             Button(action: {
                 let utterance = AVSpeechUtterance(string: word)
                 utterance.voice = AVSpeechSynthesisVoice(language: "id-ID")
                 utterance.rate = counter%2 == 0 ? 0.15 : 0.4
                 utterance.volume = 1.0
-                utterance.pitchMultiplier = 1.8
+                utterance.pitchMultiplier = 1.5
                 counter += 1
                 synthesizer.speak(utterance)
             }) {
-                
-                
-                Circle()
-                    .foregroundColor(.orange)
-                    .frame(width: 200)
-                    .overlay {
-                        VStack {
-                            Image(systemName:"speaker")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .padding(50)
-                            
-                        }
-                        .foregroundStyle(.white)
-                        .bold()
-                    }
+                Image(systemName: "speaker.wave.2")
+                    .font(.title3)
+                    .foregroundColor(.white)
+                    .padding(6)
             }
-            .foregroundColor(.blue)
-            .bold()
-        }
+            .fixedSize(horizontal: true, vertical: true)
+            .buttonStyle(RaisedButtonStyle(color: .red))
+                .padding(.leading, 8)
+                .offset(y: -4)
+           
     }
 }
 

@@ -6,6 +6,7 @@ struct StageDialog: View {
     @State private var offset: CGFloat = 1000
     @StateObject private var gameViewModel: GameViewModel
     @State private var isStarted = false
+    @Environment(\.managedObjectContext) var managedObjContext
     
     init(isPresented: Binding<Bool>, stage: Stage) {
         self._isPresented = isPresented
@@ -19,7 +20,7 @@ struct StageDialog: View {
     
     var body: some View {
         ZStack {
-            NavigationLink(destination: GameSceneView().environmentObject(gameViewModel), isActive: $isStarted) {
+            NavigationLink(destination: GameSceneView().environmentObject(gameViewModel).environment(\.managedObjectContext, managedObjContext), isActive: $isStarted) {
                 EmptyView()
             }
             Color.black

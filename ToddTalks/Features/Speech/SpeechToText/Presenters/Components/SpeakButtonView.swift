@@ -21,28 +21,19 @@ struct SpeakButtonView: View {
             self.isRecording = false
             speechRecognizer.stopTranscribing()
             speechRecognizer.transcript = ""
+            self.isCorrect = false
         }) {
-            Circle()
-                .foregroundColor(.orange)
-                .frame(width: 200)
-                .scaleEffect(isRecording ? 1.5 : 1)
-                .animation(animation)
-                .overlay {
-                    VStack {
-                        Image(systemName:"mic")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .padding(30)
-                        
-                    }
-                    .foregroundStyle(.white)
-                    .bold()
-                }
-        }.simultaneousGesture(LongPressGesture(minimumDuration: 0.1).onEnded({_ in
-            self.isRecording = true
-            checkWord()
-            speechRecognizer.startTranscribing()
-        }))
+            Image(systemName: "waveform.and.mic")
+                .font(.largeTitle)
+                .foregroundColor(.white)
+                .padding(24)
+        }       .fixedSize(horizontal: true, vertical: true)
+            .buttonStyle(RaisedButtonStyle(radius: 100, color: .blue))
+            .padding(.horizontal, 42).simultaneousGesture(LongPressGesture(minimumDuration: 0.1).onEnded({_ in
+                self.isRecording = true
+                checkWord()
+                speechRecognizer.startTranscribing()
+            }))
         
         
     }
@@ -64,6 +55,7 @@ struct SpeakButtonView: View {
         print(transcriptArr)
         if(transcriptArr.contains(wordArr)){
             isCorrect = true
+            speechRecognizer.stopTranscribing()
         }
         
     }

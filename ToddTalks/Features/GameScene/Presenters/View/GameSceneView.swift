@@ -11,13 +11,14 @@ struct GameSceneView: View {
     @EnvironmentObject private var viewModel: GameViewModel
     @State private var isAnimating: Bool = false
     @State private var showVideoModal: Bool = false
+    @State private var isCorrect: Bool = false
+    @StateObject private var achievementController = AchievementController()
     
     var body: some View {
         GeometryReader { geometry in
             ZStack(alignment: .top) {
                 NavigationLink(destination:
-                                // TODO: Replace with Photo Affirm View
-                               EmptyView(),
+                                CameraContentView().environment(\.managedObjectContext, achievementController.container.viewContext),
                                isActive: .constant(viewModel.reachedEnd)) {
                     EmptyView()
                 }
@@ -27,7 +28,25 @@ struct GameSceneView: View {
                     Spacer()
                     GameContent(lottie: viewModel.games[viewModel.currentGameIndex].lottie, content: viewModel.games[viewModel.currentGameIndex].content, isInfoScene: viewModel.isInfoScene)
                     Spacer()
-                    GameFooter()
+                    GameFooter(isCorrect: $isCorrect, lottie: viewModel.games[viewModel.currentGameIndex].lottie)
+                }
+            }
+            if (isCorrect){
+                ZStack{
+                    VStack {
+                        Spacer()
+                        HStack{
+                            Spacer()
+                            Text("Benar!").font(.custom("Nice Sugar", size: 80)).bold()
+                                .foregroundColor(.green)
+                                .padding(0)
+                            Spacer()
+                        }
+                        Spacer()
+                    }
+                    LottieView(name: Lotties.confetti, loopMode: .loop, animationSpeed: 1)
+                }.onAppear{
+                    playSound(sound: "correct1", type: "mp3")
                 }
             }
         }
@@ -36,6 +55,12 @@ struct GameSceneView: View {
             isAnimating = true
         }
         .fullScreenCover(isPresented: $showVideoModal, content: VideoModalSheetView.init)
+    }
+    
+    func resetState() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            isCorrect = false
+        }
     }
 }
 
@@ -140,17 +165,7 @@ struct GameContent: View {
                             .font(FontProvider.custom(.sassoon, size: .title)
                                 .weight(.bold))
                             .foregroundColor(.red)
-                        Button( action: {
-                        }) {
-                            Image(systemName: "speaker.wave.2")
-                                .font(.title3)
-                                .foregroundColor(.white)
-                                .padding(6)
-                        }
-                        .fixedSize(horizontal: true, vertical: true)
-                        .buttonStyle(RaisedButtonStyle(color: .red))
-                        .padding(.leading, 8)
-                        .offset(y: -4)
+                        TextToSpeechView(word: lottie)
                     }
                 }
                 .offset(y: -120)
@@ -163,7 +178,8 @@ struct GameContent: View {
 
 struct GameFooter: View {
     @EnvironmentObject private var viewModel: GameViewModel
-    
+    @Binding var isCorrect : Bool
+    let lottie : String
     var body: some View {
         ZStack {
             Button( action: {
@@ -191,17 +207,7 @@ struct GameFooter: View {
                 }
                 .fixedSize(horizontal: true, vertical: true)
                 .buttonStyle(RaisedButtonStyle(color: .red))
-                Button( action: {
-                    // TODO: Add Speech to text func
-                }) {
-                    Image(systemName: "waveform.and.mic")
-                        .font(.largeTitle)
-                        .foregroundColor(.white)
-                        .padding(24)
-                }
-                .fixedSize(horizontal: true, vertical: true)
-                .buttonStyle(RaisedButtonStyle(radius: 100, color: .blue))
-                .padding(.horizontal, 42)
+                SpeakButtonView(word: lottie, isCorrect: $isCorrect)
                 Button( action: {
                     viewModel.setGameCompleted()
                 }) {
