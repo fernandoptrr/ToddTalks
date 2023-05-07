@@ -9,9 +9,11 @@ import SwiftUI
 
 struct MilestoneCardView: View {
     let milestone: Milestone
+    @Binding var username: String
     var illScale: CGFloat = 1.6
     private let offset: CGFloat = 6
     @Environment(\.managedObjectContext) var managedObjContext
+    
     
     var body: some View {
         ZStack(alignment: .top){
@@ -40,7 +42,7 @@ struct MilestoneCardView: View {
                 HStack {
                     ProgressBarView(label: milestone.progLabel, value: milestone.progVal, maximum: milestone.progMaxVal, color: .yellow)
                         .foregroundColor(Color(uiColor: .darkGray))
-                    NavigationLink(destination: AchievementListView()) {
+                    NavigationLink(destination: AchievementListView(username: $username)) {
                         Image(systemName: "trophy.fill")
                             .foregroundColor(.primaryColor)
                             .font(.title)
@@ -54,7 +56,7 @@ struct MilestoneCardView: View {
                     .padding(.top, 8)
                     .foregroundColor(.black)
                 NavigationLink(destination: JourneyView(sections: milestone.journey, colorTheme: milestone.colorTheme) .environment(\.managedObjectContext, managedObjContext)) {
-                    Text("Journey")
+                    Text("Perjalanan")
                 }
                 .buttonStyle(RaisedButtonStyle())
                 .frame(height: 44)
@@ -95,7 +97,7 @@ struct MilestoneCardView_Previews: PreviewProvider {
                 """],
                     colorTheme: .purpleColor,
                     journey: [SectionData.section1M1, SectionData.section2M1]
-                ),
+                ), username: .constant("Sanz"),
                 illScale: 1.8
             )
             .padding(.horizontal, 32)

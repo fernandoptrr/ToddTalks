@@ -217,7 +217,7 @@ struct GameFooter: View {
                         .padding(12)
                 }
                 .fixedSize(horizontal: true, vertical: true)
-                .buttonStyle(RaisedButtonStyle(color: .red))
+                .buttonStyle(RaisedButtonStyle(color: .darkGreenColor))
             }
             .padding(.bottom, 52)
             .padding(.horizontal, 24)

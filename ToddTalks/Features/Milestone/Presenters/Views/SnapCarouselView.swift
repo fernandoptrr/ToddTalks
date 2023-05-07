@@ -132,7 +132,7 @@ struct SnapCarouselView_Previews: PreviewProvider {
             """],
                 colorTheme: .purpleColor,
                 journey: [SectionData.section1M1, SectionData.section2M1]
-            )
+            ), username: .constant("Sanz")
         )
     }
 }

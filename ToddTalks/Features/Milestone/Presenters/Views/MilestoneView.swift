@@ -11,7 +11,7 @@ struct MilestoneView: View  {
     @State var currentIndex: Int = 0
     @StateObject var viewModel = MilestoneViewModel()
     @Environment(\.managedObjectContext) var managedObjContext
-    
+    @Binding var username: String
     
     var body: some View {
         NavigationStack {
@@ -21,12 +21,11 @@ struct MilestoneView: View  {
                     .animation(.easeOut, value: currentIndex )
                 VStack{
                     Text("KataKecil")
-                        .font(FontProvider.custom(.niceSugar, size: .largeTitle))
-                        .foregroundColor(.primaryColor)
-                        .padding(.top,24)
-                    
+                                                .font(FontProvider.custom(.niceSugar, size: .largeTitle))
+                                                .foregroundColor(.textColor)
+                                                .padding(.top,24)
                     SnapCarouselView(trailingSpace: 64, index: $currentIndex, items: viewModel.milestones){ milestone in
-                        MilestoneCardView(milestone: milestone) .environment(\.managedObjectContext, managedObjContext)
+                        MilestoneCardView(milestone: milestone, username: $username) .environment(\.managedObjectContext, managedObjContext)
                     }
                     .padding(.top, 64)
                     HStack (spacing: 6){
@@ -42,7 +41,7 @@ struct MilestoneView: View  {
                     ZStack {
                         Color(.black).opacity(0.8)
                         .ignoresSafeArea()
-                        Text("Coming Soon!")
+                        Text("Segera Hadir!")
                             .font(FontProvider.custom(.niceSugar, size: .largeTitle))
                             .foregroundColor(.primaryColor)
                             .padding(.top,24)
@@ -60,7 +59,7 @@ struct MilestoneView: View  {
 struct MilestoneView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
-            MilestoneView()
+            MilestoneView(username: .constant("Gilang Sanz"))
         }
     }
 }

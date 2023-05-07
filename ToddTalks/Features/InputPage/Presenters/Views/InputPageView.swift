@@ -13,7 +13,8 @@ struct InputPageView: View {
     @State private var usia: String = ""
     @State private var usiaButtonTitle = "12 - 24 bulan"
     @State private var showActionSheet = false
-    
+    @Binding  var username: String
+
     
     @State private var selectedOption = "Option 1"
     let options = ["12 - 24 bulan", "24 - 36 bulan ", "36 - 42 bulan"]
@@ -62,8 +63,6 @@ struct InputPageView: View {
                         
                         Menu {
                             Button("12-24 bulan", action: {firstYear()})
-                            Button("24-36 bulan", action: {secondYear()})
-                            Button("36-42 bulan", action: {thirdYear()})
                         } label: {
                             HStack{
                                 Text("\(usiaButtonTitle)")
@@ -84,14 +83,14 @@ struct InputPageView: View {
                         .background(Color.white)
                         .cornerRadius(43)
                         .shadow(color: Color.black.opacity(0.08), radius: 60)
-
                         Spacer()
-                                        
-                        NavigationLink(destination: MilestoneView()) {
+                        Button(action: {
+                            username = namaAnak
+                        }) {
                             Text("Masuk")
-                                .font(FontProvider.custom(.sassoon, size: .title3).weight(.bold))
                         }
-                        .buttonStyle(RaisedButtonStyle(color: .textColor))
+                        .buttonStyle(RaisedButtonStyle(color: namaAnak.isEmpty ? Color(uiColor: .systemGray) :.textColor))
+                        .disabled(namaAnak.isEmpty)
                         .frame(height: 58)
                         .foregroundColor(.white)
                         .padding()
@@ -121,6 +120,6 @@ struct InputPageView: View {
 
 struct InputPageView_Previews: PreviewProvider {
     static var previews: some View {
-        InputPageView()
+        InputPageView(username: .constant(""))
     }
 }

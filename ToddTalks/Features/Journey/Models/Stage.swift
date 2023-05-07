@@ -13,7 +13,6 @@ struct Stage: Hashable, Identifiable {
     let label: String
     let title: String
     let body: String
-    let tips: String?
     let games: [Game]
     var starCount: Int
 }
