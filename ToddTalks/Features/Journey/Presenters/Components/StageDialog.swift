@@ -139,7 +139,7 @@ struct DialogView_Previews: PreviewProvider {
     static var previews: some View {
         StageDialog(
             isPresented: .constant(true),
-            stage:             StageData.stage1M1U1
+            stage:StageData.stage1M1U1
         )
         .environmentObject(GameViewModel(games: GameData.gamesM1U1S1))
     }

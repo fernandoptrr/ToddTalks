@@ -19,7 +19,7 @@ struct AchievementRow: View {
     var body: some View {
         NavigationLink(destination: AchievementDetailView(name: data.name, bodyData: data.body, imageData: imageData)) {
             HStack {
-                AchievementAvatar(imagePath: data.imagePath, color: .primaryColor, isEmpty: isEmpty, size: 24)
+                AchievementAvatar(imagePath: data.imagePath, color: .primaryColor, isEmpty: isEmpty, size: 24, lottie: data.lottie)
                     .padding()
                 VStack(alignment: .leading) {
                     Text(data.name)

@@ -12,8 +12,7 @@ struct ToddTalksApp: App {
     @StateObject private var achievementController = AchievementController()
     var body: some Scene {
         WindowGroup {
-            //            AchievementListView().environment(\.managedObjectContext, achievementController.container.viewContext)
-//            GameSceneView().environmentObject(gameViewModel)
+            //AchievementListView().environment(\.managedObjectContext, achievementController.container.viewContext)
             MilestoneView().environment(\.managedObjectContext, achievementController.container.viewContext)
         }
     }

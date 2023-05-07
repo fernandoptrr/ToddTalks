@@ -15,12 +15,13 @@ struct Achievement: Identifiable {
     let body: String
     var isEmpty: Bool = true
     var imageData: Data?
+    var lottie : String = Lotties.bye
 }
 
 var achievements = [
-    Achievement(id: "test1",imagePath: "achievement1", name: "Kata Pertama!", date: Date(), body: "Langkah pertama yang sangat mengesankan !!!", isEmpty: true),
-    Achievement(id: "test2",imagePath: "achievement1", name: "Bahasa Tubuh", date: Date(), body: "Hebat! Kamu berhasil menyelesaikannya dengan baik!", isEmpty: true),
-    Achievement(id: "test1",imagePath: "achievement1", name: "Stage P", date: Date(), body: "Langkah awal yang sangat mengesankan!!!", isEmpty: true),
+    Achievement(id: "test1",imagePath: "achievement1", name: "Kata Pertama!", date: Date(), body: "Langkah pertama yang sangat mengesankan !!!", isEmpty: true, lottie : Lotties.bye),
+    Achievement(id: "test2",imagePath: "achievement1", name: "Bahasa Tubuh", date: Date(), body: "Hebat! Kamu berhasil menyelesaikannya dengan baik!", isEmpty: true, lottie: Lotties.blowkiss),
+    Achievement(id: "test1",imagePath: "achievement1", name: "Stage P", date: Date(), body: "Langkah awal yang sangat mengesankan!!!", isEmpty: true, lottie: Lotties.pisang),
     Achievement(id: "test1",imagePath: "achievement1", name: "Stage B", date: Date(), body: "Hebat! Kamu berhasil menyelesaikannya dengan baik!", isEmpty: true),
     Achievement(id: "test1",imagePath: "achievement1", name: "Stage W", date: Date(), body: "Wah, pencapaian yang keren!!", isEmpty: true),
     Achievement(id: "test1",imagePath: "achievement1", name: "Stage M", date: Date(), body: "Mantap! Kamu sudah bisa mengucapkan kata dengan huruf M dengan sangat baik!", isEmpty: true),
