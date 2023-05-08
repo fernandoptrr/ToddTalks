@@ -22,7 +22,6 @@
 		61C6D6B22A0346C000C2DB5F /* CameraContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C6D6B12A0346C000C2DB5F /* CameraContentView.swift */; };
 		61C6D6B42A03762A00C2DB5F /* FrameAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61C6D6B32A03762A00C2DB5F /* FrameAssets.xcassets */; };
 		61CF154F2A07C10800BFCD2A /* completeAchievement.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 61CF154D2A07C10800BFCD2A /* completeAchievement.xcdatamodeld */; };
-		61CF15572A08053C00BFCD2A /* pisang.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 61CF15562A08053C00BFCD2A /* pisang.mp4 */; };
 		6A1258D82A06559D00D9708F /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1258D72A06559D00D9708F /* ImagePicker.swift */; };
 		6A1258DA2A0655F600D9708F /* ProfilePicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1258D92A0655F600D9708F /* ProfilePicture.swift */; };
 		6A1258E02A0684E500D9708F /* mamaSong.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 6A1258DF2A0684E500D9708F /* mamaSong.mp4 */; };
@@ -75,6 +74,7 @@
 		C47F48AA2A00503B0094BFA9 /* SectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47F48A92A00503B0094BFA9 /* SectionView.swift */; };
 		C4BAF53029F6D2D70077DD6D /* ShimmerEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BAF52F29F6D2D70077DD6D /* ShimmerEffect.swift */; };
 		C4C30C1629F61B5B006EC836 /* StageDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C30C1529F61B5B006EC836 /* StageDialog.swift */; };
+		C4D670982A08998B00A84626 /* pisang.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C4D670972A08998B00A84626 /* pisang.mp4 */; };
 		C4DB180B2A0409C600F46E8E /* BabyChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DB180A2A0409C600F46E8E /* BabyChat.swift */; };
 		C4DB180D2A04117800F46E8E /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DB180C2A04117800F46E8E /* GameViewModel.swift */; };
 		C4DB18102A04129100F46E8E /* StageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DB180F2A04129100F46E8E /* StageData.swift */; };
@@ -138,7 +138,6 @@
 		61C6D6B12A0346C000C2DB5F /* CameraContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraContentView.swift; sourceTree = "<group>"; };
 		61C6D6B32A03762A00C2DB5F /* FrameAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = FrameAssets.xcassets; sourceTree = "<group>"; };
 		61CF154E2A07C10800BFCD2A /* completeAchievement.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = completeAchievement.xcdatamodel; sourceTree = "<group>"; };
-		61CF15562A08053C00BFCD2A /* pisang.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = pisang.mp4; path = ../../../../../../../../Downloads/pisang.mp4; sourceTree = "<group>"; };
 		6A1258D72A06559D00D9708F /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		6A1258D92A0655F600D9708F /* ProfilePicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePicture.swift; sourceTree = "<group>"; };
 		6A1258DF2A0684E500D9708F /* mamaSong.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = mamaSong.mp4; path = ToddTalks/Core/Resources/Video/mamaSong.mp4; sourceTree = SOURCE_ROOT; };
@@ -193,6 +192,7 @@
 		C47F48A92A00503B0094BFA9 /* SectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionView.swift; sourceTree = "<group>"; };
 		C4BAF52F29F6D2D70077DD6D /* ShimmerEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerEffect.swift; sourceTree = "<group>"; };
 		C4C30C1529F61B5B006EC836 /* StageDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageDialog.swift; sourceTree = "<group>"; };
+		C4D670972A08998B00A84626 /* pisang.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = pisang.mp4; sourceTree = "<group>"; };
 		C4DB180A2A0409C600F46E8E /* BabyChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BabyChat.swift; path = ToddTalks/Features/GameScene/Models/BabyChat.swift; sourceTree = SOURCE_ROOT; };
 		C4DB180C2A04117800F46E8E /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		C4DB180F2A04129100F46E8E /* StageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageData.swift; sourceTree = "<group>"; };
@@ -822,7 +822,7 @@
 		C4E7680A29FFE13B00F92A56 /* Videos */ = {
 			isa = PBXGroup;
 			children = (
-				61CF15562A08053C00BFCD2A /* pisang.mp4 */,
+				C4D670972A08998B00A84626 /* pisang.mp4 */,
 				6A1258DF2A0684E500D9708F /* mamaSong.mp4 */,
 			);
 			path = Videos;
@@ -955,7 +955,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61CF15572A08053C00BFCD2A /* pisang.mp4 in Resources */,
+				C4D670982A08998B00A84626 /* pisang.mp4 in Resources */,
 				E11B31312A07E4DF00B1B2EC /* bacabuku.json in Resources */,
 				C47F48A629FFF3650094BFA9 /* baby.json in Resources */,
 				E11B31382A07E50C00B1B2EC /* pensilhitam.json in Resources */,
