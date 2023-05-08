@@ -8,5 +8,5 @@
 import Foundation
 
 var CompleteStagesData = [
-    CompleteStage(id: "stage1M1U1", starCount: 3),CompleteStage(id: "stage2M1U1", starCount: 2)
+    CompleteStage(id: "djdjdj", starCount: 3)
 ]
