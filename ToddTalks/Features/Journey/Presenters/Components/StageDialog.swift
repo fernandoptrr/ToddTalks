@@ -6,6 +6,7 @@ struct StageDialog: View {
     @State private var offset: CGFloat = 1000
     @StateObject private var gameViewModel: GameViewModel
     @State private var isStarted = false
+    @State var currStar = 0
     @Environment(\.managedObjectContext) var managedObjContext
     
     init(isPresented: Binding<Bool>, stage: Stage) {
@@ -20,7 +21,7 @@ struct StageDialog: View {
     
     var body: some View {
         ZStack {
-            NavigationLink(destination: GameSceneView().environmentObject(gameViewModel).environment(\.managedObjectContext, managedObjContext), isActive: $isStarted) {
+            NavigationLink(destination: GameSceneView(stageId: stage.id,outline: stage.outline).environmentObject(gameViewModel).environment(\.managedObjectContext, managedObjContext), isActive: $isStarted) {
                 EmptyView()
             }
             Color.black
@@ -64,7 +65,7 @@ struct StageDialog: View {
                 }
                 .overlay(alignment: .top){
                     HStack {
-                        if stage.starCount >= 1 {
+                        if currStar >= 1 {
                             Image(systemName: "star.fill")
                                 .foregroundColor(getStarColor(value: 1))
                                 .font(.system(size: 48))
@@ -78,7 +79,7 @@ struct StageDialog: View {
                                 .rotationEffect(.degrees(58))
                                 .offset(y: 6)
                         }
-                        if stage.starCount >= 2 {
+                        if currStar >= 2 {
                             Image(systemName: "star.fill")
                                 .foregroundColor(getStarColor(value: 2))
                                 .font(.system(size: 56))
@@ -90,7 +91,7 @@ struct StageDialog: View {
                                 .font(.system(size: 56))
                                 .offset(y: -14)
                         }
-                        if stage.starCount >= 3 {
+                        if currStar >= 3 {
                             Image(systemName: "star.fill")
                                 .foregroundColor(getStarColor(value: 3))
                                 .font(.system(size: 48))
@@ -111,6 +112,7 @@ struct StageDialog: View {
                     withAnimation(.spring()) {
                         offset = 0
                     }
+                    countStar()
                 }
             }
             .padding(.horizontal, 32)
@@ -125,6 +127,15 @@ struct StageDialog: View {
         withAnimation(.spring()) {
             offset = 1000
             isPresented.toggle()
+        }
+    }
+    
+    func countStar(){
+        CompleteStagesData.forEach{
+            item in
+            if (item.id == stage.id){
+                currStar = item.starCount
+            }
         }
     }
 }

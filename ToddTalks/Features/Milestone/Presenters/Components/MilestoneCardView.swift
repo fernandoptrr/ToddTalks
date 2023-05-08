@@ -13,6 +13,9 @@ struct MilestoneCardView: View {
     var illScale: CGFloat = 1.6
     private let offset: CGFloat = 6
     @Environment(\.managedObjectContext) var managedObjContext
+    @FetchRequest(sortDescriptors: [SortDescriptor(\.achievementId, order: .reverse)]) var completeAchievement: FetchedResults<CompleteAchievement>
+    
+    @State var currStar = 0
     
     
     var body: some View {
@@ -22,11 +25,13 @@ struct MilestoneCardView: View {
                 .offset(y: offset)
             RoundedRectangle(cornerRadius: 32, style: .continuous)
                 .fill(Color.milestoneCardColor)
+              
             VStack {
                 Text(milestone.title)
                     .font(FontProvider.custom(.niceSugar, size: .title))
                     .padding(.top, 84)
-                    .overlay {
+                    .overlay
+                    {
                         Image("anakcowo")
                             .resizable()
                             .scaledToFit()
@@ -40,7 +45,7 @@ struct MilestoneCardView: View {
                     .multilineTextAlignment(.center)
                     .padding(.top, 8)
                 HStack {
-                    ProgressBarView(label: milestone.progLabel, value: milestone.progVal, maximum: milestone.progMaxVal, color: .yellow)
+                    ProgressBarView(label: milestone.progLabel, value: currStar, maximum: milestone.progMaxVal, color: .yellow)
                         .foregroundColor(Color(uiColor: .darkGray))
                     NavigationLink(destination: AchievementListView(username: $username)) {
                         Image(systemName: "trophy.fill")
@@ -67,7 +72,20 @@ struct MilestoneCardView: View {
             .foregroundColor(.primaryColor)
             .padding()
         }
-        .fixedSize(horizontal: false, vertical: true)
+        .fixedSize(horizontal: false, vertical: true).onAppear{
+            checkAchievement()
+        }
+    }
+    
+    func checkAchievement(){
+        var array : [String] = []
+        completeAchievement.forEach{item in
+            guard let achievementId = item.achievementId else {return}
+            if (!array.contains(achievementId)){
+                array.append(achievementId)
+                currStar += 1
+            }
+        }
     }
 }
 
@@ -104,4 +122,6 @@ struct MilestoneCardView_Previews: PreviewProvider {
             .padding(.vertical, 84)
         }
     }
+    
+
 }

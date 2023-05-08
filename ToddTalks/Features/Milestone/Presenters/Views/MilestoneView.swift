@@ -52,7 +52,10 @@ struct MilestoneView: View  {
             }
         }
         .navigationBarBackButtonHidden()
+    
     }
+    
+ 
 }
 
 

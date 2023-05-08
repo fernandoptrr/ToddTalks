@@ -12,6 +12,7 @@ struct StageCircle: View {
     let stage: Stage
     @Binding var showStageDialog: Bool
     @Binding var selectedStage: Stage
+    @State var currStar = 0
 
     private func getStarColor(value: Int) -> Color {
         return stage.starCount >= value ? Color.yellow : Color(uiColor: .systemGray4)
@@ -20,7 +21,7 @@ struct StageCircle: View {
     var body: some View {
         VStack(alignment: .center) {
             HStack {
-                if stage.starCount >= 1 {
+                if currStar >= 1 {
                     Image(systemName: "star.fill")
                         .foregroundColor(getStarColor(value: 1))
                         .font(.system(size: 18))
@@ -35,7 +36,7 @@ struct StageCircle: View {
                     .offset(y: 8)
                     
                 }
-                if stage.starCount >= 2 {
+                if currStar >= 2 {
                     Image(systemName: "star.fill")
                         .foregroundColor(getStarColor(value: 2))
                         .font(.system(size: 18))
@@ -47,7 +48,7 @@ struct StageCircle: View {
                         .font(.system(size: 18))
                         .offset(y: -4)
                 }
-                if stage.starCount >= 3 {
+                if currStar >= 3 {
                     Image(systemName: "star.fill")
                         .foregroundColor(getStarColor(value: 3))
                         .font(.system(size: 18))
@@ -83,6 +84,18 @@ struct StageCircle: View {
                 .lineLimit(3)
                 .padding(.top, 4)
             Spacer()
+        }.onAppear{
+            countStar()
+        }
+    }
+    
+    func countStar(){
+        CompleteStagesData.forEach{
+            item in
+            if (item.id == stage.id){
+                currStar = item.starCount
+            }
+            print(item)
         }
     }
 }

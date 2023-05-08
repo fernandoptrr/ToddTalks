@@ -11,7 +11,11 @@ import WebKit
 
 
 struct VideoModalSheetView: View {
- 
+    var player: AVPlayer {
+          let player = AVPlayer(url: Bundle.main.url(forResource: "pisang", withExtension: "mp4")!)
+          player.play()
+          return player
+      }
     @Environment(\.presentationMode) var presentationMode
      
     var body: some View {
@@ -30,10 +34,9 @@ struct VideoModalSheetView: View {
             .padding()
             .foregroundColor(.blue)
             
-            VideoPlayer(player: AVPlayer(url: Bundle.main.url(forResource: "mamaSong", withExtension: "mp4")!))
+            VideoPlayer(player: player)
                 .ignoresSafeArea()
         }
-        
     }
 }
 

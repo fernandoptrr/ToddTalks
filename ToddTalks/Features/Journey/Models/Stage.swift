@@ -15,5 +15,6 @@ struct Stage: Hashable, Identifiable {
     let body: String
     let games: [Game]
     var starCount: Int
+    var outline : String = "frameAwan"
 }
 

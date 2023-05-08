@@ -40,6 +40,7 @@ struct AchievementRow: View {
             if (item.achievementId == data.id) {
                 self.isEmpty = false
                 self.imageData = item.imageData
+//                starCount += 1
                 return
             }
         }

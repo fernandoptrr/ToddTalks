@@ -46,10 +46,21 @@ struct AchievementListView: View {
                 }
                 .listStyle(PlainListStyle())
             }
+        }.onAppear{
+            checkAchievement()
         }
     }
     
- 
+    func checkAchievement(){
+        var array : [String] = []
+        completeAchievement.forEach{item in
+            guard let achievementId = item.achievementId else {return}
+            if (!array.contains(achievementId)){
+                array.append(achievementId)
+                starCount += 1
+            }
+        }
+    }
     
 }
 
