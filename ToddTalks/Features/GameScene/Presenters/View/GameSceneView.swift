@@ -22,7 +22,7 @@ struct GameSceneView: View {
         GeometryReader { geometry in
             ZStack(alignment: .top) {
                 NavigationLink(destination:
-                                CameraContentView(outline: outline).environment(\.managedObjectContext, achievementController.container.viewContext),
+                                CameraContentView(outline: outline,achievementId: stageId).environment(\.managedObjectContext, achievementController.container.viewContext),
                                isActive: .constant(viewModel.reachedEnd)) {
                     EmptyView()
                 }.simultaneousGesture(TapGesture().onEnded{

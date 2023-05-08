@@ -14,7 +14,7 @@ struct AchievementListView: View {
     @FetchRequest(sortDescriptors: [SortDescriptor(\.achievementId, order: .reverse)]) var completeAchievement: FetchedResults<CompleteAchievement>
     @Binding var username: String
     @State var starCount = 0
-
+    
     var body: some View {
         NavigationView{
             ZStack {
@@ -56,8 +56,12 @@ struct AchievementListView: View {
         completeAchievement.forEach{item in
             guard let achievementId = item.achievementId else {return}
             if (!array.contains(achievementId)){
-                array.append(achievementId)
-                starCount += 1
+                achievements.forEach{el in
+                    if (el.id == achievementId){
+                        starCount += 1
+                        array.append(achievementId)
+                    }
+                }
             }
         }
     }

@@ -12,14 +12,15 @@ import CoreData
 
 struct CameraContentView: View {
     let outline : String
+    let achievementId : String
     var body: some View {
-        CameraView(outline: outline)
+        CameraView(outline: outline,achievementId: achievementId)
     }
 }
 
 struct CameraContentView_Previews: PreviewProvider {
     static var previews: some View {
-        CameraContentView(outline: "framePapa")
+        CameraContentView(outline: "framePapa", achievementId: "test1")
     }
 }
 
@@ -30,6 +31,7 @@ struct CameraView :  View {
     @Environment(\.managedObjectContext) var managedObjContext
     @Environment(\.dismiss) var dismiss
     let outline : String
+    let achievementId : String
     
     var body: some View {
         ZStack {
@@ -74,7 +76,7 @@ struct CameraView :  View {
                                 return
                             }
                             
-                            AchievementController().addCompletedAchievement(achievementId: "test3", imageData: image, context: managedObjContext)
+                            AchievementController().addCompletedAchievement(achievementId: achievementId, imageData: image, context: managedObjContext)
                             dismiss()
                         }, label: {
                             Text("Lanjut")

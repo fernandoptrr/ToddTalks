@@ -45,7 +45,7 @@ struct MilestoneCardView: View {
                     .multilineTextAlignment(.center)
                     .padding(.top, 8)
                 HStack {
-                    ProgressBarView(label: milestone.progLabel, value: currStar, maximum: milestone.progMaxVal, color: .yellow)
+                    ProgressBarView(label: "\(currStar)/\(milestone.progMaxVal)", value: currStar, maximum: milestone.progMaxVal, color: .yellow)
                         .foregroundColor(Color(uiColor: .darkGray))
                     NavigationLink(destination: AchievementListView(username: $username)) {
                         Image(systemName: "trophy.fill")
@@ -82,8 +82,12 @@ struct MilestoneCardView: View {
         completeAchievement.forEach{item in
             guard let achievementId = item.achievementId else {return}
             if (!array.contains(achievementId)){
-                array.append(achievementId)
-                currStar += 1
+                achievements.forEach{el in
+                    if (el.id == achievementId){
+                        currStar += 1
+                        array.append(achievementId)
+                    }
+                }
             }
         }
     }
