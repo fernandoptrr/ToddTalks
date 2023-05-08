@@ -12,6 +12,7 @@ struct AchievementAvatar: View {
     let color: Color
     var isEmpty: Bool = false
     var size: CGFloat = 32
+    let lottie: String
     
     var body: some View {
         if isEmpty {
@@ -41,12 +42,15 @@ struct AchievementAvatar: View {
             .padding()
             .background(color)
             .clipShape(Circle())
+            .overlay {
+                LottieView(name: lottie, loopMode: .loop, animationSpeed: 1).padding(4)
+            }
     }
 }
 
 struct AchievementAvatar_Previews: PreviewProvider {
     static var previews: some View {
-        AchievementAvatar(imagePath: "blabla", color: Color.primaryColor, isEmpty: true)
+        AchievementAvatar(imagePath: "blabla", color: Color.primaryColor, isEmpty: false,lottie: Lotties.bye)
             .previewLayout(.sizeThatFits)
     }
 }

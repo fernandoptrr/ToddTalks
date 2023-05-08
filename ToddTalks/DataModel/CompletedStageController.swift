@@ -8,7 +8,7 @@
 import Foundation
 import CoreData
 
-class StageController : ObservableObject {
+class CompleteStageController : ObservableObject {
     let container = NSPersistentContainer(name : "CompletedStageModel")
     
     init() {
@@ -22,16 +22,15 @@ class StageController : ObservableObject {
     func save(context: NSManagedObjectContext){
         do {
             try context.save()
-            print("Data SAVED")
+            print("Data star SAVED")
         } catch {
             print("Unable to save data")
         }
     }
     
-    func addCompletedStage(title: String, starCount: Int16, context: NSManagedObjectContext) {
+    func addCompletedStage(stageId: String, starCount: Int16, context: NSManagedObjectContext) {
         let stage = CompletedStage(context: context)
-        stage.id = UUID()
-        stage.title = title
+        stage.stageId = stageId
         stage.starCount = starCount
         
         save(context: context)

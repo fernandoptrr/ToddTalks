@@ -13,6 +13,7 @@ struct AchievementListView: View {
     @Environment(\.managedObjectContext) var managedObjContext
     @FetchRequest(sortDescriptors: [SortDescriptor(\.achievementId, order: .reverse)]) var completeAchievement: FetchedResults<CompleteAchievement>
     @Binding var username: String
+    @State var starCount = 0
 
     var body: some View {
         NavigationView{
@@ -38,17 +39,28 @@ struct AchievementListView: View {
                     }
                     List {
                         ForEach(achievements) { achievement in
-                            AchievementRow(data: achievement)
+                            AchievementRow(data: achievement,starCount: $starCount)
                                 .environment(\.managedObjectContext, managedObjContext)
                         }
                     }
                 }
                 .listStyle(PlainListStyle())
             }
+        }.onAppear{
+            checkAchievement()
         }
     }
     
- 
+    func checkAchievement(){
+        var array : [String] = []
+        completeAchievement.forEach{item in
+            guard let achievementId = item.achievementId else {return}
+            if (!array.contains(achievementId)){
+                array.append(achievementId)
+                starCount += 1
+            }
+        }
+    }
     
 }
 

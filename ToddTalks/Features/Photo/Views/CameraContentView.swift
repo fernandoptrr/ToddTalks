@@ -11,14 +11,15 @@ import Photos
 import CoreData
 
 struct CameraContentView: View {
+    let outline : String
     var body: some View {
-        CameraView()
+        CameraView(outline: outline)
     }
 }
 
 struct CameraContentView_Previews: PreviewProvider {
     static var previews: some View {
-        CameraContentView()
+        CameraContentView(outline: "framePapa")
     }
 }
 
@@ -28,6 +29,7 @@ struct CameraView :  View {
     @State private var capturedImage: UIImage?
     @Environment(\.managedObjectContext) var managedObjContext
     @Environment(\.dismiss) var dismiss
+    let outline : String
     
     var body: some View {
         ZStack {
@@ -49,14 +51,13 @@ struct CameraView :  View {
             }
             
             VStack {
-                Text("poto yu!").font(.custom("Nice Sugar", size: 40))
+                Text("Foto yuk!").font(.custom("Nice Sugar", size: 40))
                     .foregroundColor(Color("PrimaryColor"))
                     .padding(0)
                 CameraPreview(camera: camera)
                     .ignoresSafeArea(.all, edges: .all)
             }
-            frameView()
-            
+            frameView(frame: self.outline)
             
             if let image = capturedImage {
                 Image(uiImage: image)
@@ -69,11 +70,11 @@ struct CameraView :  View {
                 HStack {
                     if camera.isTaken {
                         Button(action: {
-                            guard let image = camera.savePic() else {
+                            guard let image = camera.savePic(frame: self.outline) else {
                                 return
                             }
                             
-                            AchievementController().addCompletedAchievement(achievementId: "test1", imageData: image, context: managedObjContext)
+                            AchievementController().addCompletedAchievement(achievementId: "test3", imageData: image, context: managedObjContext)
                             dismiss()
                         }, label: {
                             Text("Lanjut")
@@ -207,9 +208,9 @@ class CameraModel: NSObject,ObservableObject, AVCapturePhotoCaptureDelegate {
         
     }
     
-    func savePic() -> Data?{
+    func savePic(frame : String) -> Data?{
         let image = UIImage(data: self.pictData)!
-        let overlay = UIImage(named: "frameAwan")
+        let overlay = UIImage(named: frame)
         let widthRect = image.size.width
         let heightRect = image.size.height
         let overlayRect = CGRect(x: 0, y: 0, width: widthRect, height: heightRect)
@@ -259,11 +260,12 @@ func addOverlayToImage(image: UIImage, overlayImage: UIImage, overlayRect: CGRec
 
 
 struct frameView: View {
+    let frame : String
     var body: some View {
-        Image("frameAwan")
+        Image(frame)
             .resizable()
-            .frame(width: 370,height: 642)
-            .offset(x: -1,y: -20)
+            .frame(width: 340,height: 622)
+            .offset(x: -15,y: -20)
     }
 }
 
@@ -295,7 +297,7 @@ struct CameraPreview: UIViewRepresentable {
     @ObservedObject var camera: CameraModel
     
     func makeUIView(context: Context) -> UIView {
-        let view = UIView(frame: CGRect(x: 36, y: 0, width: 320, height: 552))
+        let view = UIView(frame: CGRect(x: 36, y: 0, width: 290, height: 532))
         
         camera.preview = AVCaptureVideoPreviewLayer(session: camera.session)
         camera.preview.frame = view.frame

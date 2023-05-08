@@ -14,21 +14,27 @@ struct GameSceneView: View {
     @State private var isCorrect: Bool = false
     @StateObject private var achievementController = AchievementController()
     
+    let stageId : String
+    let outline : String
+    @State var starState = 0
+    
     var body: some View {
         GeometryReader { geometry in
             ZStack(alignment: .top) {
                 NavigationLink(destination:
-                                CameraContentView().environment(\.managedObjectContext, achievementController.container.viewContext),
+                                CameraContentView(outline: outline).environment(\.managedObjectContext, achievementController.container.viewContext),
                                isActive: .constant(viewModel.reachedEnd)) {
                     EmptyView()
-                }
+                }.simultaneousGesture(TapGesture().onEnded{
+                    
+                })
                 GameBackround(isAnimating: $isAnimating, width: geometry.size.width)
                 VStack {
                     GameHeader(currentIndex: viewModel.currentGameIndex, gameLength: viewModel.games.count, babyChat: viewModel.games[viewModel.currentGameIndex].infoScene, isInfoScene: viewModel.isInfoScene, showVideoModal: $showVideoModal)
                     Spacer()
                     GameContent(lottie: viewModel.games[viewModel.currentGameIndex].lottie, content: viewModel.games[viewModel.currentGameIndex].content, isInfoScene: viewModel.isInfoScene)
                     Spacer()
-                    GameFooter(isCorrect: $isCorrect, content: viewModel.games[viewModel.currentGameIndex].content)
+                    GameFooter(isCorrect: $isCorrect, starState: $starState, stageId: stageId, content: viewModel.games[viewModel.currentGameIndex].content )
                 }
             }
             if (isCorrect){
@@ -66,7 +72,7 @@ struct GameSceneView: View {
 
 struct GameSceneView_Previews: PreviewProvider {
     static var previews: some View {
-        GameSceneView()
+        GameSceneView(stageId: "stage1M1U1", outline: "framePapa")
             .environmentObject(GameViewModel(games: GameData.gamesM1U1S1))
     }
 }
@@ -179,11 +185,17 @@ struct GameContent: View {
 struct GameFooter: View {
     @EnvironmentObject private var viewModel: GameViewModel
     @Binding var isCorrect : Bool
+    @Binding var starState : Int
+    let stageId : String
     let content : String
     var body: some View {
         ZStack {
             Button( action: {
                 viewModel.nextGame()
+                if (viewModel.reachedEnd) {
+                    print("naise")
+                    CompleteStagesData.append(CompleteStage(id: stageId, starCount: starState))
+                }
             }) {
                 Text("Lanjut")
                     .font(FontProvider.custom(.sassoon, size: .title3)
@@ -210,6 +222,10 @@ struct GameFooter: View {
                 SpeakButtonView(word: content, isCorrect: $isCorrect)
                 Button( action: {
                     viewModel.setGameCompleted()
+                    if (starState < 3){
+                        starState += 1
+                    }
+                    print("jalan kok \(starState)")
                 }) {
                     Image(systemName: "checkmark")
                         .font(.title)

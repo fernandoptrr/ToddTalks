@@ -13,28 +13,28 @@ struct StageData {
                                   label: "Gestur",
                                   title: "Gestur",
                                   body: "Pada tahap ini, anak akan mempelajari berbagai macam gestur sederhana, seperti dadah",
-                                  games: GameData.gamesM1U1S1, starCount: 0)
+                                  games: GameData.gamesM1U1S1, starCount: 0,outline: "frameBye")
     
     static var stage2M1U1 = Stage(id: "stage2M1U1",
                                   icon: "play.fill",
                                   label: "Bahasa Tubuh",
                                   title: "Bahasa Tubuh",
                                   body: "Pada tahap ini anak akan mempelajari berbagai macam bahasa tubuh, seperti senyum",
-                                  games: GameData.gamesM1U1S2, starCount: 0)
+                                  games: GameData.gamesM1U1S2, starCount: 0,outline: "frameMuah")
     
     static var stage1M1U2 = Stage(id: "stage1M1U2",
                                   icon: "play.fill",
                                   label: "Huruf P",
                                   title: "Huruf P",
                                   body: "Pada tahap ini anak akan mempelajari cara melafalkan kata-kata dengan huruf P, seperti sapi",
-                                  games: GameData.gamesM1U2S1, starCount: 0)
+                                  games: GameData.gamesM1U2S1, starCount: 0,outline: "framePapa")
     
     static var stage2M1U2 = Stage(id: "stage2M1U2",
                                   icon: "play.fill",
                                   label: "Huruf B",
                                   title: "Huruf B",
                                   body: "Pada tahap ini anak akan mempelajari cara melafalkan kata-kata dengan huruf B, seperti buku",
-                                  games: GameData.gamesM1U2S2, starCount: 0)
+                                  games: GameData.gamesM1U2S2, starCount: 0,outline: "frameMelon")
     
     static var stage3M1U2 = Stage(id: "stage3M1U2",
                                   icon: "play.fill",

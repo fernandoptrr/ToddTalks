@@ -13,7 +13,7 @@ struct MilestoneData {
         image: Lotties.baby,
         title: "12 - 24 Bulan",
         body: "Pada tahap ini diharapkan sang anak dapat mengucapkan kata “p” , “w”, “z” dan “t” dengan benar.",
-        progVal: 0,
+        progVal: 3,
         progMaxVal: 10,
         tips: [
                "Jangan memaksa anak untuk berbicara jika mereka merasa tidak nyaman atau tidak siap",
